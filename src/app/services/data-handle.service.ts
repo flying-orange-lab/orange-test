@@ -10,6 +10,11 @@ import { ABILITY_DATA } from '../datas/ability.data';
 import { ABILITY_DATA_V3 } from '../datas/oranageV3/ability.data';
 import { MART_DATA_V3 } from '../datas/oranageV3/mart.data';
 import { MART_DATA_ANOTHER_RED } from '../datas/another_red/mart.data';
+import {
+  POKEMON_MOVE_TM_V4,
+  POKEMON_MOVE_TUTOR_V4,
+  POKEMON_MOVE_V4,
+} from '../datas/orangeV4/move.data';
 
 @Injectable({
   providedIn: 'root',
@@ -97,5 +102,17 @@ export class DataHandleService {
         return MART_DATA_ANOTHER_RED;
     }
     return [];
+  }
+
+  get moveDatas() {
+    switch (this.gameVersionSubject.value) {
+      case 'orange_v4':
+        return {
+          learn: POKEMON_MOVE_V4,
+          tm: POKEMON_MOVE_TM_V4,
+          tutor: POKEMON_MOVE_TUTOR_V4,
+        };
+    }
+    return undefined;
   }
 }
