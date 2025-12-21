@@ -16,6 +16,7 @@ import {
   POKEMON_MOVE_V4,
 } from '../datas/orangeV4/move.data';
 import { POKEMON_DATA_V4 } from '../datas/orangeV4/pokemon.data';
+import { ABILITY_DATA_V4 } from '../datas/orangeV4/ability.data';
 
 @Injectable({
   providedIn: 'root',
@@ -97,6 +98,8 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'orange_v3':
         return ABILITY_DATA_V3;
+      case 'orange_v4':
+        return ABILITY_DATA_V4;
     }
     return ABILITY_DATA;
   }
