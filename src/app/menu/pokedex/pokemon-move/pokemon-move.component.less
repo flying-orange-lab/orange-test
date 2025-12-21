@@ -1,0 +1,123 @@
+/* 공통 스타일: 서랍 컨테이너 */
+.drawer-container {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  // border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+/* 최상위 서랍 버튼 스타일 */
+.drawer-container > button {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #e0f2f7;
+  color: black;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drawer-container > button:hover {
+  background-color: #3d85c6;
+}
+
+/* 하위 서랍 컨테이너 스타일 */
+.drawer-box {
+  border-top: 1px solid #eee;
+  padding: 0;
+  margin: 0;
+  scroll-margin-top: 90px;
+}
+
+/* 하위 서랍 버튼 스타일 */
+.drawer-box > button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #e9ecef;
+  color: #333;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.drawer-box > button:hover {
+  background-color: #d8d8d8;
+}
+
+/* 화살표 아이콘 스타일 */
+.drawer-box > button span {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.drawer-box > button span.rotate {
+  transform: rotate(180deg);
+}
+
+/* 서랍 내용 스타일 */
+.drawer-content {
+  padding: 15px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+}
+
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 4px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+table thead th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  color: #555;
+}
+
+.drawer-tutor {
+  .red {
+    background-color: #cc0000;
+    border: 1px solid #cc0000;
+  }
+  .blue {
+    background-color: #4a86e8;
+    border: 1px solid #4a86e8;
+  }
+  .yellow {
+    background-color: #f1c232;
+    border: 1px solid #f1c232;
+  }
+  .green {
+    background-color: #34a853;
+    border: 1px solid #34a853;
+  }
+  .black {
+    background-color: #000000;
+    border: 1px solid #000000;
+  }
+  tr {
+    padding: 10px;
+    border: 1px solid #eee;
+    text-align: left;
+  }
+}

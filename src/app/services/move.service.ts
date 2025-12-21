@@ -3,15 +3,15 @@ import { DataHandleService } from './data-handle.service';
 @Injectable({
   providedIn: 'root',
 })
-export class PokemonService {
+export class PokemonMoveService {
   private dataHandleService = inject(DataHandleService);
 
   getMoveFromPokemonKeyname(pokemonKeyname: string) {
     const moveDatas = this.dataHandleService.moveDatas;
     return {
-      learn: moveDatas?.learn?.[pokemonKeyname],
-      tm: moveDatas?.tm?.[pokemonKeyname],
-      tutor: moveDatas?.tm?.[pokemonKeyname],
+      learn: moveDatas?.learn?.[pokemonKeyname] ?? [],
+      tm: moveDatas?.tm?.[pokemonKeyname] ?? [],
+      tutor: moveDatas?.tutor?.[pokemonKeyname] ?? [],
     };
   }
 }

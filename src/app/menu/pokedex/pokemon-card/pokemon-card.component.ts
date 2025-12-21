@@ -17,12 +17,17 @@ import { PokemonStatComponent } from '../pokemon-stat/pokemon-stat.component';
 import { PokemonAbility } from 'src/app/models/ability.model';
 import { PokemonLocationComponent } from '../pokemon-location/pokemon-location.component';
 import { Pokemon } from 'src/app/models/pokemon.model';
+import { PokemonMoveComponent } from '../pokemon-move/pokemon-move.component';
 
 @Component({
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
   styleUrls: ['./pokemon-card.component.less'],
-  imports: [PokemonStatComponent, PokemonLocationComponent],
+  imports: [
+    PokemonStatComponent,
+    PokemonLocationComponent,
+    PokemonMoveComponent,
+  ],
 })
 export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   private router = inject(Router);
@@ -93,6 +98,10 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
       urlKey += `-${this.currentFormIndex}`;
     }
     return urlKey;
+  }
+
+  get currentMoveKeyName() {
+    return `${this.pokemon.id}-${this.currentFormIndex}`;
   }
 
   get displayId() {
