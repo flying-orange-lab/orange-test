@@ -15,6 +15,7 @@ import {
   POKEMON_MOVE_TUTOR_V4,
   POKEMON_MOVE_V4,
 } from '../datas/orangeV4/move.data';
+import { POKEMON_DATA_V4 } from '../datas/orangeV4/pokemon.data';
 
 @Injectable({
   providedIn: 'root',
@@ -35,6 +36,8 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'orange_v3':
         return '오렌지 V3';
+      case 'orange_v4':
+        return '오렌지 V4';
       case 'another_red':
         return '어나더레드';
     }
@@ -46,6 +49,8 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'orange_v3':
         return '';
+      case 'orange_v4':
+        return 'v4';
       case 'another_red':
         return 'another_red_';
     }
@@ -57,6 +62,8 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'orange_v3':
         return POKEMON_DATA_V3;
+      case 'orange_v4':
+        return POKEMON_DATA_V4;
       case 'another_red':
         return POKEMON_DATA_ANOTHER_RED;
     }
