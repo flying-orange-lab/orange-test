@@ -26,8 +26,8 @@ export class HeaderComponent implements OnInit {
     switch (this.gameVersion) {
       case 'orange_v3':
         return '모에몬 리덕스 오렌지 에디션 3.24';
-      case 'orange_v4':
-        return '모에몬 리덕스 오렌지 에디션 4.0';
+      case 'alternative':
+        return '얼터너티브 블랙2';
       case 'another_red':
         return '어나더 레드';
       default:

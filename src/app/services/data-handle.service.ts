@@ -17,6 +17,7 @@ import {
 } from '../datas/orangeV4/move.data';
 import { POKEMON_DATA_V4 } from '../datas/orangeV4/pokemon.data';
 import { ABILITY_DATA_V4 } from '../datas/orangeV4/ability.data';
+import { POKEMON_WILDS_V4 } from '../datas/orangeV4/wilds.data';
 
 @Injectable({
   providedIn: 'root',
@@ -37,8 +38,8 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'orange_v3':
         return '오렌지 V3';
-      case 'orange_v4':
-        return '오렌지 V4';
+      case 'alternative':
+        return '얼터너티브 블랙2';
       case 'another_red':
         return '어나더레드';
     }
@@ -50,8 +51,8 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'orange_v3':
         return '';
-      case 'orange_v4':
-        return 'v4';
+      case 'alternative':
+        return 'alternative_';
       case 'another_red':
         return 'another_red_';
     }
@@ -63,7 +64,7 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'orange_v3':
         return POKEMON_DATA_V3;
-      case 'orange_v4':
+      case 'alternative':
         return POKEMON_DATA_V4;
       case 'another_red':
         return POKEMON_DATA_ANOTHER_RED;
@@ -76,6 +77,8 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'orange_v3':
         return POKEMON_WILDS_V3;
+      case 'alternative':
+        return POKEMON_WILDS_V4;
       case 'another_red':
         return POKEMON_WILDS_ANOTHER_RED;
     }
@@ -98,7 +101,7 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'orange_v3':
         return ABILITY_DATA_V3;
-      case 'orange_v4':
+      case 'alternative':
         return ABILITY_DATA_V4;
     }
     return ABILITY_DATA;
@@ -116,7 +119,7 @@ export class DataHandleService {
 
   get moveDatas() {
     switch (this.gameVersionSubject.value) {
-      case 'orange_v4':
+      case 'alternative':
         return {
           learn: POKEMON_MOVE_V4,
           tm: POKEMON_MOVE_TM_V4,
