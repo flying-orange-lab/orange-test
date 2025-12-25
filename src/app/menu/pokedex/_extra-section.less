@@ -3,6 +3,10 @@
   color: #555;
   text-align: left;
   position: relative;
+  &.detail {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .extra-title {
@@ -29,4 +33,11 @@
   content: "·";
   display: inline-block;
   width: 8px;
+}
+
+.extra-detail-icon {
+  width: fit-content;
+  margin-left: auto;
+  font-size: 1.5em;
+  cursor: pointer;
 }

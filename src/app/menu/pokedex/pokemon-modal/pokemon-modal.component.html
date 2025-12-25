@@ -1,0 +1,18 @@
+<div class="modal-container">
+  <div class="header" (click)="close()">
+    <div class="text-btn">닫기</div>
+  </div>
+  <div class="tab">
+    <mat-tab-group class="modal-tabs" headerPosition="above">
+      <mat-tab label="배우는 기술">
+        <div class="tab-content">
+          <app-pokemon-move
+            [pokemonKeyname]="data.currentMoveKeyName"
+          ></app-pokemon-move>
+        </div>
+      </mat-tab>
+      <!-- <mat-tab label="Second"> Content 2 </mat-tab>
+      <mat-tab label="Third"> Content 3 </mat-tab> -->
+    </mat-tab-group>
+  </div>
+</div>

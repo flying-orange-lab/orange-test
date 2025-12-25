@@ -9,6 +9,7 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { DataHandleService } from 'src/app/services/data-handle.service';
 import { PokemonImageService } from 'src/app/services/pokemon-image.service';
@@ -17,23 +18,20 @@ import { PokemonStatComponent } from '../pokemon-stat/pokemon-stat.component';
 import { PokemonAbility } from 'src/app/models/ability.model';
 import { PokemonLocationComponent } from '../pokemon-location/pokemon-location.component';
 import { Pokemon } from 'src/app/models/pokemon.model';
-import { PokemonMoveComponent } from '../pokemon-move/pokemon-move.component';
+import { PokemonModalComponent } from '../pokemon-modal/pokemon-modal.component';
 
 @Component({
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
   styleUrls: ['./pokemon-card.component.less'],
-  imports: [
-    PokemonStatComponent,
-    PokemonLocationComponent,
-    PokemonMoveComponent,
-  ],
+  imports: [PokemonStatComponent, PokemonLocationComponent],
 })
 export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   private router = inject(Router);
   private dataHandleService = inject(DataHandleService);
   private pokemonService = inject(PokemonService);
   private pokemonImageService = inject(PokemonImageService);
+  private dialog = inject(MatDialog);
 
   @Input() pokemon!: Pokemon;
   @Input() useSprite = false;
@@ -178,6 +176,18 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
 
   goToDefensePage(types: string[]): void {
     this.defenseEvent.emit(types);
+  }
+
+  openModal() {
+    this.dialog.open(PokemonModalComponent, {
+      width: '100vw',
+      height: '100vh',
+      maxWidth: '100vw',
+      panelClass: 'no-padding-dialog', // 전역 CSS에서 여백 제거용
+      data: {
+        'currentMoveKeyName': this.currentMoveKeyName,
+      },
+    });
   }
 
   ngOnDestroy(): void {
