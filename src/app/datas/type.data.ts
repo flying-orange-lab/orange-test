@@ -43,6 +43,28 @@ export const TYPE_DISPLAY_DATA: TypeDisplay = {
   'fairy': '페어리',
 };
 
+// 모든 타입의 영어 이름 매핑
+export const TYPE_CODE_DATA: TypeDisplay = {
+  '노말': 'normal',
+  '불꽃': 'fire',
+  '물': 'water',
+  '풀': 'grass',
+  '전기': 'electric',
+  '얼음': 'ice',
+  '격투': 'fighting',
+  '독': 'poison',
+  '땅': 'ground',
+  '비행': 'flying',
+  '에스퍼': 'psychic',
+  '벌레': 'bug',
+  '바위': 'rock',
+  '고스트': 'ghost',
+  '악': 'dark',
+  '드래곤': 'dragon',
+  '강철': 'steel',
+  '페어리': 'fairy',
+};
+
 export const TYPE_EFFECTIVE_LABEL = [
   '4배 약점',
   '2배 약점',

@@ -18,6 +18,7 @@ import {
 import { POKEMON_DATA_V4 } from '../datas/orangeV4/pokemon.data';
 import { ABILITY_DATA_V4 } from '../datas/orangeV4/ability.data';
 import { POKEMON_WILDS_V4 } from '../datas/orangeV4/wilds.data';
+import { POKEMON_MOVE_DETAIL_V4 } from '../datas/orangeV4/move-detail.data';
 
 @Injectable({
   providedIn: 'root',
@@ -127,5 +128,13 @@ export class DataHandleService {
         };
     }
     return undefined;
+  }
+
+  get moveDetailDatas() {
+    switch (this.gameVersionSubject.value) {
+      case 'alternative':
+        return POKEMON_MOVE_DETAIL_V4;
+    }
+    return [];
   }
 }

@@ -1,0 +1,86 @@
+<div class="move-detail-container">
+  <section class="filter-section"></section>
+  <div class="move-list-container">
+    @for (moveDetail of searchResults; track moveDetail.id) {
+      <div class="move-card" [class]="moveDetail.type.toLowerCase()">
+        <div class="move-header">
+          <span class="move-name">{{ moveDetail.name }}</span>
+          <div class="badges">
+            <span
+              class="badge type-badge"
+              [class]="'type-' + korToEngTypeMapper(moveDetail.type)"
+              >{{ moveDetail.type }}</span
+            >
+            <span
+              class="badge class-badge"
+              [attr.data-class]="moveDetail.class"
+            >
+              {{ moveDetail.class }}
+            </span>
+          </div>
+        </div>
+
+        <div class="move-stats">
+          <div class="stat-item">
+            <span class="label">위력</span>
+            <span class="value">{{ moveDetail.power || "--" }}</span>
+          </div>
+          <div class="stat-item">
+            <span class="label">명중</span>
+            <span class="value">{{ moveDetail.accuracy || "--" }}</span>
+          </div>
+          <div class="stat-item">
+            <span class="label">PP</span>
+            <span class="value">{{ moveDetail.pp }}</span>
+          </div>
+        </div>
+
+        <div class="move-details">
+          @if (moveDetail.category) {
+            <span class="tag">#{{ moveDetail.category }}</span>
+          }
+          @if (moveDetail.makeContact) {
+            <span class="tag contact">접촉</span>
+          }
+          @if (moveDetail.targeting) {
+            <span class="tag target">{{ moveDetail.targeting }}</span>
+          }
+        </div>
+
+        <div class="move-effects">
+          @if (moveDetail.effects.inflict) {
+            <div class="effect-row">
+              <span class="effect-label inflict">상태유발</span>
+              <span class="effect-value">{{ moveDetail.effects.inflict }}</span>
+            </div>
+          }
+
+          @if (moveDetail.effects.changeStatusTarget) {
+            <div class="effect-row">
+              <span class="effect-label target">랭크(대상)</span>
+              <span class="effect-value">{{
+                moveDetail.effects.changeStatusTarget
+              }}</span>
+            </div>
+          }
+
+          @if (moveDetail.effects.changeStatusMe) {
+            <div class="effect-row">
+              <span class="effect-label self">랭크(자신)</span>
+              <span class="effect-value">{{
+                moveDetail.effects.changeStatusMe
+              }}</span>
+            </div>
+          }
+
+          @if (moveDetail.effects.etc) {
+            <div class="effect-row etc-row">
+              <span class="effect-label etc">비고</span>
+              <span class="effect-value">{{ moveDetail.effects.etc }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

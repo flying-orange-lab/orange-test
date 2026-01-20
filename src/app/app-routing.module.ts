@@ -6,6 +6,7 @@ import { DefenseComponent } from './menu/defense/defense.component';
 import { WildComponent } from './menu/wild/wild.component';
 import { ItemsComponent } from './menu/items/items.component';
 import { MartComponent } from './menu/mart/mart.component';
+import { MoveDetailComponent } from './menu/move-detail/move-detail.component';
 
 const routes: Routes = [
   { path: ':gameVersion', component: HomeComponent, data: { title: '홈' } },
@@ -33,6 +34,11 @@ const routes: Routes = [
     path: ':gameVersion/mart',
     component: MartComponent,
     data: { title: '프렌들리숍' },
+  },
+  {
+    path: ':gameVersion/move-detail',
+    component: MoveDetailComponent,
+    data: { title: '기술 정보' },
   },
 ];
 

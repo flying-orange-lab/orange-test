@@ -1,0 +1,238 @@
+.move-detail-container {
+}
+.move-list-container {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  padding: 16px;
+}
+
+.move-card {
+  border-radius: 12px;
+  background: #fff;
+  border-left: 8px solid #ccc; // 기본 색상
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.move-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+
+  .move-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: white;
+  margin-left: 4px;
+
+  &.type-badge {
+    text-transform: uppercase;
+  }
+
+  &[data-class="물리"] {
+    background: #c92112;
+  } // 빨강
+  &[data-class="특수"] {
+    background: #4f5870;
+  } // 남색
+  &[data-class="변화"] {
+    background: #9fa19f;
+  } // 회색
+}
+
+.move-stats {
+  display: flex;
+  justify-content: space-between;
+  background: #f8f9fa;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    .label {
+      font-size: 0.7rem;
+      color: #666;
+    }
+    .value {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+}
+
+.move-details {
+  margin-bottom: 8px;
+  .tag {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-right: 4px;
+    color: #495057;
+  }
+}
+
+// .move-effects {
+//   font-size: 0.85rem;
+//   color: #555;
+//   line-height: 1.4;
+//   border-top: 1px dashed #eee;
+//   padding-top: 8px;
+
+//   .effect-text {
+//     margin: 4px 0;
+//   }
+// }
+.move-effects {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  .effect-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+
+  .effect-label {
+    flex-shrink: 0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+    min-width: 55px;
+    text-align: center;
+
+    // 상태유발: 보라색 계열
+    &.inflict {
+      background-color: #a33ea1;
+    }
+
+    // 랭크(대상): 주황색 (공격적)
+    &.target {
+      background-color: #e66d11;
+    }
+
+    // 랭크(자신): 파란색 (방어/강화)
+    &.self {
+      background-color: #2185d0;
+    }
+
+    // 비고: 회색
+    &.etc {
+      background-color: #767676;
+    }
+  }
+
+  .effect-value {
+    color: #444;
+    line-height: 1.4;
+  }
+
+  .etc-row {
+    margin-top: 4px;
+    .effect-value {
+      font-style: italic;
+      color: #666;
+    }
+  }
+}
+
+/* 기존 타입별 배경색 (변경 없음) */
+.type-normal {
+  background-color: #a8a77a;
+}
+
+.type-fire {
+  background-color: #ee8130;
+}
+
+.type-water {
+  background-color: #6390f0;
+}
+
+.type-grass {
+  background-color: #7ac74c;
+}
+
+.type-electric {
+  background-color: #f7d02c;
+}
+
+.type-ice {
+  background-color: #96d9d6;
+}
+
+.type-fighting {
+  background-color: #c22e28;
+}
+
+.type-poison {
+  background-color: #a33ea1;
+}
+
+.type-ground {
+  background-color: #e2bf65;
+}
+
+.type-flying {
+  background-color: #a98ff3;
+}
+
+.type-psychic {
+  background-color: #f95587;
+}
+
+.type-bug {
+  background-color: #a6b91a;
+}
+
+.type-rock {
+  background-color: #b6a136;
+}
+
+.type-ghost {
+  background-color: #735797;
+}
+
+.type-dragon {
+  background-color: #6f35fc;
+}
+
+.type-steel {
+  background-color: #b7b7ce;
+}
+
+.type-dark {
+  background-color: #705746;
+}
+
+.type-fairy {
+  background-color: #d685ad;
+}
