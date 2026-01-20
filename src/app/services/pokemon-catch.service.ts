@@ -22,9 +22,14 @@ export class PokemonCatchService extends Dexie {
       .stores({
         gotcha: 'id',
         another_red_gotcha: 'id',
+        alternative_gotcha: 'id',
       })
       .upgrade(async (tx) => {
-        const storeNames = ['gotcha', 'another_red_gotcha'];
+        const storeNames = [
+          'gotcha',
+          'another_red_gotcha',
+          'alternative_gotcha',
+        ];
 
         for (const storeName of storeNames) {
           const oldGotchaData = await tx.table(storeName).toArray();

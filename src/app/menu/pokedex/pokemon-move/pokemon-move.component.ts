@@ -21,7 +21,7 @@ export class PokemonMoveComponent implements OnInit {
   @Input() pokemonKeyname!: string;
 
   moves?: PokemonMoves;
-  isRootDrawerOpen = false;
+  isRootDrawerOpen = true;
   isDrawerOpen = {
     learn: false,
     tm: false,

@@ -21,9 +21,14 @@ export class ItemService extends Dexie {
       .stores({
         takenItems: '[locationIndex+itemIndex]',
         another_red_takenItems: '[locationIndex+itemIndex]',
+        alternative_takenItems: '[locationIndex+itemIndex]',
       })
       .upgrade(async (tx) => {
-        const storeNames = ['takenItems', 'another_red_takenItems'];
+        const storeNames = [
+          'takenItems',
+          'another_red_takenItems',
+          'alternative_takenItems',
+        ];
 
         for (const storeName of storeNames) {
           const oldGotchaData = await tx.table(storeName).toArray();

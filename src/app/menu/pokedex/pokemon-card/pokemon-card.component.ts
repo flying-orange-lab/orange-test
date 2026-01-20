@@ -180,9 +180,10 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
 
   openModal() {
     this.dialog.open(PokemonModalComponent, {
-      width: '100vw',
-      height: '100vh',
-      maxWidth: '100vw',
+      width: '96vw',
+      height: '96vh',
+      maxWidth: '840px',
+      backdropClass: 'blur-backdrop',
       panelClass: 'no-padding-dialog', // 전역 CSS에서 여백 제거용
       data: {
         'currentMoveKeyName': this.currentMoveKeyName,

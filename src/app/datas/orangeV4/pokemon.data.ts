@@ -449,7 +449,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'koreanName': '삐삐',
     'imageUrl': '35.png',
     'types': ['fairy', 'normal'],
-    'abilities': ['프렌드가드', ' 매직가드', '천진'],
+    'abilities': ['프렌드가드', '매직가드', '천진'],
     'stats': [70, 45, 48, 60, 65, 35, 323],
     'statsOrigin': [70, 45, 48, 60, 65, 35, 323],
     'evolutionCondition': '삐 (친밀도 220 이상 레벨업)',
@@ -462,7 +462,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'koreanName': '픽시',
     'imageUrl': '36.png',
     'types': ['fairy', 'normal'],
-    'abilities': ['중력장', ' 매직가드', '천진'],
+    'abilities': ['중력장', '매직가드', '천진'],
     'stats': [95, 80, 73, 95, 90, 60, 493],
     'statsOrigin': [95, 70, 73, 95, 90, 60, 483],
     'evolutionCondition': '삐삐 (달의돌 사용)',
@@ -479,7 +479,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [38, 41, 40, 50, 65, 65, 299],
     'statsOrigin': [38, 41, 40, 50, 65, 65, 299],
     'evolutionCondition': '',
-    'wildItems': '복분열매 ',
+    'wildItems': '복분열매',
     'extra': '',
   },
   {
@@ -492,7 +492,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [73, 67, 75, 86, 100, 109, 510],
     'statsOrigin': [73, 67, 75, 91, 100, 109, 515],
     'evolutionCondition': '식스테일 (불꽃의돌 사용)',
-    'wildItems': '복분열매 ',
+    'wildItems': '복분열매',
     'extra': '',
   },
   {
@@ -1610,7 +1610,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [75, 43, 65, 125, 96, 96, 500],
     'statsOrigin': [75, 43, 65, 125, 96, 96, 500],
     'evolutionCondition': '뽀뽀라 (레벨 29)',
-    'wildItems': '배리열매 ',
+    'wildItems': '배리열매',
     'extra': '',
   },
   {
@@ -3131,7 +3131,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [95, 100, 105, 40, 70, 105, 515],
     'statsOrigin': [95, 100, 105, 40, 70, 105, 515],
     'evolutionCondition': '',
-    'wildItems': '튼튼밀크 ',
+    'wildItems': '튼튼밀크',
     'extra': '',
   },
   {
@@ -3144,7 +3144,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [255, 10, 10, 75, 135, 55, 540],
     'statsOrigin': [255, 10, 10, 75, 135, 55, 540],
     'evolutionCondition': '럭키 (친밀도 220 이상 레벨 업)',
-    'wildItems': '행복의알 ',
+    'wildItems': '행복의알',
     'extra': '',
   },
   {
@@ -4184,7 +4184,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [60, 60, 40, 65, 45, 35, 305],
     'statsOrigin': [60, 60, 40, 65, 45, 35, 305],
     'evolutionCondition': '',
-    'wildItems': '복분열매 ',
+    'wildItems': '복분열매',
     'extra': '',
   },
   {
@@ -4197,7 +4197,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [95, 70, 95, 120, 70, 45, 495],
     'statsOrigin': [95, 70, 95, 120, 70, 45, 495],
     'evolutionCondition': '둔타 (레벨 33)',
-    'wildItems': '복분열매 ',
+    'wildItems': '복분열매',
     'extra': '',
   },
   {
