@@ -1,10 +1,81 @@
+@import "_base-section.less";
+
 .move-detail-container {
 }
+
+.search-section {
+  &:extend(.base-section);
+  padding: 25px;
+
+  h2 {
+    &:extend(.base-section-h2);
+  }
+  .search-controls {
+    &:extend(.base-section-search-control);
+
+    input#pokemon-search {
+      &:extend(.base-section-search-input);
+      max-width: 400px;
+    }
+    input#pokemon-search:focus {
+      &:extend(.base-section-search-input:focus);
+    }
+
+    #searchButton {
+      padding: 12px 25px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #searchButton:hover {
+      background-color: #0056b3;
+    }
+  }
+  .filter-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .filter-label {
+      font-weight: bold;
+      margin-right: 5px;
+      color: #555;
+    }
+
+    .filter-group label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .filter-group input[type="checkbox"] {
+      cursor: pointer;
+    }
+  }
+}
+
 .move-list-container {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  padding: 16px;
+  padding: 0 0 16px;
 }
 
 .move-card {

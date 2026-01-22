@@ -1,5 +1,54 @@
 <div class="move-detail-container">
-  <section class="filter-section"></section>
+  <section class="search-section">
+    <h2>기술 검색</h2>
+    <div class="search-controls">
+      <input
+        type="text"
+        id="pokemon-search"
+        placeholder="기술명을 검색하세요"
+        [(ngModel)]="moveSearchInput"
+        (keyup.enter)="onSearchButtonClick()"
+        autocomplete="off"
+      />
+      <button id="searchButton" (click)="onSearchButtonClick()">검색</button>
+    </div>
+
+    <div class="filter-controls">
+      <div class="filter-group">
+        <span class="filter-label">접촉 여부:</span>
+        <label>
+          <input
+            type="checkbox"
+            [checked]="isFilterActive('contact', '접촉')"
+            (change)="toggleFilter('contact', '접촉')"
+          />
+          접촉
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            [checked]="isFilterActive('contact', '비접촉')"
+            (change)="toggleFilter('contact', '비접촉')"
+          />
+          비접촉
+        </label>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">분류:</span>
+        @for (cat of categoryList; track cat) {
+          <label>
+            <input
+              type="checkbox"
+              [checked]="isFilterActive('category', cat)"
+              (change)="toggleFilter('category', cat)"
+            />
+            {{ cat }}
+          </label>
+        }
+      </div>
+    </div>
+  </section>
   <div class="move-list-container">
     @for (moveDetail of searchResults; track moveDetail.id) {
       <div class="move-card" [class]="moveDetail.type.toLowerCase()">
@@ -41,6 +90,8 @@
           }
           @if (moveDetail.makeContact) {
             <span class="tag contact">접촉</span>
+          } @else {
+            <span class="tag contact">비접촉</span>
           }
           @if (moveDetail.targeting) {
             <span class="tag target">{{ moveDetail.targeting }}</span>
