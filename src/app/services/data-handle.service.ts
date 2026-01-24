@@ -19,6 +19,7 @@ import { POKEMON_DATA_V4 } from '../datas/orangeV4/pokemon.data';
 import { ABILITY_DATA_V4 } from '../datas/orangeV4/ability.data';
 import { POKEMON_WILDS_V4 } from '../datas/orangeV4/wilds.data';
 import { POKEMON_MOVE_DETAIL_V4 } from '../datas/orangeV4/move-detail.data';
+import { POKEMON_HOLLOW_V4 } from '../datas/orangeV4/hollow.data';
 
 @Injectable({
   providedIn: 'root',
@@ -134,6 +135,14 @@ export class DataHandleService {
     switch (this.gameVersionSubject.value) {
       case 'alternative':
         return POKEMON_MOVE_DETAIL_V4;
+    }
+    return [];
+  }
+
+  get hiddenHollowDatas() {
+    switch (this.gameVersionSubject.value) {
+      case 'alternative':
+        return POKEMON_HOLLOW_V4;
     }
     return [];
   }

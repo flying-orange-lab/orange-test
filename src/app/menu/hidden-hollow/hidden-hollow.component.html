@@ -1,0 +1,35 @@
+<section class="hollow-section">
+  <div class="hollow-container">
+    @for (hollowData of hollowDatas; track $index) {
+      <div class="location-section">
+        <div class="location-header">
+          <h2>{{ hollowData.locationName }}</h2>
+          @if (hollowData.description) {
+            <h2>{{ hollowData.description }}</h2>
+          }
+        </div>
+
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>출현율</th>
+                <th>포켓몬</th>
+                <th>특성 (숨겨진 특성)</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (group of hollowData.groups; track group.pokemonName) {
+                <tr>
+                  <td>{{ group.rateType }}</td>
+                  <td>{{ group.pokemonName }}</td>
+                  <td>{{ group.ability }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    }
+  </div>
+</section>
