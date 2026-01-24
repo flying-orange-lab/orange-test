@@ -10,6 +10,7 @@ import { MoveDetailComponent } from './menu/move-detail/move-detail.component';
 import { HiddenHollowComponent } from './menu/hidden-hollow/hidden-hollow.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/alternative', pathMatch: 'full' },
   { path: ':gameVersion', component: HomeComponent, data: { title: '홈' } },
   {
     path: ':gameVersion/pokedex',
