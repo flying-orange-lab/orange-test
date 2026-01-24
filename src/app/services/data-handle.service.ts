@@ -20,6 +20,8 @@ import { ABILITY_DATA_V4 } from '../datas/orangeV4/ability.data';
 import { POKEMON_WILDS_V4 } from '../datas/orangeV4/wilds.data';
 import { POKEMON_MOVE_DETAIL_V4 } from '../datas/orangeV4/move-detail.data';
 import { POKEMON_HOLLOW_V4 } from '../datas/orangeV4/hollow.data';
+import { ITEM_DATA_V4 } from '../datas/orangeV4/item.data';
+import { MART_DATA_V4 } from '../datas/orangeV4/mart.data';
 
 @Injectable({
   providedIn: 'root',
@@ -94,6 +96,8 @@ export class DataHandleService {
         return ITEM_DATA_V3;
       case 'another_red':
         return ITEM_DATA_ANOTHER_RED;
+      case 'alternative':
+        return ITEM_DATA_V4;
     }
 
     return [];
@@ -115,6 +119,8 @@ export class DataHandleService {
         return MART_DATA_V3;
       case 'another_red':
         return MART_DATA_ANOTHER_RED;
+      case 'alternative':
+        return MART_DATA_V4;
     }
     return [];
   }
