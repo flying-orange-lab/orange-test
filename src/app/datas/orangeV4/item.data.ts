@@ -36,6 +36,7 @@ export const ITEM_DATA_V4: PokeItem[] = [
       'TM47 로킥',
       'TM59 괴전파',
       'TM94 바위깨기',
+      'HM01 풀베기',
     ],
   },
   {
@@ -54,14 +55,15 @@ export const ITEM_DATA_V4: PokeItem[] = [
       'TM08 벌크업 (파도타기 필요)',
       'TM19 개척하기',
       'TM84 독찌르기',
+      'HM04 괴력',
     ],
   },
   {
     'location': '고대샛길',
     'itemList': [
       'TM39 암석봉인 (구름하수도 방면)',
-      'TM52 기합구슬 (PWT 방면, 파도타기 필요)',
-      'TM85 치근거리기 (PWT 방면, 괴력 필요)',
+      'TM52 기합구슬 (PWT 방면)',
+      'TM85 치근거리기 (PWT 방면)',
     ],
   },
   {
@@ -78,11 +80,11 @@ export const ITEM_DATA_V4: PokeItem[] = [
   },
   {
     'location': '뇌문시티',
-    'itemList': ['TM49 사이코노이즈 (뮤지컬)', 'TM72 볼트체인지'],
+    'itemList': ['TM49 사이코노이즈 (뮤지컬홀)', 'TM72 볼트체인지'],
   },
   {
     'location': '16번도로',
-    'itemList': ['TM66 파워젬'],
+    'itemList': ['TM66 파워젬 (괴력 필요)'],
   },
   {
     'location': '미혹의 숲',
@@ -90,7 +92,7 @@ export const ITEM_DATA_V4: PokeItem[] = [
   },
   {
     'location': '5번도로',
-    'itemList': ['TM43 니트로차지'],
+    'itemList': ['TM43 니트로차지', 'HM02 귀환'],
   },
   {
     'location': '물풍경도개교',
@@ -106,7 +108,7 @@ export const ITEM_DATA_V4: PokeItem[] = [
   },
   {
     'location': '6번도로',
-    'itemList': ['TM20 진공파 (파도타기 필요)'],
+    'itemList': ['TM20 진공파 (파도타기 필요)', 'HM03 파도타기'],
   },
   {
     'location': '전기돌동굴',
@@ -118,7 +120,7 @@ export const ITEM_DATA_V4: PokeItem[] = [
   },
   {
     'location': '궐수의 동굴',
-    'itemList': ['TM80 스톤샤워 (파도타기 필요)'],
+    'itemList': ['TM80 스톤샤워'],
   },
   {
     'location': '궐수시티',
@@ -150,7 +152,7 @@ export const ITEM_DATA_V4: PokeItem[] = [
   },
   {
     'location': '물결마을',
-    'itemList': ['TM55 열탕'],
+    'itemList': ['TM55 열탕', 'HM05 폭포오르기'],
   },
   {
     'location': '물결만',
@@ -219,7 +221,7 @@ export const ITEM_DATA_V4: PokeItem[] = [
   },
   {
     'location': '해변동혈',
-    'itemList': ['TM06 맹독'],
+    'itemList': ['TM06 맹독 (파도타기, 괴력 필요)'],
   },
   {
     'location': '자이언트홀',
@@ -227,11 +229,16 @@ export const ITEM_DATA_V4: PokeItem[] = [
   },
   {
     'location': '23번도로',
-    'itemList': ['TM12 도발', 'TM41 기습', 'TM50 오버히트'],
+    'itemList': ['TM12 도발', 'TM41 기습', 'TM50 오버히트 (괴력 필요)'],
   },
   {
     'location': '챔피언로드',
-    'itemList': ['TM46 파동탄', 'TM58 폭풍', 'TM71 스톤에지 (파도타기 필요)'],
+    'itemList': [
+      'TM46 파동탄',
+      'TM58 폭풍',
+      'TM71 스톤에지 (파도타기 필요)',
+      'HM06 다이빙',
+    ],
   },
   {
     'location': '스카이애로 브리지',

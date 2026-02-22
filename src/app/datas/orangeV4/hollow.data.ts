@@ -1001,8 +1001,8 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '간혹',
-        'pokemonName': '암팰리스',
-        'ability': '깨어진갑옷',
+        'pokemonName': '잉어킹',
+        'ability': '주눅',
       },
       {
         'rateType': '가끔',

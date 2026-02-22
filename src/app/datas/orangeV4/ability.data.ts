@@ -356,16 +356,15 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   },
   {
     'id': 57,
-    'name': '플러스',
-    'effect_text':
-      '아군의 특성이 플러스나 마이너스일 경우, 특수공격이 1.5배 증가한다.',
+    'name': '비행술사',
+    'effect_text': '비행타입 기술의 위력이 1.5배 증가한다.',
     'effect_wild_text': '',
   },
   {
     'id': 58,
-    'name': '마이너스',
+    'name': '빙하의힘',
     'effect_text':
-      '아군의 특성이 플러스나 마이너스일 경우, 특수공격이 1.5배 증가한다.',
+      '날씨가 싸라기눈일 때 얼음, 땅, 물 기술의 위력이 1.5배 증가한다.',
     'effect_wild_text': '',
   },
   {
@@ -445,8 +444,8 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   },
   {
     'id': 71,
-    'name': '감미로운꿀',
-    'effect_text': '아군의 명중률이 1.2배 증가한다.',
+    'name': '개미지옥',
+    'effect_text': '상대를 도망치거나 교체할 수 없게 한다.',
     'effect_wild_text': '',
   },
   {
@@ -458,9 +457,9 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   },
   {
     'id': 73,
-    'name': '하얀연기',
-    'effect_text': '상대로부터 랭크 하락을 무효화한다.',
-    'effect_wild_text': '야생 포켓몬과의 조우율이 1/2로 감소한다.',
+    'name': '감미로운꿀',
+    'effect_text': '아군의 명중률이 1.2배 증가한다.',
+    'effect_wild_text': '',
   },
   {
     'id': 74,
