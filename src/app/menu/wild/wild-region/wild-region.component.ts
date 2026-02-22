@@ -7,7 +7,7 @@ import {
   inject,
 } from '@angular/core';
 import { PokemonService } from 'src/app/services/pokemon.service';
-import { RegionData } from 'src/app/models/wilds.model';
+import { Encounter, RegionData } from 'src/app/models/wilds.model';
 import { FormControl } from '@angular/forms';
 import { HighlightPipe } from 'src/app/shared/highlight.pipe';
 
@@ -32,6 +32,14 @@ export class WildRegionComponent implements OnInit {
     if (this.regionDatas && this.regionDatas.length > 0) {
       this.selectedRegion = this.regionDatas[0];
     }
+  }
+
+  displayName(item: Encounter) {
+    let result = item.name;
+    if (item.extra) {
+      result += ` (${item.extra})`;
+    }
+    return result;
   }
 
   public toggleExpanded(): void {

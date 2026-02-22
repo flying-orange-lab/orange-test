@@ -59,13 +59,10 @@
               </td>
               <td
                 (click)="onCatchPokemon(encounter.name, true)"
-                [innerHTML]="encounter.name | highlight: searchContext.value"
-              >
-                {{ encounter.name }}
-                @if (encounter.extra) {
-                  ({{ encounter.extra }})
-                }
-              </td>
+                [innerHTML]="
+                  displayName(encounter) | highlight: searchContext.value
+                "
+              ></td>
               <td>{{ encounter.minLv }}</td>
               <td>{{ encounter.maxLv }}</td>
               <td>{{ encounter.rate }}%</td>
