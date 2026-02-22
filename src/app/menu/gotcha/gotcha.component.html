@@ -1,0 +1,53 @@
+<section class="base-section">
+  <h2 class="base-section-h2">포켓몬 정보 검색</h2>
+
+  <div class="item-container">
+    @for (cat of gotchaDatas; track cat.title) {
+      <div class="location-section">
+        <div class="location-header">
+          <h2 [innerHTML]="cat.title"></h2>
+        </div>
+
+        <div class="content-wrapper">
+          @if (cat.data.length > 0) {
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                  <th>포켓몬</th>
+                  <th>Lv.</th>
+                  <th>위치</th>
+                  <th>선행조건</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (pkm of cat.data; track $index) {
+                  <tr>
+                    <td
+                      class="pkm-name"
+                      data-label="포켓몬"
+                      [innerHTML]="pkm.name || '-'"
+                    ></td>
+                    <td class="center" data-label="Lv.">{{ pkm.level }}</td>
+                    <td
+                      data-label="위치"
+                      [innerHTML]="pkm.location || '-'"
+                    ></td>
+                    <td data-label="선행조건">{{ pkm.requirement || "-" }}</td>
+                    <td
+                      class="note-cell"
+                      data-label="비고"
+                      [innerHTML]="pkm.note || '-'"
+                    ></td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          } @else {
+            <div class="empty-msg">등록된 포켓몬 정보가 없습니다.</div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

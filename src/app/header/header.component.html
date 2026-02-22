@@ -39,6 +39,11 @@
       >
     </li>
     <li>
+      <a [routerLink]="['/', gameVersion, 'gotcha']" (click)="toggleMenu()"
+        >포켓몬 획득 정보</a
+      >
+    </li>
+    <li>
       <a [routerLink]="['/', gameVersion, 'item']" (click)="toggleMenu()"
         >아이템 정보</a
       >
@@ -58,8 +63,7 @@
         >은혈 정보</a
       >
     </li>
-    <!-- <li><a routerLink="/getcha" (click)="toggleMenu()">포켓몬 획득 정보</a></li>
-    <li><a routerLink="/legend" (click)="toggleMenu()">전설의 포켓몬</a></li>
+    <!-- <li><a routerLink="/legend" (click)="toggleMenu()">전설의 포켓몬</a></li>
     <li><a routerLink="/trainer" (click)="toggleMenu()">트레이너 정보</a></li> -->
   </ul>
 </nav>

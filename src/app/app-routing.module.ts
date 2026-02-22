@@ -8,6 +8,7 @@ import { ItemsComponent } from './menu/items/items.component';
 import { MartComponent } from './menu/mart/mart.component';
 import { MoveDetailComponent } from './menu/move-detail/move-detail.component';
 import { HiddenHollowComponent } from './menu/hidden-hollow/hidden-hollow.component';
+import { GotchaComponent } from './menu/gotcha/gotcha.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/alternative', pathMatch: 'full' },
@@ -26,6 +27,11 @@ const routes: Routes = [
     path: ':gameVersion/wild',
     component: WildComponent,
     data: { title: '서식지' },
+  },
+  {
+    path: ':gameVersion/gotcha',
+    component: GotchaComponent,
+    data: { title: '심볼·선물·교환' },
   },
   {
     path: ':gameVersion/item',
