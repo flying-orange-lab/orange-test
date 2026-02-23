@@ -31156,7 +31156,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 1,
-      'moveName': '성장',
+      'moveName': '덩굴방망이(풀)',
     },
     {
       'moveLv': 4,
@@ -31196,7 +31196,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 40,
-      'moveName': '덩굴방망이(풀)',
+      'moveName': '성장',
     },
     {
       'moveLv': 44,
@@ -39808,7 +39808,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 15,
-      'moveName': '똥고르기',
+      'moveName': '땅고르기',
     },
     {
       'moveLv': 19,
@@ -39894,7 +39894,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 15,
-      'moveName': '똥고르기',
+      'moveName': '땅고르기',
     },
     {
       'moveLv': 19,
@@ -57926,7 +57926,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 1,
-      'moveName': '성장',
+      'moveName': '덩굴방망이(불꽃)',
     },
     {
       'moveLv': 4,
@@ -57966,7 +57966,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 40,
-      'moveName': '덩굴방망이(불꽃)',
+      'moveName': '성장',
     },
     {
       'moveLv': 44,
@@ -58008,7 +58008,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 1,
-      'moveName': '성장',
+      'moveName': '덩굴방망이(물)',
     },
     {
       'moveLv': 4,
@@ -58048,7 +58048,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 40,
-      'moveName': '덩굴방망이(물)',
+      'moveName': '성장',
     },
     {
       'moveLv': 44,
@@ -58090,7 +58090,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 1,
-      'moveName': '성장',
+      'moveName': '덩굴방망이(바위)',
     },
     {
       'moveLv': 4,
@@ -58130,7 +58130,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 40,
-      'moveName': '덩굴방망이(바위)',
+      'moveName': '성장',
     },
     {
       'moveLv': 44,
@@ -71987,7 +71987,6 @@ export const POKEMON_MOVE_TM_V4: Record<string, string[]> = {
     'TM30 섀도볼',
     'TM31 깨뜨리기',
     'TM42 객기',
-    'TM44 잠자기',
     'TM45 그로우펀치',
     'TM47 로킥',
     'TM52 기합구슬',
@@ -72014,7 +72013,6 @@ export const POKEMON_MOVE_TM_V4: Record<string, string[]> = {
     'TM30 섀도볼',
     'TM31 깨뜨리기',
     'TM42 객기',
-    'TM44 잠자기',
     'TM45 그로우펀치',
     'TM47 로킥',
     'TM52 기합구슬',

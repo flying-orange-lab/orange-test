@@ -479,7 +479,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [38, 41, 40, 50, 65, 65, 299],
     'statsOrigin': [38, 41, 40, 50, 65, 65, 299],
     'evolutionCondition': '',
-    'wildItems': '복분열매',
+    'wildItems': '복분열매 ',
     'extra': '',
   },
   {
@@ -492,7 +492,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [73, 67, 75, 86, 100, 109, 510],
     'statsOrigin': [73, 67, 75, 91, 100, 109, 515],
     'evolutionCondition': '식스테일 (불꽃의돌 사용)',
-    'wildItems': '복분열매',
+    'wildItems': '복분열매 ',
     'extra': '',
   },
   {
@@ -1610,7 +1610,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [75, 43, 65, 125, 96, 96, 500],
     'statsOrigin': [75, 43, 65, 125, 96, 96, 500],
     'evolutionCondition': '뽀뽀라 (레벨 29)',
-    'wildItems': '배리열매',
+    'wildItems': '배리열매 ',
     'extra': '',
   },
   {
@@ -3131,7 +3131,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [95, 100, 105, 40, 70, 105, 515],
     'statsOrigin': [95, 100, 105, 40, 70, 105, 515],
     'evolutionCondition': '',
-    'wildItems': '튼튼밀크',
+    'wildItems': '튼튼밀크 ',
     'extra': '',
   },
   {
@@ -3144,7 +3144,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [255, 10, 10, 75, 135, 55, 540],
     'statsOrigin': [255, 10, 10, 75, 135, 55, 540],
     'evolutionCondition': '럭키 (친밀도 220 이상 레벨 업)',
-    'wildItems': '행복의알',
+    'wildItems': '행복의알 ',
     'extra': '',
   },
   {
@@ -4184,7 +4184,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [60, 60, 40, 65, 45, 35, 305],
     'statsOrigin': [60, 60, 40, 65, 45, 35, 305],
     'evolutionCondition': '',
-    'wildItems': '복분열매',
+    'wildItems': '복분열매 ',
     'extra': '',
   },
   {
@@ -4197,7 +4197,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'stats': [95, 70, 95, 120, 70, 45, 495],
     'statsOrigin': [95, 70, 95, 120, 70, 45, 495],
     'evolutionCondition': '둔타 (레벨 33)',
-    'wildItems': '복분열매',
+    'wildItems': '복분열매 ',
     'extra': '',
   },
   {
@@ -4565,7 +4565,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
         'statsOrigin': [80, 120, 84, 60, 96, 110, 550],
         'evolutionCondition': '',
         'wildItems': '',
-        'extra': '',
+        'extra': '시스템 한계 상\n가면 교체 불가',
       },
       {
         'formName': '화덕의가면',
@@ -5257,7 +5257,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'koreanName': '포곰곰',
     'imageUrl': '759.png',
     'types': ['normal', 'fighting'],
-    'abilities': ['두꺼운지방', '서투름', '긴장감'],
+    'abilities': ['정화의바디', '서투름', '긴장감'],
     'stats': [70, 75, 50, 45, 50, 50, 340],
     'statsOrigin': [70, 75, 50, 45, 50, 50, 340],
     'evolutionCondition': '',
@@ -5270,7 +5270,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'koreanName': '이븐곰',
     'imageUrl': '760.png',
     'types': ['normal', 'fighting'],
-    'abilities': ['두꺼운지방', '불굴의방패', '긴장감'],
+    'abilities': ['정화의바디', '불굴의방패', '긴장감'],
     'stats': [120, 125, 90, 55, 60, 60, 510],
     'statsOrigin': [120, 125, 80, 55, 60, 60, 500],
     'evolutionCondition': '포곰곰 (레벨 27)',

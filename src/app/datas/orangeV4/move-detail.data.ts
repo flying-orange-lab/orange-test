@@ -5214,6 +5214,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': false,
+    'category': '장판',
     'effects': {
       'etc': '독압정 중첩 +1(최대 2)',
     },
@@ -5958,6 +5959,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': false,
+    'category': '장판',
     'effects': {
       'etc': '스텔스록 중첩 +1(최대 1)',
     },
@@ -6334,7 +6336,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'pp': 15,
     'makeContact': false,
     'effects': {
-      'etc': '대상이 독 상태일 경우 위력 2배',
+      'etc': '대상이 독 상태일 경우 위력 2배, 기본 급소율 +1',
     },
   },
   {
