@@ -4854,6 +4854,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 15,
     'makeContact': true,
+    'category': '베기',
     'effects': {
       'etc': '압정뿌리기 중첩 +1(최대 3)',
     },
