@@ -38454,7 +38454,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 25,
-      'moveName': '더블촙',
+      'moveName': '드래곤애로',
     },
     {
       'moveLv': 25,
@@ -87245,11 +87245,11 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': [],
+      'moves': ['열풍', '순풍', '날개쉬기'],
     },
     {
       'tutorName': 'green',
-      'moves': [],
+      'moves': ['죽기살기', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -87259,7 +87259,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
   '277-0': [
     {
       'tutorName': 'red',
-      'moves': [],
+      'moves': ['드릴라이너'],
     },
     {
       'tutorName': 'blue',
@@ -87267,11 +87267,11 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': [],
+      'moves': ['열풍', '순풍', '날개쉬기'],
     },
     {
       'tutorName': 'green',
-      'moves': [],
+      'moves': ['죽기살기', '잠꼬대'],
     },
     {
       'tutorName': 'black',
