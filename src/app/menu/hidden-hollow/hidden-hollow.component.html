@@ -10,24 +10,23 @@
         </div>
 
         <div>
-          <table>
-            <thead>
-              <tr>
-                <th>출현율</th>
-                <th>포켓몬</th>
-                <th>특성 (숨겨진 특성)</th>
-              </tr>
-            </thead>
-            <tbody>
-              @for (group of hollowData.groups; track group.pokemonName) {
-                <tr>
-                  <td>{{ group.rateType }}</td>
-                  <td>{{ group.pokemonName }}</td>
-                  <td>{{ group.ability }}</td>
-                </tr>
-              }
-            </tbody>
-          </table>
+          <div class="pokemon-grid">
+            @for (group of hollowData.groups; track group.pokemonName) {
+              <div class="pokemon-card" (click)="onPokemonClick(group.pokemonName)">
+                <div class="pokemon-image-wrapper">
+                  <img [src]="getPokemonImageUrl(group.pokemonName)" [alt]="group.pokemonName" class="pokemon-image">
+                </div>
+                <div class="pokemon-info">
+                  <span class="pokemon-name">{{ group.pokemonName }}</span>
+                  <span class="pokemon-ability">{{ group.ability }}</span>
+                </div>
+                <div class="pokemon-rate-divider"></div>
+                <div class="pokemon-rate-container">
+                  <span class="pokemon-rate" [ngClass]="getBadgeClass(group.rateType)">{{ group.rateType }}</span>
+                </div>
+              </div>
+            }
+          </div>
         </div>
       </div>
     }
