@@ -317,7 +317,7 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '간혹',
-        'pokemonName': '에레키브',
+        'pokemonName': '에레키드',
         'ability': '의기양양',
       },
       {
@@ -822,7 +822,7 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
     'groups': [
       {
         'rateType': '자주',
-        'pokemonName': '슈륙챙이',
+        'pokemonName': '수륙챙이',
         'ability': '습기',
       },
       {

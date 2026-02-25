@@ -28,7 +28,7 @@ export class PokemonService {
     '루가루암',
   ];
 
-  private getBaseName(pokemonName: string): string {
+  getBaseName(pokemonName: string): string {
     // 폼 이름이 있는 포켓몬 처리
 
     for (const extraName of this.filterExtra) {
