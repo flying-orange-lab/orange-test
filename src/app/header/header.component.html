@@ -6,14 +6,29 @@
   >
     {{ getTitle() }}
   </h1>
-  <div
-    class="hamburger-button"
-    (click)="toggleMenu()"
-    [class.active]="isMenuOpen"
-  >
-    <span class="line"></span>
-    <span class="line"></span>
-    <span class="line"></span>
+  <div class="header-button">
+    <div class="mode-switch">
+      <input
+        type="checkbox"
+        id="mode-toggle"
+        [(ngModel)]="isPopMode"
+        (change)="onPopToggle()"
+      />
+      <label for="mode-toggle" class="switch-label">
+        <span class="on-text">POP</span>
+        <span class="off-text">OFF</span>
+        <span class="ball"></span>
+      </label>
+    </div>
+    <div
+      class="hamburger-button"
+      (click)="toggleMenu()"
+      [class.active]="isMenuOpen"
+    >
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
   </div>
 </header>
 

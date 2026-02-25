@@ -29,8 +29,6 @@ export class PokedexComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
 
-  pokemonUseSprite = false;
-
   pokemonSearchInput = '';
   pokemonSearchOffset = 1;
   pokemonSearchAttr?: string;
@@ -49,8 +47,6 @@ export class PokedexComponent implements OnInit {
       this.isHelperOpen = isOpened;
     });
 
-    this.pokemonUseSprite =
-      this.dataHandleService.getGameVersion() == 'orange_v3';
     // 페이지 로딩 시 모든 포켓몬 데이터 가져옴
     this.pokemonService.getAllPokemon().subscribe((data) => {
       this.allPokemon = data;
