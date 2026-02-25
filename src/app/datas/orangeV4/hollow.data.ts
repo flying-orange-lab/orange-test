@@ -167,6 +167,12 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
         'pokemonName': '이상해씨',
         'ability': '심록',
       },
+    ],
+  },
+  {
+    'locationName': '6번도로',
+    'description': '(궐수의동굴 입구)',
+    'groups': [
       {
         'rateType': '자주',
         'pokemonName': '뿔카노',
@@ -370,6 +376,12 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
         'pokemonName': '나몰빼미',
         'ability': '심록',
       },
+    ],
+  },
+  {
+    'locationName': '풍요의사당',
+    'description': '(사당 오른쪽 파도타기)',
+    'groups': [
       {
         'rateType': '자주',
         'pokemonName': '치릴리',
@@ -465,56 +477,6 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
         'rateType': '가끔',
         'pokemonName': '불꽃숭이',
         'ability': '맹화',
-      },
-      {
-        'rateType': '자주',
-        'pokemonName': '투구',
-        'ability': '깨어진갑옷',
-      },
-      {
-        'rateType': '자주',
-        'pokemonName': '암나이트',
-        'ability': '깨어진갑옷',
-      },
-      {
-        'rateType': '자주',
-        'pokemonName': '프로토가',
-        'ability': '쓱쓱',
-      },
-      {
-        'rateType': '자주',
-        'pokemonName': '아켄',
-        'ability': '도주',
-      },
-      {
-        'rateType': '간혹',
-        'pokemonName': '파치래곤',
-        'ability': '축전',
-      },
-      {
-        'rateType': '간혹',
-        'pokemonName': '파치르돈',
-        'ability': '축전',
-      },
-      {
-        'rateType': '간혹',
-        'pokemonName': '어래곤',
-        'ability': '저수',
-      },
-      {
-        'rateType': '간혹',
-        'pokemonName': '어치르돈',
-        'ability': '저수',
-      },
-      {
-        'rateType': '가끔',
-        'pokemonName': '꼬부기',
-        'ability': '급류',
-      },
-      {
-        'rateType': '가끔',
-        'pokemonName': '누리공',
-        'ability': '급류',
       },
     ],
   },
@@ -687,6 +649,62 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
     ],
   },
   {
+    'locationName': '13번도로',
+    'description': '(자이언트홀 골목길)',
+    'groups': [
+      {
+        'rateType': '자주',
+        'pokemonName': '투구',
+        'ability': '깨어진갑옷',
+      },
+      {
+        'rateType': '자주',
+        'pokemonName': '암나이트',
+        'ability': '깨어진갑옷',
+      },
+      {
+        'rateType': '자주',
+        'pokemonName': '프로토가',
+        'ability': '쓱쓱',
+      },
+      {
+        'rateType': '자주',
+        'pokemonName': '아켄',
+        'ability': '도주',
+      },
+      {
+        'rateType': '간혹',
+        'pokemonName': '파치래곤',
+        'ability': '축전',
+      },
+      {
+        'rateType': '간혹',
+        'pokemonName': '파치르돈',
+        'ability': '축전',
+      },
+      {
+        'rateType': '간혹',
+        'pokemonName': '어래곤',
+        'ability': '저수',
+      },
+      {
+        'rateType': '간혹',
+        'pokemonName': '어치르돈',
+        'ability': '저수',
+      },
+      {
+        'rateType': '가끔',
+        'pokemonName': '꼬부기',
+        'ability': '급류',
+      },
+      {
+        'rateType': '가끔',
+        'pokemonName': '누리공',
+        'ability': '급류',
+      },
+    ],
+  },
+  {
     'locationName': '23번도로',
     'description': '',
     'groups': [
@@ -796,6 +814,12 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
         'pokemonName': '펜드라',
         'ability': '벌레의알림',
       },
+    ],
+  },
+  {
+    'locationName': '바람개비숲',
+    'description': '(외부)',
+    'groups': [
       {
         'rateType': '자주',
         'pokemonName': '슈륙챙이',
@@ -882,6 +906,12 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
         'pokemonName': '윈디',
         'ability': '타오르는불꽃',
       },
+    ],
+  },
+  {
+    'locationName': '3번도로',
+    'description': '(파도타기 한 후 북쪽)',
+    'groups': [
       {
         'rateType': '자주',
         'pokemonName': '보송송',
