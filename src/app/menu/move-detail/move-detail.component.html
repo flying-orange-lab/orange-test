@@ -15,37 +15,53 @@
 
     <div class="filter-controls">
       <div class="filter-group">
-        <span class="filter-label">접촉 여부:</span>
-        <label>
-          <input
-            type="checkbox"
-            [checked]="isFilterActive('contact', '접촉')"
-            (change)="toggleFilter('contact', '접촉')"
-          />
-          접촉
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            [checked]="isFilterActive('contact', '비접촉')"
-            (change)="toggleFilter('contact', '비접촉')"
-          />
-          비접촉
-        </label>
+        <span class="filter-label">접촉 여부</span>
+        <div class="chip-container">
+          <label
+            class="filter-chip"
+            [class.active]="isFilterActive('contact', '접촉')"
+          >
+            <input
+              type="checkbox"
+              [checked]="isFilterActive('contact', '접촉')"
+              (change)="toggleFilter('contact', '접촉')"
+              class="hidden-checkbox"
+            />
+            <span>접촉</span>
+          </label>
+          <label
+            class="filter-chip"
+            [class.active]="isFilterActive('contact', '비접촉')"
+          >
+            <input
+              type="checkbox"
+              [checked]="isFilterActive('contact', '비접촉')"
+              (change)="toggleFilter('contact', '비접촉')"
+              class="hidden-checkbox"
+            />
+            <span>비접촉</span>
+          </label>
+        </div>
       </div>
 
       <div class="filter-group">
-        <span class="filter-label">분류:</span>
-        @for (cat of categoryList; track cat) {
-          <label>
-            <input
-              type="checkbox"
-              [checked]="isFilterActive('category', cat)"
-              (change)="toggleFilter('category', cat)"
-            />
-            {{ cat }}
-          </label>
-        }
+        <span class="filter-label">분류</span>
+        <div class="chip-container">
+          @for (cat of categoryList; track cat) {
+            <label
+              class="filter-chip"
+              [class.active]="isFilterActive('category', cat)"
+            >
+              <input
+                type="checkbox"
+                [checked]="isFilterActive('category', cat)"
+                (change)="toggleFilter('category', cat)"
+                class="hidden-checkbox"
+              />
+              <span>{{ cat }}</span>
+            </label>
+          }
+        </div>
       </div>
     </div>
   </section>
@@ -86,7 +102,9 @@
 
         <div class="move-details">
           @if (moveDetail.category) {
-            <span class="tag">#{{ moveDetail.category }}</span>
+            @for (cat of moveDetail.category; track cat) {
+              <span class="tag">#{{ cat }}</span>
+            }
           }
           @if (moveDetail.makeContact) {
             <span class="tag contact">접촉</span>

@@ -17,7 +17,17 @@ export class MoveDetailComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
 
-  categoryList = ['파동', '장판', '베기', '소리', '펀치', '흡수', '턱', '킥'];
+  categoryList = [
+    '파동',
+    '장판',
+    '베기',
+    '소리',
+    '펀치',
+    '반동',
+    '흡수',
+    '턱',
+    '킥',
+  ];
   noResultsMessage = '';
 
   moveSearchInput = '';

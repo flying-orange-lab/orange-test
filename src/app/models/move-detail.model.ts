@@ -7,7 +7,7 @@ export interface MoveDetail {
   accuracy: string;
   pp: number;
   makeContact: boolean;
-  category?: string; // 분류: 소리, 킥, 펀치 등등
+  category?: string[]; // 분류: 소리, 킥, 펀치 등등
   targeting?: string;
   effects: MoveEffect;
 }
