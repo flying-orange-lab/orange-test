@@ -9,6 +9,8 @@ import { DefenseComponent } from '../defense/defense.component';
 import { WindowSizeService } from 'src/app/services/window-size.service';
 import { PokedexGuideComponent } from './pokedex-guide/pokedex-guide.component';
 import { HelperService } from 'src/app/services/helper.service';
+import { TYPE_DISPLAY_DATA, TYPE_LABEL } from 'src/app/datas/type.data';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-pokedex',
@@ -19,6 +21,7 @@ import { HelperService } from 'src/app/services/helper.service';
     PokemonCardComponent,
     DefenseComponent,
     PokedexGuideComponent,
+    NgClass,
   ],
 })
 export class PokedexComponent implements OnInit {
@@ -32,6 +35,10 @@ export class PokedexComponent implements OnInit {
   pokemonSearchInput = '';
   pokemonSearchOffset = 1;
   pokemonSearchAttr?: string;
+
+  selectedType: string | null = null;
+  typeLabels = TYPE_LABEL;
+  typeDisplay = TYPE_DISPLAY_DATA;
 
   private allPokemon: Pokemon[] = [];
   searchResults: Pokemon[] = [];
@@ -71,6 +78,13 @@ export class PokedexComponent implements OnInit {
         } else {
           this.pokemonSearchAttr = '';
         }
+
+        if (params['type']) {
+          this.selectedType = params['type'];
+        } else {
+          this.selectedType = null;
+        }
+
         this.performSearch();
       });
     });
@@ -89,15 +103,34 @@ export class PokedexComponent implements OnInit {
       this.router.navigate([], {
         relativeTo: this.route,
         queryParams: { gte: this.pokemonSearchOffset }, // 페이지 번호 쿼리 파라미터 추가
-        // queryParamsHandling: 'merge', // 기존 파라미터(search) 유지
+        queryParamsHandling: 'merge',
       });
     } else {
       this.pokemonSearchOffset = 1;
       this.router.navigate([], {
         relativeTo: this.route, // 현재 라우트를 기준으로
         queryParams: { search: this.pokemonSearchInput },
+        queryParamsHandling: 'merge',
       });
     }
+  }
+
+  onTypeFilterClick(typeKey: string): void {
+    if (this.selectedType === typeKey) {
+      this.selectedType = null;
+    } else {
+      this.selectedType = typeKey;
+    }
+
+    this.pokemonSearchOffset = 1;
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {
+        type: this.selectedType,
+        gte: 1, // 필터가 바뀌면 1페이지로
+      },
+      queryParamsHandling: 'merge',
+    });
   }
 
   onPageButtonClick(status: boolean): void {
@@ -153,6 +186,12 @@ export class PokedexComponent implements OnInit {
 
     // 이름 또는 한국어 이름으로 필터링합니다.
     const filtered = this.allPokemon.filter((pokemon) => {
+      if (this.selectedType) {
+        if (!pokemon.types || !pokemon.types.includes(this.selectedType)) {
+          return false;
+        }
+      }
+
       if (this.pokemonSearchAttr) {
         if (this.pokemonSearchAttr === 'form' && !pokemon.form) {
           return false;

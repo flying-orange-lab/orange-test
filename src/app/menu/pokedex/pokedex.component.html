@@ -13,6 +13,19 @@
       <button id="searchButton" (click)="onSearchButtonClick()">검색</button>
     </div>
 
+    <div class="type-filter-grid">
+      @for (typeKey of typeLabels; track typeKey) {
+        <button
+          class="type-button"
+          [class.selected]="selectedType === typeKey"
+          [ngClass]="'type-' + typeKey"
+          (click)="onTypeFilterClick(typeKey)"
+        >
+          {{ typeDisplay[typeKey] }}
+        </button>
+      }
+    </div>
+
     @if (noResultsMessage) {
       <p id="noResultsMessage">{{ noResultsMessage }}</p>
     }
