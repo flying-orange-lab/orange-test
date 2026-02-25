@@ -21,7 +21,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'targeting': '아군 포함 광역',
     'effects': {},
   },
@@ -34,7 +34,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'inflict': '30% 풀죽음',
       'changeStatusTarget': '50% 방어 -1',
@@ -50,7 +50,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 20,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'changeStatusMe': '공격 +1',
     },
@@ -88,7 +88,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'inflict': '10% 화상',
     },
@@ -102,7 +102,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'inflict': '10% 얼음',
     },
@@ -116,7 +116,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'inflict': '10% 마비',
     },
@@ -130,7 +130,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 35,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {},
   },
   {
@@ -195,7 +195,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 20,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {},
   },
   {
@@ -294,7 +294,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 20,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'inflict': '30% 풀죽음',
       'etc': '작아지기를 사용한 대상에게 데미지 2배 및 필중',
@@ -309,7 +309,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 30,
     'makeContact': false,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'etc': '2회 공격',
     },
@@ -334,7 +334,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 10,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥', '반동'],
     'effects': {
       'etc': '빗나갈 시 자신 최대 HP의 1/2 반동 데미지',
     },
@@ -348,6 +348,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': true,
+    'category': ['펀치'],
     'effects': {
       'changeStatusMe': '방어/특방 -1',
     },
@@ -387,7 +388,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'targeting': '아군 제외 광역',
     'effects': {
       'changeStatusMe': '방어 -1',
@@ -402,7 +403,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '베기/흡수',
+    'category': ['베기', '흡수'],
     'effects': {
       'etc': '입힌 데미지의 1/2 회복',
     },
@@ -416,7 +417,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'targeting': '아군 포함 광역',
     'effects': {},
   },
@@ -466,6 +467,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 20,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'etc': '입힌 데미지의 1/4 반동 데미지',
     },
@@ -493,6 +495,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'etc': '입힌 데미지의 1/4 반동 데미지',
     },
@@ -571,7 +574,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 25,
     'makeContact': true,
-    'category': '턱',
+    'category': ['턱'],
     'effects': {
       'inflict': '30% 풀죽음',
     },
@@ -585,7 +588,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 40,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'changeStatusTarget': '공격 -1',
     },
@@ -599,7 +602,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'etc': '우선도 -6, 대상 강제 교체',
     },
@@ -613,7 +616,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '60',
     'pp': 15,
     'makeContact': true,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'inflict': '잠듦',
     },
@@ -874,7 +877,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 20,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'etc': '대상의 몸무게에 따라 20~120의 위력',
     },
@@ -927,7 +930,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 25,
     'makeContact': false,
-    'category': '흡수',
+    'category': ['흡수'],
     'effects': {
       'etc': '입힌 데미지의 1/2 회복',
     },
@@ -941,7 +944,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': false,
-    'category': '흡수',
+    'category': ['흡수'],
     'effects': {
       'etc': '입힌 데미지의 1/2 회복',
     },
@@ -982,7 +985,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 25,
     'makeContact': false,
-    'category': '베기',
+    'category': ['베기'],
     'targeting': '아군 제외 광역',
     'effects': {
       'etc': '기본 급소율 +1',
@@ -1154,7 +1157,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '흡수',
+    'category': ['흡수'],
     'effects': {
       'etc': '입힌 데미지의 1/2 회복',
     },
@@ -1300,7 +1303,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'etc': '우선도 +1, 사용한 턴에 공격받을 시 공격 +1',
     },
@@ -1354,7 +1357,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '85',
     'pp': 40,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'changeStatusTarget': '방어 -2',
     },
@@ -1654,7 +1657,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 20,
     'makeContact': false,
-    'category': '흡수',
+    'category': ['흡수'],
     'targeting': '아군 포함 광역',
     'effects': {
       'etc': '입힌 데미지의 1/2 회복',
@@ -1695,7 +1698,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '충전기, 날씨가 쾌청일 때 즉발',
     },
@@ -1788,7 +1791,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 10,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'changeStatusTarget': '50% 공격 -1',
     },
@@ -1802,7 +1805,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 10,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥', '반동'],
     'effects': {
       'etc': '빗나갈 시 자신 최대 HP의 1/2 반동 데미지',
     },
@@ -1829,7 +1832,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': false,
-    'category': '흡수',
+    'category': ['흡수'],
     'effects': {
       'etc': '대상이 잠들어야 사용 가능, 입힌 데미지의 1/2 회복',
     },
@@ -1857,7 +1860,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'changeStatusTarget': '공격 -1',
     },
@@ -1871,7 +1874,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '흡수',
+    'category': ['흡수'],
     'effects': {
       'etc': '입힌 데미지의 1/2 회복',
     },
@@ -1978,7 +1981,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 10,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥', '반동'],
     'effects': {
       'inflict': '30% 혼란',
       'etc': '빗나갈 시 자신 최대 HP의 1/2 반동 데미지',
@@ -2021,7 +2024,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 10,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'changeStatusTarget': '10% 방어 -1',
       'etc': '기본 급소율 +1',
@@ -2050,7 +2053,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '80',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '2~5회 공격',
     },
@@ -2168,7 +2171,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 20,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '기본 급소율 +1',
     },
@@ -2196,6 +2199,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 0,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'etc': '자신 최대 HP 1/4의 반동 데미지',
     },
@@ -2248,7 +2252,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 10,
     'makeContact': false,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '2회 공격',
     },
@@ -2302,6 +2306,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 10,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'etc': '빗나갈 시 자신 최대 HP의 1/2 반동 데미지',
     },
@@ -2394,7 +2399,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'changeStatusTarget': '공격/특공 -1',
       'etc': '사용 후 교대 포켓몬과 교체',
@@ -2436,7 +2441,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 30,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'etc': '우선도 +1',
     },
@@ -2474,7 +2479,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '흡수',
+    'category': ['흡수'],
     'effects': {
       'etc': '입힌 데미지의 3/4 회복',
     },
@@ -2543,7 +2548,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': false,
-    'category': '장판',
+    'category': ['장판'],
     'effects': {
       'etc': '압정뿌리기 중첩 +1 (최대 3)',
     },
@@ -2597,7 +2602,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '-',
     'pp': 5,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'targeting': '전체',
     'effects': {
       'etc': '영향을 받은 모든 대상을 3턴 뒤에 기절시킴',
@@ -2695,7 +2700,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '흡수',
+    'category': ['흡수'],
     'effects': {
       'etc': '입힌 데미지의 1/2 회복',
     },
@@ -2749,7 +2754,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 30,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '반드시 대상의 HP를 1 남김',
     },
@@ -2803,7 +2808,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 20,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '연속으로 명중 시 위력 2배 (최대 160)',
     },
@@ -2830,7 +2835,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'changeStatusMe': '특공 +1',
     },
@@ -2844,6 +2849,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 5,
     'makeContact': false,
+    'category': ['반동'],
     'targeting': '아군 포함 광역',
     'effects': {
       'etc': '입힌 데미지의 1/4 반동 데미지',
@@ -2978,7 +2984,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '65',
     'pp': 5,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'inflict': '혼란',
     },
@@ -3095,7 +3101,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'changeStatusMe': '10% 공격 +1',
     },
@@ -3109,6 +3115,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
+    'category': ['반동'],
     'effects': {
       'changeStatusMe': '회피율 -1',
       'etc': '입힌 데미지의 1/3 반동 데미지',
@@ -3232,7 +3239,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '턱',
+    'category': ['턱'],
     'effects': {
       'changeStatusTarget': '20% 방어 -1',
     },
@@ -3377,7 +3384,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'targeting': '무작위 단일 적',
     'effects': {
       'etc': '2~5턴 고정, 전체 포켓몬 잠듦 회복 및 잠듦 면역',
@@ -3542,7 +3549,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '턱',
+    'category': ['턱'],
     'effects': {
       'etc': '상대의 리플렉터/빛의장막 파괴',
     },
@@ -3570,7 +3577,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'etc': '대상이 마지막으로 사용한 기술의 PP 3 감소',
     },
@@ -3852,7 +3859,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 10,
     'makeContact': false,
-    'category': '파동',
+    'category': ['파동'],
     'targeting': '아군 제외 광역',
     'effects': {},
   },
@@ -3865,7 +3872,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 10,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'etc': '3회 공격(개별 명중률), 명중 시 위력 20씩 상승',
     },
@@ -3879,7 +3886,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '스텔스록 중첩 +1 (최대 1)',
     },
@@ -3919,7 +3926,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'changeStatusMe': '스피드 +1',
     },
@@ -3998,7 +4005,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 10,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'inflict': '10% 화상',
       'etc': '급소율 +1',
@@ -4026,7 +4033,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 10,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'changeStatusTarget': '50% 방어 -1',
     },
@@ -4040,7 +4047,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'inflict': '10% 풀죽음',
       'etc': '우선도 +1',
@@ -4069,7 +4076,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'targeting': '아군 제외 광역',
     'effects': {},
   },
@@ -4082,7 +4089,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 15,
     'makeContact': true,
-    'category': '턱',
+    'category': ['턱'],
     'effects': {
       'inflict': '30% 맹독',
     },
@@ -4096,7 +4103,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 10,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'changeStatusTarget': '50% 방어 -1',
     },
@@ -4110,6 +4117,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'inflict': '10% 화상',
       'etc': '입힌 데미지의 1/3 반동 데미지',
@@ -4124,6 +4132,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'etc': '입힌 데미지의 1/3 반동 데미지',
     },
@@ -4137,7 +4146,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 10,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'changeStatusMe': '20% 공격 +1',
     },
@@ -4204,7 +4213,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 25,
     'makeContact': false,
-    'category': '베기',
+    'category': ['베기'],
     'targeting': '아군 제외 광역',
     'effects': {
       'etc': '기본 급소율 +1',
@@ -4352,7 +4361,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {},
   },
   {
@@ -4443,7 +4452,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {},
   },
   {
@@ -4493,7 +4502,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '-',
     'pp': 40,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'changeStatusMe': '공격 +1',
     },
@@ -4507,7 +4516,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '기본 급소율 +1',
     },
@@ -4521,6 +4530,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'etc': '입힌 데미지의 1/3 반동 데미지',
     },
@@ -4574,7 +4584,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'inflict': '20% 혼란',
     },
@@ -4601,6 +4611,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'etc': '입힌 데미지의 1/3 반동 데미지',
     },
@@ -4652,7 +4663,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '기본 급소율 +1',
     },
@@ -4693,7 +4704,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': false,
-    'category': '파동',
+    'category': ['파동'],
     'effects': {},
   },
   {
@@ -4705,7 +4716,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 20,
     'makeContact': false,
-    'category': '파동',
+    'category': ['파동'],
     'effects': {
       'inflict': '20% 혼란',
     },
@@ -4786,6 +4797,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 5,
     'makeContact': false,
+    'category': ['반동'],
     'effects': {
       'etc': '입힌 데미지의 1/2 반동 데미지',
     },
@@ -4799,7 +4811,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'changeStatusMe': '스피드 -1',
     },
@@ -4840,7 +4852,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '턱',
+    'category': ['턱'],
     'effects': {
       'etc': '대상의 교체를 금지',
     },
@@ -4854,7 +4866,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '압정뿌리기 중첩 +1(최대 3)',
     },
@@ -4987,6 +4999,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'etc': '우선도 +1, 입힌 데미지의 1/3 반동 데미지',
     },
@@ -5026,7 +5039,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'inflict': '50% 마비/화상/얼음',
     },
@@ -5040,7 +5053,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'etc': '2턴 동안 대상의 HP 회복을 금지',
     },
@@ -5215,7 +5228,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': false,
-    'category': '장판',
+    'category': ['장판'],
     'effects': {
       'etc': '독압정 중첩 +1(최대 2)',
     },
@@ -5296,7 +5309,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': false,
-    'category': '파동',
+    'category': ['파동'],
     'effects': {},
   },
   {
@@ -5335,7 +5348,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 15,
     'makeContact': false,
-    'category': '파동',
+    'category': ['파동'],
     'effects': {
       'inflict': '20% 풀죽음',
     },
@@ -5349,7 +5362,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '기본 급소율 +1',
     },
@@ -5387,7 +5400,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 10,
     'makeContact': false,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'inflict': '30% 풀죽음',
     },
@@ -5401,7 +5414,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '기본 급소율 +1',
     },
@@ -5415,7 +5428,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'changeStatusTarget': '10% 특방 -1',
     },
@@ -5429,7 +5442,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 10,
     'makeContact': false,
-    'category': '파동',
+    'category': ['파동'],
     'effects': {},
   },
   {
@@ -5467,7 +5480,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '펀치/흡수',
+    'category': ['펀치', '흡수'],
     'effects': {
       'etc': '입힌 데미지의 1/2 회복',
     },
@@ -5481,7 +5494,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 30,
     'makeContact': false,
-    'category': '파동',
+    'category': ['파동'],
     'effects': {
       'etc': '우선도 +1',
     },
@@ -5547,6 +5560,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 5,
     'makeContact': false,
+    'category': ['반동'],
     'effects': {
       'etc': '입힌 데미지의 1/2 반동 데미지',
     },
@@ -5587,7 +5601,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 30,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'etc': '우선도 +1',
     },
@@ -5627,7 +5641,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '기본 급소율 +1',
     },
@@ -5641,7 +5655,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 15,
     'makeContact': true,
-    'category': '턱',
+    'category': ['턱'],
     'effects': {
       'inflict': '10% 마비/풀죽음',
     },
@@ -5655,7 +5669,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 15,
     'makeContact': true,
-    'category': '턱',
+    'category': ['턱'],
     'effects': {
       'inflict': '10% 얼음/풀죽음',
     },
@@ -5669,7 +5683,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 15,
     'makeContact': true,
-    'category': '턱',
+    'category': ['턱'],
     'effects': {
       'inflict': '10% 화상/풀죽음',
     },
@@ -5709,7 +5723,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '기본 급소율 +1',
     },
@@ -5772,7 +5786,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'type': '땅',
     'class': '물리',
     'power': '120',
-    'accuracy': '90',
+    'accuracy': '85',
     'pp': 10,
     'makeContact': false,
     'targeting': '아군 제외 광역',
@@ -5879,7 +5893,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'inflict': '10% 독',
       'etc': '기본 급소율 +1',
@@ -5960,7 +5974,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 20,
     'makeContact': false,
-    'category': '장판',
+    'category': ['장판'],
     'effects': {
       'etc': '스텔스록 중첩 +1(최대 1)',
     },
@@ -5987,7 +6001,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'inflict': '30% 혼란',
     },
@@ -5996,8 +6010,8 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'id': 449,
     'name': '심판의뭉치',
     'type': '노말',
-    'class': '물리',
-    'power': '150',
+    'class': '특수',
+    'power': '100',
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
@@ -6066,7 +6080,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'targeting': '아군 제외 광역',
     'effects': {},
   },
@@ -6079,7 +6093,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '90',
     'pp': 5,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '사용 후 1턴 행동불능',
     },
@@ -6107,6 +6121,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '85',
     'pp': 5,
     'makeContact': true,
+    'category': ['반동'],
     'effects': {
       'etc': '입힌 데미지의 1/2 반동 데미지',
     },
@@ -6147,7 +6162,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 5,
     'makeContact': false,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '기본 급소율 +1',
     },
@@ -6175,7 +6190,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '턱',
+    'category': ['턱'],
     'effects': {
       'etc': '대상보다 먼저 행동했을 경우 위력 2배',
     },
@@ -6283,7 +6298,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': false,
-    'category': '파동',
+    'category': ['파동'],
     'effects': {
       'changeStatusMe': '방어/특방 -1',
     },
@@ -6310,6 +6325,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 5,
     'makeContact': false,
+    'category': ['반동'],
     'effects': {
       'etc': '입힌 데미지의 1/2 반동 데미지',
     },
@@ -6393,7 +6409,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'changeStatusMe': '스피드 -1',
     },
@@ -6486,7 +6502,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'etc': '확정 급소',
     },
@@ -6552,7 +6568,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 20,
     'makeContact': true,
-    'category': '킥',
+    'category': ['킥'],
     'effects': {
       'changeStatusTarget': '스피드 -1',
     },
@@ -6778,7 +6794,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': true,
-    'category': '펀치',
+    'category': ['펀치'],
     'effects': {
       'etc': '3회 공격, 확정 급소',
     },
@@ -6870,7 +6886,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '필중',
     'pp': 5,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '이전 턴에 아군이 쓰러졌을 경우 위력 2배',
     },
@@ -7057,6 +7073,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
+    'category': ['반동'],
     'targeting': '30% 마비',
     'effects': {
       'etc': '입힌 데미지의 1/4 반동 데미지',
@@ -7109,7 +7126,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '흡수',
+    'category': ['흡수'],
     'effects': {
       'etc': '입힌 데미지의 1/2 회복',
     },
@@ -7123,7 +7140,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'etc': '대상의 랭크 변화를 무시',
     },
@@ -7137,7 +7154,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'changeStatusTarget': '50% 방어 -1',
     },
@@ -7283,7 +7300,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': false,
-    'targeting': '아군 제외 광역',
+    'targeting': '아군 포함 광역',
     'effects': {
       'inflict': '30% 화상',
     },
@@ -7310,7 +7327,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 10,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'effects': {
       'inflict': '40% 잠듦',
     },
@@ -7324,7 +7341,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 5,
     'makeContact': true,
-    'category': '베기',
+    'category': ['베기'],
     'effects': {
       'changeStatusMe': '방어/특방 -1',
     },
@@ -7419,7 +7436,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '95',
     'pp': 15,
     'makeContact': false,
-    'category': '소리',
+    'category': ['소리'],
     'targeting': '아군 제외 광역',
     'effects': {
       'changeStatusTarget': '특공 -1',

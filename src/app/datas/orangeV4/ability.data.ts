@@ -97,8 +97,7 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   {
     'id': 16,
     'name': '변환자재',
-    'effect_text':
-      '공격 기술을 사용하는 데 성공했을 경우, 그 기술의 타입으로 변화한다.',
+    'effect_text': '기술을 사용하면 그 기술의 타입으로 변화한다.',
     'effect_wild_text': '',
   },
   {
