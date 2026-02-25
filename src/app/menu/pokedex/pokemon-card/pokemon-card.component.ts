@@ -52,6 +52,9 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   constructor() {
     this.sub = this.pokemonAlterService.useAlter$.subscribe((value) => {
       this.useSprite = value;
+      if (!this.pokemon) {
+        return;
+      }
       this.hasGender = this.pokemonAlterService.hasGender(this.currentKeyname);
       this.updatePokemonInfo();
     });
