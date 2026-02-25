@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   isPopMode = false;
 
   ngOnInit(): void {
-    // 데이터 처리
+    this.isPopMode = this.pokemonAlterService.useAlter;
     this.dataHandleService.gameVersion$.subscribe((version) => {
       this.gameVersion = version;
     });

@@ -311,16 +311,21 @@ export class PokemonAlterService {
     '423-1',
     '550-1',
   ]);
-  private useAlterSource = new BehaviorSubject<boolean>(false);
+  private readonly STORAGE_KEY = 'use_alter_source';
+  private initialValue = localStorage.getItem(this.STORAGE_KEY) === 'true';
+
+  private useAlterSource = new BehaviorSubject<boolean>(this.initialValue);
   useAlter$ = this.useAlterSource.asObservable();
 
   setUseAlter(value: boolean) {
+    localStorage.setItem(this.STORAGE_KEY, String(value));
     this.useAlterSource.next(value);
   }
 
   get useAlter(): boolean {
     return this.useAlterSource.getValue();
   }
+
   hasGender(keyname: string) {
     const result = keyname.replace(/^(front-|back-)/, '');
     return this.gender_set.has(result);
