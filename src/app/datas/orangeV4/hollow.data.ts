@@ -445,8 +445,8 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '자주',
-        'pokemonName': '돌살이',
-        'ability': '깨어진갑옷',
+        'pokemonName': '앱솔',
+        'ability': '대운',
       },
       {
         'rateType': '간혹',
@@ -883,7 +883,7 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '자주',
-        'pokemonName': '렌트라',
+        'pokemonName': '에리본',
         'ability': '근성',
       },
       {
@@ -1016,8 +1016,8 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '자주',
-        'pokemonName': '페라페',
-        'ability': '방음',
+        'pokemonName': '할비롱',
+        'ability': '초식',
       },
       {
         'rateType': '자주',
