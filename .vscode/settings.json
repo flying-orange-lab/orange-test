@@ -9,6 +9,6 @@
   "eslint.validate": ["javascript", "typescript", "html"],
   "eslint.format.enable": true,
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
