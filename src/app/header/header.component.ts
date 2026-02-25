@@ -1,19 +1,23 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { DataHandleService } from '../services/data-handle.service';
 import { RouterLink } from '@angular/router';
+import { PokemonAlterService } from '../services/pokemon-alter.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.less'],
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule],
 })
 export class HeaderComponent implements OnInit {
   @Input() isHeaderHidden!: boolean;
+  private pokemonAlterService = inject(PokemonAlterService);
   dataHandleService = inject(DataHandleService);
 
   gameVersion: string | null = null;
   isMenuOpen = false;
+  isPopMode = false;
 
   ngOnInit(): void {
     // 데이터 처리
@@ -34,7 +38,9 @@ export class HeaderComponent implements OnInit {
         return '준비중';
     }
   }
-
+  onPopToggle() {
+    this.pokemonAlterService.setUseAlter(this.isPopMode);
+  }
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }

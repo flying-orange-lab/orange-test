@@ -11,14 +11,15 @@ import {
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { DataHandleService } from 'src/app/services/data-handle.service';
-import { PokemonImageService } from 'src/app/services/pokemon-image.service';
+// import { PokemonImageService } from 'src/app/services/pokemon-image.service';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { PokemonStatComponent } from '../pokemon-stat/pokemon-stat.component';
 import { PokemonAbility } from 'src/app/models/ability.model';
 import { PokemonLocationComponent } from '../pokemon-location/pokemon-location.component';
 import { Pokemon } from 'src/app/models/pokemon.model';
 import { PokemonModalComponent } from '../pokemon-modal/pokemon-modal.component';
+import { PokemonAlterService } from 'src/app/services/pokemon-alter.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -28,17 +29,19 @@ import { PokemonModalComponent } from '../pokemon-modal/pokemon-modal.component'
 })
 export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   private router = inject(Router);
-  private dataHandleService = inject(DataHandleService);
+  private pokemonAlterService = inject(PokemonAlterService);
   private pokemonService = inject(PokemonService);
-  private pokemonImageService = inject(PokemonImageService);
+  // private pokemonImageService = inject(PokemonImageService);
   private dialog = inject(MatDialog);
 
+  private sub: Subscription;
+
   @Input() pokemon!: Pokemon;
-  @Input() useSprite = false;
   @Output() defenseEvent = new EventEmitter<string[]>();
   currentPokemonStats: number[] = [0, 0, 0, 0, 0, 0, 0];
   currentAbility?: PokemonAbility;
   currentAbilityIndex?: number;
+  useSprite = false;
   hasGender = false;
   isFront = true;
   isGenderFemale = false;
@@ -46,11 +49,17 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   currentFormIndex = 0;
   currentImageUrl = '';
 
-  async ngOnInit() {
-    // sprite 출력이 필요한 경우에만 처리
+  constructor() {
+    this.sub = this.pokemonAlterService.useAlter$.subscribe((value) => {
+      this.useSprite = value;
+      this.hasGender = this.pokemonAlterService.hasGender(this.currentKeyname);
+      this.updatePokemonInfo();
+    });
+  }
+
+  ngOnInit() {
     if (this.useSprite) {
-      const keyUrl = this.currentKeyname + '-female';
-      this.hasGender = await this.pokemonImageService.hasImage(keyUrl);
+      this.hasGender = this.pokemonAlterService.hasGender(this.currentKeyname);
     }
   }
 
@@ -146,32 +155,27 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   // 포켓몬 정보 업데이트
-  async updatePokemonInfo() {
+  updatePokemonInfo() {
     this.currentPokemonStats = this.currentPokemon.stats || [];
-    await this.updateImageUrl();
+    this.updateImageUrl();
   }
 
-  async updateImageUrl(): Promise<void> {
+  updateImageUrl(): void {
     // sprite 출력이 필요한 경우에만 처리
     if (!this.useSprite) {
       this.currentImageUrl = this.currentImageAltPath;
       return;
     }
 
+    // assets 기반으로 출력
     let urlKey = this.currentKeyname;
     if (this.isGenderFemale) {
       const genderKey = urlKey + '-female';
-      if (await this.pokemonImageService.hasImage(genderKey)) {
+      if (this.pokemonAlterService.hasGender(urlKey)) {
         urlKey = genderKey;
       }
     }
-
-    const imageBlob = await this.pokemonImageService.getImage(urlKey);
-    if (!imageBlob) {
-      this.currentImageUrl = this.currentImageAltPath;
-    } else {
-      this.currentImageUrl = URL.createObjectURL(imageBlob);
-    }
+    this.currentImageUrl = `assets/sprites/${urlKey}.png`;
   }
 
   goToDefensePage(types: string[]): void {
@@ -192,8 +196,9 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnDestroy(): void {
-    if (this.currentImageUrl) {
-      URL.revokeObjectURL(this.currentImageUrl);
-    }
+    // if (this.currentImageUrl) {
+    //   URL.revokeObjectURL(this.currentImageUrl);
+    // }
+    if (this.sub) this.sub.unsubscribe();
   }
 }

@@ -9,6 +9,13 @@
 @menu-width: 50%;
 @menu-max-width: 300px;
 
+@switch-width: 60px;
+@switch-height: 30px;
+@ball-size: 24px;
+@off-color: #ccc;
+@on-color: #4caf50; // ON 되었을 때 초록색
+@transition-speed: 0.3s;
+
 // 믹스인: Flexbox 중앙 정렬
 .flex-center() {
   display: flex;
@@ -48,6 +55,60 @@
   .header-title {
     font-size: 1.2em;
     cursor: pointer;
+  }
+
+  .header-button {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    .mode-switch {
+      input {
+        display: none; // 체크박스 숨김
+
+        // 체크되었을 때의 상태 제어 (중첩 활용)
+        &:checked + .switch-label {
+          background-color: @on-color;
+
+          .ball {
+            transform: translateX(
+              @switch-width - @ball-size - 6px
+            ); // 유동적인 계산
+          }
+        }
+      }
+    }
+    .switch-label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: @switch-width;
+      height: @switch-height;
+      background-color: @off-color;
+      border-radius: 20px;
+      cursor: pointer;
+      padding: 0 5px;
+      transition: background-color @transition-speed;
+
+      .ball {
+        position: absolute;
+        top: (@switch-height - @ball-size) / 2; // 중앙 정렬 계산
+        left: 3px;
+        width: @ball-size;
+        height: @ball-size;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform @transition-speed ease;
+      }
+
+      .on-text,
+      .off-text {
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        user-select: none;
+      }
+    }
   }
 
   .hamburger-button {
