@@ -115,6 +115,13 @@ export class PokedexComponent implements OnInit {
     }
   }
 
+  resetSearch(): void {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {}, // Clear all query params
+    });
+  }
+
   onTypeFilterClick(typeKey: string): void {
     if (this.selectedType === typeKey) {
       this.selectedType = null;

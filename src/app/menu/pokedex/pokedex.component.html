@@ -10,7 +10,12 @@
         (keyup.enter)="onSearchButtonClick()"
         autocomplete="off"
       />
-      <button id="searchButton" (click)="onSearchButtonClick()">검색</button>
+      <button id="searchButton" (click)="onSearchButtonClick()" title="검색">
+        <i class="fas fa-search"></i>
+      </button>
+      <button id="resetButton" (click)="resetSearch()" title="초기화">
+        <i class="fas fa-undo"></i>
+      </button>
     </div>
 
     <div class="type-filter-grid">
