@@ -1,7 +1,7 @@
 <div class="pokemon-card-container">
   <div class="pokemon-card-content">
-    <!-- 성별 표기-->
-    @if (hasGender) {
+    @if (useSprite && hasGender) {
+      <!-- 성별 표기-->
       <button
         class="gender-button"
         [class.male-active]="!isGenderFemale"
