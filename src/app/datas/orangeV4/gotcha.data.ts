@@ -24,7 +24,7 @@ export const POKEMON_GOTCHA_V4: GotchaPokemonCategory[] = [
         'level': 25,
         'location': '4번도로',
         'requirement': '',
-        'note': '목요일에만 출현',
+        'note': '확정 이로치',
       },
       {
         'name': '디안시',
@@ -44,7 +44,7 @@ export const POKEMON_GOTCHA_V4: GotchaPokemonCategory[] = [
         'name': '볼케니온',
         'level': 50,
         'location': '리버스마운틴',
-        'requirement': '난천에게 폭포오르기 비전머신을 받기',
+        'requirement': '난천에게 폭포오르기 비전머신 받기',
         'note': '',
       },
       {
@@ -73,7 +73,7 @@ export const POKEMON_GOTCHA_V4: GotchaPokemonCategory[] = [
         'level': 45,
         'location': '물결만',
         'requirement': '',
-        'note': '월요일에만 출현, 숨겨진 특성 고정',
+        'note': '확정 이로치',
       },
       {
         'name': '악식킹',
@@ -225,7 +225,7 @@ export const POKEMON_GOTCHA_V4: GotchaPokemonCategory[] = [
         'level': 85,
         'location': '타워오브해븐',
         'requirement': '성신시티 체육관 관장들에게 승리 후 구슬 획득',
-        'note': '종을 조사해야 출현함',
+        'note': '종을 조사해야 출현',
       },
       {
         'name': '지라치',
@@ -315,8 +315,8 @@ export const POKEMON_GOTCHA_V4: GotchaPokemonCategory[] = [
         'name': '쉐이미',
         'level': 70,
         'location': '사색의들판',
-        'requirement': '바람개비숲에서 체렌과 이벤트',
-        'note': '유채로부터 그라데시아꽃 획득 가능',
+        'requirement': '바람개비숲 체렌 이벤트',
+        'note': '성신시티 포켓몬센터의 유채로부터 그라데시아꽃 획득 가능',
       },
       {
         'name': '아르세우스',
