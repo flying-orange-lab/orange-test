@@ -7,9 +7,9 @@
         [class.male-active]="!isGenderFemale"
         [class.female-active]="isGenderFemale"
         (click)="toggleGender()"
-      >
-        {{ isGenderFemale ? "♀" : "♂" }}
-      </button>
+        [attr.aria-label]="isGenderFemale ? '암컷' : '수컷'"
+        title="성별 변경"
+      ></button>
     }
     <img
       class="pokemon-image"

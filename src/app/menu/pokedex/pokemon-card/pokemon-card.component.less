@@ -58,43 +58,44 @@
 .gender-button {
   position: absolute;
   top: 5px;
-  /* 이미지 상단에 배치 */
   right: 5px;
-  /* 이미지 오른쪽에 배치 */
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  font-size: 0.8em;
-  font-weight: bold;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff; /* 흰색 원 배경 */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  /* 이미지 위에 오도록 */
   transition:
-    background-color 0.2s,
-    transform 0.2s;
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .gender-button:hover {
-  background-color: #e0e0e0;
   transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.gender-button.male-active {
-  color: #4caf50;
-  /* 남성 심볼 색상 (예: 초록) */
-  /* background-color: #e6ffe6; */
+/* 안쪽의 작은 원을 위한 공통 스타일 */
+.gender-button::after {
+  content: "";
+  display: block;
+  width: 15px; /* 내부 원 크기 */
+  height: 15px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
 }
 
-.gender-button.female-active {
-  color: #ff69b4;
-  /* 여성 심볼 색상 (예: 핑크) */
-  /* background-color: #ffe6f0; */
+.gender-button.male-active::after {
+  background-color: #ffb6c1; /* 남성은 분홍색 원 */
+}
+
+.gender-button.female-active::after {
+  background-color: #ff4d4d; /* 여성은 빨간색 원 */
 }
 
 .pokemon-info {
