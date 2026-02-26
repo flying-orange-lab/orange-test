@@ -9,6 +9,7 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 // import { PokemonImageService } from 'src/app/services/pokemon-image.service';
@@ -25,7 +26,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
   styleUrls: ['./pokemon-card.component.less'],
-  imports: [PokemonStatComponent, PokemonLocationComponent],
+  imports: [PokemonStatComponent, PokemonLocationComponent, NgOptimizedImage],
 })
 export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   private router = inject(Router);

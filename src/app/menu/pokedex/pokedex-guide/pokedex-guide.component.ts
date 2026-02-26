@@ -9,13 +9,13 @@ import { Pokemon } from 'src/app/models/pokemon.model';
 import { PokemonStatComponent } from '../pokemon-stat/pokemon-stat.component';
 import { HelperService } from 'src/app/services/helper.service';
 import { PopoverComponent } from 'src/app/shared/popover/popover.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-pokedex-guide',
   templateUrl: './pokedex-guide.component.html',
   styleUrl: './pokedex-guide.component.less',
-  imports: [CommonModule, PokemonStatComponent],
+  imports: [CommonModule, PokemonStatComponent, NgOptimizedImage],
 })
 export class PokedexGuideComponent {
   private helperService = inject(HelperService);
