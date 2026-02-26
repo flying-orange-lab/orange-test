@@ -12,9 +12,18 @@
         <div>
           <div class="pokemon-grid">
             @for (group of hollowData.groups; track group.pokemonName) {
-              <div class="pokemon-card" (click)="onPokemonClick(group.pokemonName)">
+              <div
+                class="pokemon-card"
+                (click)="onPokemonClick(group.pokemonName)"
+              >
                 <div class="pokemon-image-wrapper">
-                  <img [src]="getPokemonImageUrl(group.pokemonName)" [alt]="group.pokemonName" class="pokemon-image">
+                  <img
+                    [ngSrc]="getPokemonImageUrl(group.pokemonName)"
+                    width="96"
+                    height="96"
+                    [alt]="group.pokemonName"
+                    class="pokemon-image"
+                  />
                 </div>
                 <div class="pokemon-info">
                   <span class="pokemon-name">{{ group.pokemonName }}</span>
@@ -22,7 +31,11 @@
                 </div>
                 <div class="pokemon-rate-divider"></div>
                 <div class="pokemon-rate-container">
-                  <span class="pokemon-rate" [ngClass]="getBadgeClass(group.rateType)">{{ group.rateType }}</span>
+                  <span
+                    class="pokemon-rate"
+                    [ngClass]="getBadgeClass(group.rateType)"
+                    >{{ group.rateType }}</span
+                  >
                 </div>
               </div>
             }

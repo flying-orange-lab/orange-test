@@ -13,7 +13,9 @@
     }
     <img
       class="pokemon-image"
-      [src]="currentImageUrl"
+      [ngSrc]="currentImageUrl"
+      width="96"
+      height="96"
       (click)="toggleSprite()"
     />
     <div class="pokemon-info">
