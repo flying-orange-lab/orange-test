@@ -6645,7 +6645,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'type': '페어리',
     'class': '특수',
     'power': '65',
-    'accuracy': '팔중',
+    'accuracy': '필중',
     'pp': 15,
     'makeContact': false,
     'targeting': '아군 제외 광역',

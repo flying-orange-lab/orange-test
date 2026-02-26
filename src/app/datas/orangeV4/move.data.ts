@@ -28324,7 +28324,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 50,
-      'moveName': '유턴턴',
+      'moveName': '유턴',
     },
     {
       'moveLv': 54,

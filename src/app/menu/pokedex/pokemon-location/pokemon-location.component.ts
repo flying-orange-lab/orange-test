@@ -37,9 +37,22 @@ export class PokemonLocationComponent implements OnChanges {
 
   private searchLocations(): void {
     // 서비스의 findPokemonLocations 메서드를 직접 호출하여 데이터를 가져옵니다.
+    let extra_term = this.pokemonExtra;
+    if (
+      [
+        '암멍이',
+        '체리꼬',
+        '일레즌',
+        '스트린더',
+        '플라엣테',
+        '플라제스',
+      ].includes(this.pokemonName)
+    ) {
+      extra_term = undefined;
+    }
     this.pokemonLocations = this.pokemonService.findPokemonLocations(
       this.pokemonName,
-      this.pokemonExtra,
+      extra_term,
     );
   }
 
