@@ -17,7 +17,7 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 import { PokemonStatComponent } from '../pokemon-stat/pokemon-stat.component';
 import { PokemonAbility } from 'src/app/models/ability.model';
 import { PokemonLocationComponent } from '../pokemon-location/pokemon-location.component';
-import { Pokemon } from 'src/app/models/pokemon.model';
+import { Pokemon, PokemonForm } from 'src/app/models/pokemon.model';
 import { PokemonModalComponent } from '../pokemon-modal/pokemon-modal.component';
 import { PokemonAlterService } from 'src/app/services/pokemon-alter.service';
 import { Subscription } from 'rxjs';
@@ -74,21 +74,34 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
     }
   }
 
-  get currentPokemon(): any {
+  get currentPokemon(): Pokemon | PokemonForm {
     // 폼이 있다면 현재 선택된 폼의 데이터를, 없다면 포켓몬 기본 데이터를 반환
     return this.pokemon.form?.[this.currentFormIndex] || this.pokemon;
   }
 
   get evolutionConditionArray() {
+    if (!this.currentPokemon.evolutionCondition) {
+      return [];
+    }
     return this.currentPokemon.evolutionCondition
       .split(',')
       .map((item: string) => item.trim());
   }
 
   get pokemonExtraText() {
+    if (!this.currentPokemon.extra) {
+      return [];
+    }
     return this.currentPokemon.extra
       .split('.')
       .map((item: string) => item.trim());
+  }
+
+  get pokemonFormName() {
+    if ('formName' in this.currentPokemon) {
+      return this.currentPokemon.formName;
+    }
+    return undefined;
   }
 
   get currentImageAltPath() {
@@ -182,8 +195,11 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
     this.currentImageUrl = `assets/sprites/${urlKey}.png`;
   }
 
-  goToDefensePage(types: string[]): void {
-    this.defenseEvent.emit(types);
+  goToDefensePage(): void {
+    if (!this.currentPokemon.types) {
+      return;
+    }
+    this.defenseEvent.emit(this.currentPokemon.types);
   }
 
   openModal() {

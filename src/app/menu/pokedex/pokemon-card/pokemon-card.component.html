@@ -22,10 +22,7 @@
       <div class="pokemon-name">{{ pokemon.koreanName || pokemon.name }}</div>
       <div class="pokemon-id">{{ displayId }}</div>
     </div>
-    <div
-      class="pokemon-types-container"
-      (click)="goToDefensePage(currentPokemon.types)"
-    >
+    <div class="pokemon-types-container" (click)="goToDefensePage()">
       @for (type of currentPokemon.types; track $index) {
         <span class="type-badge type-{{ type }}">
           {{ displayType(type) }}
@@ -127,9 +124,7 @@
   <div class="pokemon-card-extra">
     <app-pokemon-location
       [pokemonName]="pokemon.koreanName"
-      [pokemonExtra]="
-        currentPokemon.formName ? currentPokemon.formName : undefined
-      "
+      [pokemonExtra]="pokemonFormName"
     ></app-pokemon-location>
   </div>
   <div class="pokemon-card-extra detail">

@@ -31,16 +31,16 @@ export class PokedexComponent implements OnInit {
   private pokemonService = inject(PokemonService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private allPokemon: Pokemon[] = [];
 
-  pokemonSearchInput = '';
-  pokemonSearchOffset = 1;
-  pokemonSearchAttr?: string;
-
-  selectedType: string | null = null;
   typeLabels = TYPE_LABEL;
   typeDisplay = TYPE_DISPLAY_DATA;
 
-  private allPokemon: Pokemon[] = [];
+  pokemonSearchInput = '';
+  pokemonSearchOffset = 1;
+  pokemonSearchAttr = '';
+  selectedType: string | null = null;
+
   searchResults: Pokemon[] = [];
   noResultsMessage = '';
 
@@ -60,30 +60,10 @@ export class PokedexComponent implements OnInit {
 
       // URL 파라미터가 있다면 검색을 실행합니다.
       this.route.queryParams.subscribe((params) => {
-        if (params['search']) {
-          const searchTerm = params['search'] || '';
-          this.pokemonSearchInput = searchTerm;
-        } else {
-          this.pokemonSearchInput = '';
-        }
-
-        if (params['gte']) {
-          this.pokemonSearchOffset = parseInt(params['gte']);
-        } else {
-          this.pokemonSearchOffset = 1;
-        }
-
-        if (params['attr']) {
-          this.pokemonSearchAttr = params['attr'];
-        } else {
-          this.pokemonSearchAttr = '';
-        }
-
-        if (params['type']) {
-          this.selectedType = params['type'];
-        } else {
-          this.selectedType = null;
-        }
+        this.pokemonSearchInput = params['search'] || '';
+        this.pokemonSearchOffset = parseInt(params['gte']) || 1;
+        this.pokemonSearchAttr = params['attr'] || '';
+        this.selectedType = params['type'] || null;
 
         this.performSearch();
       });
@@ -102,7 +82,7 @@ export class PokedexComponent implements OnInit {
       this.pokemonSearchInput = '';
       this.router.navigate([], {
         relativeTo: this.route,
-        queryParams: { gte: this.pokemonSearchOffset }, // 페이지 번호 쿼리 파라미터 추가
+        queryParams: { search: undefined, gte: this.pokemonSearchOffset }, // 페이지 번호 쿼리 파라미터 추가
         queryParamsHandling: 'merge',
       });
     } else {
