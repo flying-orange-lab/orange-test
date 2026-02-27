@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { ABILITY_DATA } from '../datas/ability.data';
-import {
-  POKEMON_MOVE_TM_V4,
-  POKEMON_MOVE_TUTOR_V4,
-  POKEMON_MOVE_V4,
-} from '../datas/orangeV4/move.data';
+import { POKEMON_MOVE_V4 } from '../datas/orangeV4/move.data';
 import { POKEMON_DATA_V4 } from '../datas/orangeV4/pokemon.data';
 import { ABILITY_DATA_V4 } from '../datas/orangeV4/ability.data';
 import { POKEMON_WILDS_V4 } from '../datas/orangeV4/wilds.data';
@@ -14,6 +10,8 @@ import { POKEMON_HOLLOW_V4 } from '../datas/orangeV4/hollow.data';
 import { ITEM_DATA_V4 } from '../datas/orangeV4/item.data';
 import { MART_DATA_V4 } from '../datas/orangeV4/mart.data';
 import { POKEMON_GOTCHA_V4 } from '../datas/orangeV4/gotcha.data';
+import { POKEMON_MOVE_TM_V4 } from '../datas/orangeV4/move-tm.data';
+import { POKEMON_MOVE_TUTOR_V4 } from '../datas/orangeV4/move-tutor.data';
 
 @Injectable({
   providedIn: 'root',
