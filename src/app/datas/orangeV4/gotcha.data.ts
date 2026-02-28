@@ -24,7 +24,7 @@ export const POKEMON_GOTCHA_V4: GotchaPokemonCategory[] = [
         'level': 25,
         'location': '4번도로',
         'requirement': '',
-        'note': '확정 이로치',
+        'note': '목요일에만 출현, 확정 이로치',
       },
       {
         'name': '디안시',
@@ -73,7 +73,7 @@ export const POKEMON_GOTCHA_V4: GotchaPokemonCategory[] = [
         'level': 45,
         'location': '물결만',
         'requirement': '',
-        'note': '확정 이로치',
+        'note': '월요일에만 출현, 확정 이로치',
       },
       {
         'name': '악식킹',
