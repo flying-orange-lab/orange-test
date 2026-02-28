@@ -10,20 +10,29 @@ import { DataHandleService } from './services/data-handle.service';
 import { Title } from '@angular/platform-browser';
 import { HeaderComponent } from './header/header.component';
 import { FloatingButtonComponent } from './floating-button/floating-button.component';
+import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
-declare let gtag: Function;
+declare let gtag: (command: string, ...args: unknown[]) => void;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less'],
-  imports: [HeaderComponent, FloatingButtonComponent, RouterOutlet],
+  imports: [
+    HeaderComponent,
+    FloatingButtonComponent,
+    RouterOutlet,
+    MatSnackBarModule,
+  ],
 })
 export class AppComponent implements OnInit {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private titleService = inject(Title);
   private dataHandleService = inject(DataHandleService);
+  private swUpdate = inject(SwUpdate);
+  private snackBar = inject(MatSnackBar);
 
   title = 'datasheet';
 
@@ -38,6 +47,34 @@ export class AppComponent implements OnInit {
         });
       }
     });
+
+    this.checkForUpdates();
+  }
+
+  private checkForUpdates() {
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.versionUpdates
+        .pipe(
+          filter(
+            (evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY',
+          ),
+        )
+        .subscribe(() => {
+          const snackBarRef = this.snackBar.open(
+            '새로운 버전이 업데이트 되었습니다.',
+            '새로고침',
+            {
+              duration: 10000,
+              horizontalPosition: 'center',
+              verticalPosition: 'bottom',
+            },
+          );
+
+          snackBarRef.onAction().subscribe(() => {
+            window.location.reload();
+          });
+        });
+    }
   }
 
   ngOnInit(): void {
