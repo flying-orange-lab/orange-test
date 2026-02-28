@@ -3560,67 +3560,231 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
   '43-0': [
     {
       'moveLv': 1,
-      'moveName': '용해액',
+      'moveName': '몸통박치기',
     },
     {
       'moveLv': 1,
-      'moveName': '흡수',
-    },
-    {
-      'moveLv': 1,
-      'moveName': '성장',
-    },
-    {
-      'moveLv': 5,
-      'moveName': '씨뿌리기',
-    },
-    {
-      'moveLv': 8,
-      'moveName': '주술',
-    },
-    {
-      'moveLv': 11,
-      'moveName': '독가루',
-    },
-    {
-      'moveLv': 11,
-      'moveName': '저리가루',
-    },
-    {
-      'moveLv': 14,
-      'moveName': '메가드레인',
-    },
-    {
-      'moveLv': 17,
-      'moveName': '수면가루',
-    },
-    {
-      'moveLv': 20,
-      'moveName': '신통력',
-    },
-    {
-      'moveLv': 23,
       'moveName': '애교부리기',
     },
     {
+      'moveLv': 4,
+      'moveName': '흡수',
+    },
+    {
+      'moveLv': 6,
+      'moveName': '성장',
+    },
+    {
+      'moveLv': 8,
+      'moveName': '구르기',
+    },
+    {
+      'moveLv': 10,
+      'moveName': '씨뿌리기',
+    },
+    {
+      'moveLv': 12,
+      'moveName': '매지컬리프',
+    },
+    {
+      'moveLv': 14,
+      'moveName': '스피드스타',
+    },
+    {
+      'moveLv': 17,
+      'moveName': '도우미',
+    },
+    {
+      'moveLv': 20,
+      'moveName': '메가드레인',
+    },
+    {
+      'moveLv': 23,
+      'moveName': '쾌청',
+    },
+    {
       'moveLv': 26,
-      'moveName': '달빛',
+      'moveName': '소란피기',
     },
     {
       'moveLv': 29,
-      'moveName': '진흙폭탄',
+      'moveName': '앙코르',
     },
     {
       'moveLv': 32,
-      'moveName': '오물공격',
+      'moveName': '기가드레인',
     },
     {
       'moveLv': 35,
-      'moveName': '뿌리박기',
+      'moveName': '웨더볼',
     },
     {
       'moveLv': 38,
-      'moveName': '문포스',
+      'moveName': '광합성',
+    },
+    {
+      'moveLv': 41,
+      'moveName': '에너지볼',
+    },
+    {
+      'moveLv': 44,
+      'moveName': '추억의선물',
+    },
+  ],
+  '44-0': [
+    {
+      'moveLv': 1,
+      'moveName': '몸통박치기',
+    },
+    {
+      'moveLv': 1,
+      'moveName': '애교부리기',
+    },
+    {
+      'moveLv': 4,
+      'moveName': '흡수',
+    },
+    {
+      'moveLv': 6,
+      'moveName': '성장',
+    },
+    {
+      'moveLv': 8,
+      'moveName': '구르기',
+    },
+    {
+      'moveLv': 10,
+      'moveName': '씨뿌리기',
+    },
+    {
+      'moveLv': 12,
+      'moveName': '매지컬리프',
+    },
+    {
+      'moveLv': 14,
+      'moveName': '스피드스타',
+    },
+    {
+      'moveLv': 17,
+      'moveName': '도우미',
+    },
+    {
+      'moveLv': 20,
+      'moveName': '메가드레인',
+    },
+    {
+      'moveLv': 23,
+      'moveName': '쾌청',
+    },
+    {
+      'moveLv': 25,
+      'moveName': '씨폭탄',
+    },
+    {
+      'moveLv': 28,
+      'moveName': '소란피기',
+    },
+    {
+      'moveLv': 31,
+      'moveName': '앙코르',
+    },
+    {
+      'moveLv': 34,
+      'moveName': '기가드레인',
+    },
+    {
+      'moveLv': 37,
+      'moveName': '웨더볼',
+    },
+    {
+      'moveLv': 40,
+      'moveName': '광합성',
+    },
+    {
+      'moveLv': 43,
+      'moveName': '에너지볼',
+    },
+    {
+      'moveLv': 46,
+      'moveName': '추억의선물',
+    },
+    {
+      'moveLv': 49,
+      'moveName': '리프스톰',
+    },
+  ],
+  '45-0': [
+    {
+      'moveLv': 1,
+      'moveName': '신비의부적',
+    },
+    {
+      'moveLv': 1,
+      'moveName': '대지의힘',
+    },
+    {
+      'moveLv': 1,
+      'moveName': '애교부리기',
+    },
+    {
+      'moveLv': 4,
+      'moveName': '흡수',
+    },
+    {
+      'moveLv': 6,
+      'moveName': '성장',
+    },
+    {
+      'moveLv': 8,
+      'moveName': '구르기',
+    },
+    {
+      'moveLv': 10,
+      'moveName': '씨뿌리기',
+    },
+    {
+      'moveLv': 12,
+      'moveName': '매지컬리프',
+    },
+    {
+      'moveLv': 14,
+      'moveName': '스피드스타',
+    },
+    {
+      'moveLv': 17,
+      'moveName': '도우미',
+    },
+    {
+      'moveLv': 20,
+      'moveName': '메가드레인',
+    },
+    {
+      'moveLv': 23,
+      'moveName': '쾌청',
+    },
+    {
+      'moveLv': 25,
+      'moveName': '씨폭탄',
+    },
+    {
+      'moveLv': 28,
+      'moveName': '소란피기',
+    },
+    {
+      'moveLv': 31,
+      'moveName': '앙코르',
+    },
+    {
+      'moveLv': 34,
+      'moveName': '기가드레인',
+    },
+    {
+      'moveLv': 35,
+      'moveName': '꽃잎댄스',
+    },
+    {
+      'moveLv': 38,
+      'moveName': '웨더볼',
     },
     {
       'moveLv': 41,
@@ -3628,206 +3792,26 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 44,
-      'moveName': '오물폭탄',
+      'moveName': '에너지볼',
     },
     {
       'moveLv': 47,
-      'moveName': '꽃잎댄스',
+      'moveName': '물붓기',
     },
     {
       'moveLv': 50,
-      'moveName': '솔라빔',
-    },
-  ],
-  '44-0': [
-    {
-      'moveLv': 1,
-      'moveName': '용해액',
-    },
-    {
-      'moveLv': 1,
-      'moveName': '흡수',
-    },
-    {
-      'moveLv': 1,
-      'moveName': '성장',
-    },
-    {
-      'moveLv': 5,
-      'moveName': '씨뿌리기',
-    },
-    {
-      'moveLv': 8,
-      'moveName': '주술',
-    },
-    {
-      'moveLv': 11,
-      'moveName': '독가루',
-    },
-    {
-      'moveLv': 11,
-      'moveName': '저리가루',
-    },
-    {
-      'moveLv': 14,
-      'moveName': '메가드레인',
-    },
-    {
-      'moveLv': 17,
-      'moveName': '수면가루',
-    },
-    {
-      'moveLv': 20,
-      'moveName': '신통력',
-    },
-    {
-      'moveLv': 21,
-      'moveName': '기가드레인',
-    },
-    {
-      'moveLv': 24,
-      'moveName': '애교부리기',
-    },
-    {
-      'moveLv': 27,
-      'moveName': '달빛',
-    },
-    {
-      'moveLv': 30,
-      'moveName': '진흙폭탄',
-    },
-    {
-      'moveLv': 33,
-      'moveName': '오물공격',
-    },
-    {
-      'moveLv': 36,
-      'moveName': '뿌리박기',
-    },
-    {
-      'moveLv': 39,
-      'moveName': '문포스',
-    },
-    {
-      'moveLv': 42,
-      'moveName': '광합성',
-    },
-    {
-      'moveLv': 45,
-      'moveName': '오물폭탄',
-    },
-    {
-      'moveLv': 48,
-      'moveName': '대지의힘',
-    },
-    {
-      'moveLv': 51,
-      'moveName': '꽃잎댄스',
+      'moveName': '하이퍼보이스',
     },
     {
       'moveLv': 54,
-      'moveName': '솔라빔',
-    },
-  ],
-  '45-0': [
-    {
-      'moveLv': 1,
-      'moveName': '아로마테라피',
-    },
-    {
-      'moveLv': 1,
-      'moveName': '흡수',
-    },
-    {
-      'moveLv': 1,
-      'moveName': '성장',
-    },
-    {
-      'moveLv': 5,
-      'moveName': '씨뿌리기',
-    },
-    {
-      'moveLv': 8,
-      'moveName': '주술',
-    },
-    {
-      'moveLv': 11,
-      'moveName': '독가루',
-    },
-    {
-      'moveLv': 11,
-      'moveName': '저리가루',
-    },
-    {
-      'moveLv': 14,
-      'moveName': '메가드레인',
-    },
-    {
-      'moveLv': 17,
-      'moveName': '수면가루',
-    },
-    {
-      'moveLv': 20,
-      'moveName': '신통력',
-    },
-    {
-      'moveLv': 21,
-      'moveName': '기가드레인',
-    },
-    {
-      'moveLv': 24,
-      'moveName': '애교부리기',
-    },
-    {
-      'moveLv': 27,
-      'moveName': '달빛',
-    },
-    {
-      'moveLv': 30,
-      'moveName': '진흙폭탄',
-    },
-    {
-      'moveLv': 33,
-      'moveName': '오물공격',
-    },
-    {
-      'moveLv': 36,
-      'moveName': '뿌리박기',
-    },
-    {
-      'moveLv': 39,
-      'moveName': '문포스',
-    },
-    {
-      'moveLv': 42,
-      'moveName': '광합성',
-    },
-    {
-      'moveLv': 45,
-      'moveName': '오물폭탄',
-    },
-    {
-      'moveLv': 48,
-      'moveName': '대지의힘',
-    },
-    {
-      'moveLv': 51,
-      'moveName': '꽃잎댄스',
-    },
-    {
-      'moveLv': 54,
-      'moveName': '솔라빔',
+      'moveName': '추억의선물',
     },
     {
       'moveLv': 58,
-      'moveName': '오물웨이브',
-    },
-    {
-      'moveLv': 61,
       'moveName': '리프스톰',
     },
     {
-      'moveLv': 64,
+      'moveLv': 62,
       'moveName': '클로로블라스트',
     },
   ],

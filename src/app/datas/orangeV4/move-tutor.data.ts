@@ -8687,7 +8687,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': ['역할'],
+      'moves': ['역할', '드레인펀치'],
     },
     {
       'tutorName': 'green',
