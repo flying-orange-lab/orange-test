@@ -11,6 +11,8 @@ import { PokedexGuideComponent } from './pokedex-guide/pokedex-guide.component';
 import { HelperService } from 'src/app/services/helper.service';
 import { TYPE_DISPLAY_DATA, TYPE_LABEL } from 'src/app/datas/type.data';
 import { NgClass } from '@angular/common';
+import { FavoriteService } from 'src/app/services/favorite.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-pokedex',
@@ -31,7 +33,9 @@ export class PokedexComponent implements OnInit {
   private pokemonService = inject(PokemonService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private favoriteService = inject(FavoriteService);
   private allPokemon: Pokemon[] = [];
+  private favoriteSub?: Subscription;
 
   typeLabels = TYPE_LABEL;
   typeDisplay = TYPE_DISPLAY_DATA;
@@ -40,6 +44,9 @@ export class PokedexComponent implements OnInit {
   pokemonSearchOffset = 1;
   pokemonSearchAttr = '';
   selectedType: string | null = null;
+  showFavoritesOnly = false;
+
+  favoriteIds: number[] = [];
 
   searchResults: Pokemon[] = [];
   noResultsMessage = '';
@@ -54,6 +61,16 @@ export class PokedexComponent implements OnInit {
       this.isHelperOpen = isOpened;
     });
 
+    // 즐겨찾기 상태 구독
+    this.favoriteSub = this.favoriteService
+      .getFavoritesObservable()
+      .subscribe((favorites) => {
+        this.favoriteIds = favorites;
+        if (this.showFavoritesOnly) {
+          this.performSearch();
+        }
+      });
+
     // 페이지 로딩 시 모든 포켓몬 데이터 가져옴
     this.pokemonService.getAllPokemon().subscribe((data) => {
       this.allPokemon = data;
@@ -64,6 +81,7 @@ export class PokedexComponent implements OnInit {
         this.pokemonSearchOffset = parseInt(params['gte']) || 1;
         this.pokemonSearchAttr = params['attr'] || '';
         this.selectedType = params['type'] || null;
+        this.showFavoritesOnly = params['favorites'] === 'true';
 
         this.performSearch();
       });
@@ -96,9 +114,23 @@ export class PokedexComponent implements OnInit {
   }
 
   resetSearch(): void {
+    this.showFavoritesOnly = false;
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: {}, // Clear all query params
+    });
+  }
+
+  toggleFavoriteFilter(): void {
+    this.showFavoritesOnly = !this.showFavoritesOnly;
+    this.pokemonSearchOffset = 1;
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {
+        favorites: this.showFavoritesOnly ? 'true' : null,
+        gte: 1, // 돌아갈때 1페이지로
+      },
+      queryParamsHandling: 'merge',
     });
   }
 
@@ -171,6 +203,17 @@ export class PokedexComponent implements OnInit {
   performSearch(): void {
     const lowerCaseSearchTerm = this.pokemonSearchInput.toLowerCase().trim();
 
+    // 즐겨찾기 전용 모드 일때
+    if (this.showFavoritesOnly) {
+      const favoriteSet = new Set(this.favoriteIds);
+      const favoritesList: Pokemon[] = this.allPokemon.filter((p) =>
+        favoriteSet.has(p.id),
+      );
+
+      this.updateSearchResults(favoritesList, true);
+      return;
+    }
+
     // 이름 또는 한국어 이름으로 필터링합니다.
     const filtered = this.allPokemon.filter((pokemon) => {
       if (this.selectedType) {
@@ -220,8 +263,17 @@ export class PokedexComponent implements OnInit {
       return true;
     });
 
+    this.updateSearchResults(filtered, false);
+  }
+
+  private updateSearchResults(
+    filtered: Pokemon[],
+    isFavoritesResult: boolean,
+  ): void {
     if (filtered.length === 0) {
-      this.noResultsMessage = `'${this.pokemonSearchInput}'에 대한 검색 결과가 없습니다.`;
+      this.noResultsMessage = isFavoritesResult
+        ? '즐겨찾기한 포켓몬이 없습니다.'
+        : `'${this.pokemonSearchInput}'에 대한 검색 결과가 없습니다.`;
       this.searchResults = [];
     } else if (filtered.length > 30) {
       this.noResultsMessage = `총 ${filtered.length}개의 결과 중 30개만 표시되었습니다.`;

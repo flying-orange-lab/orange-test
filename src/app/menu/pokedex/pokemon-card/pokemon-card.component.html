@@ -3,7 +3,7 @@
     @if (useSprite && hasGender) {
       <!-- 성별 표기-->
       <button
-        class="gender-button"
+        class="floating-button gender-button"
         [class.male-active]="!isGenderFemale"
         [class.female-active]="isGenderFemale"
         (click)="toggleGender()"
@@ -11,6 +11,16 @@
         title="성별 변경"
       ></button>
     }
+    <!-- 즐겨찾기 버튼 -->
+    <button
+      class="floating-button favorite-button"
+      [class.is-favorite]="isFavorite"
+      (click)="toggleFavorite($event)"
+      [attr.aria-label]="isFavorite ? '즐겨찾기 해제' : '즐겨찾기 추가'"
+      [title]="isFavorite ? '즐겨찾기 해제' : '즐겨찾기 추가'"
+    >
+      {{ isFavorite ? "★" : "☆" }}
+    </button>
     <img
       class="pokemon-image"
       [ngSrc]="currentImageUrl"

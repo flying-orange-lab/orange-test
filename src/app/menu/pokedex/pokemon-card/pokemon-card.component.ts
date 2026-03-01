@@ -20,6 +20,7 @@ import { PokemonLocationComponent } from '../pokemon-location/pokemon-location.c
 import { Pokemon, PokemonForm } from 'src/app/models/pokemon.model';
 import { PokemonModalComponent } from '../pokemon-modal/pokemon-modal.component';
 import { PokemonAlterService } from 'src/app/services/pokemon-alter.service';
+import { FavoriteService } from 'src/app/services/favorite.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -34,8 +35,10 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   private pokemonService = inject(PokemonService);
   // private pokemonImageService = inject(PokemonImageService);
   private dialog = inject(MatDialog);
+  private favoriteService = inject(FavoriteService);
 
   private sub: Subscription;
+  private favoriteSub?: Subscription;
 
   @Input() pokemon!: Pokemon;
   @Output() defenseEvent = new EventEmitter<string[]>();
@@ -49,6 +52,7 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
 
   currentFormIndex = 0;
   currentImageUrl = '';
+  isFavorite = false;
 
   constructor() {
     this.sub = this.pokemonAlterService.useAlter$.subscribe((value) => {
@@ -64,6 +68,16 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   ngOnInit() {
     if (this.useSprite) {
       this.hasGender = this.pokemonAlterService.hasGender(this.currentKeyname);
+    }
+
+    // 즐겨찾기 상태 구독
+    if (this.pokemon) {
+      this.isFavorite = this.favoriteService.isFavorite(this.pokemon.id);
+      this.favoriteSub = this.favoriteService
+        .getFavoritesObservable()
+        .subscribe(() => {
+          this.isFavorite = this.favoriteService.isFavorite(this.pokemon.id);
+        });
     }
   }
 
@@ -158,6 +172,14 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
     this.updatePokemonInfo(); // 성별이 바뀌면 이미지 업데이트
   }
 
+  // 즐겨찾기 토글
+  toggleFavorite(event: Event): void {
+    event.stopPropagation(); // 부모 요소 클릭 이벤트 방지 (예: 상세 페이지 라우팅 등)
+    if (this.pokemon) {
+      this.favoriteService.toggleFavorite(this.pokemon.id);
+    }
+  }
+
   clickAbility(AbilityName: string, index: number) {
     if (
       this.currentAbility?.name == AbilityName &&
@@ -220,5 +242,6 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
     //   URL.revokeObjectURL(this.currentImageUrl);
     // }
     if (this.sub) this.sub.unsubscribe();
+    if (this.favoriteSub) this.favoriteSub.unsubscribe();
   }
 }
