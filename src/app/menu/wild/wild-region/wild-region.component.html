@@ -23,10 +23,16 @@
           <th style="width: 20%">최대 Lv</th>
           <th style="width: 20%">출현율</th>
         </tr>
-        @for (areaData of selectedRegion.areaDatas; track $index) {
+      </thead>
+      @for (areaData of selectedRegion.areaDatas; track $index) {
+        <tbody class="area-header" [attr.data-value]="areaData.area">
           <tr>
-            <td colspan="5" class="area-header">{{ areaData.area }}</td>
+            <td colspan="5">
+              {{ areaData.area }}
+            </td>
           </tr>
+        </tbody>
+        <tbody class="wild-item" [attr.data-value]="areaData.area">
           @for (encounter of areaData.encounters; track $index) {
             @let pokemonId = getPokemonId(encounter.name);
             <tr>
@@ -68,8 +74,8 @@
               <td>{{ encounter.rate }}%</td>
             </tr>
           }
-        }
-      </thead>
+        </tbody>
+      }
     </table>
   </div>
 }

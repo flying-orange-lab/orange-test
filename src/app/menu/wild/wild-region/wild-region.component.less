@@ -10,7 +10,6 @@
   /* 실제 내용 높이에 따라 조절 필요, 또는 JavaScript로 동적 계산 */
 }
 
-
 // 버튼
 .sub-condition-button-box {
   display: flex;
@@ -31,9 +30,10 @@
   border-radius: 20px;
   cursor: pointer;
   font-size: 0.95em;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
-
 
 .sub-condition-button:hover {
   background-color: #0056b3;
@@ -58,20 +58,59 @@
 
   .wild-encounter-header {
     font-size: 0.8em;
+    color: #ff9000;
+  }
+
+  th,
+  td {
+    padding: 4px 6px;
+  }
+
+  th {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  tbody,
+  thead {
+    border: 1px solid black;
+
+    td,
+    th {
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    // 2. 첫 번째 행(tr)의 모든 td 상단 border를 black으로
+    tr:first-child {
+      td,
+      th {
+        border-top: 1px solid black;
+      }
+    }
+    // 3. 마지막 행(tr)의 모든 td 하단 border를 black으로
+    tr:last-child {
+      td,
+      th {
+        border-bottom: 1px solid black;
+      }
+    }
+    tr {
+      // 각 행의 첫 번째 td (왼쪽 외곽선)
+      td:first-child,
+      th:first-child {
+        border-left: 1px solid black;
+      }
+
+      // 각 행의 마지막 td (오른쪽 외곽선)
+      td:last-child,
+      th:last-child {
+        border-right: 1px solid black;
+      }
+    }
   }
 }
 
-.wild-encounter-table th,
-.wild-encounter-table td {
-  border: 1px solid #ddd;
-  padding: 4px 6px;
-  text-align: left;
-}
-
 .wild-encounter-table th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-  text-align: center;
+  background-color: #666;
 }
 
 .wild-encounter-table td {
@@ -79,8 +118,70 @@
 }
 
 .wild-encounter-table .area-header {
-  background-color: #e6f7ff;
-  /* area 헤더 배경색 */
+  background-color: #b7b7b7;
   font-weight: bold;
   text-align: center;
+
+  &[data-value="풀숲"],
+  &[data-value="흔들리는 풀숲"],
+  &[data-value="얕은 물웅덩이"] {
+    background-color: #93c47d;
+  }
+  &[data-value="색이 진한 풀숲"] {
+    background-color: #418225;
+  }
+  &[data-value="파도타기"],
+  &[data-value="파도타기: 수면의 그림자"] {
+    background-color: #6d9eeb;
+  }
+  &[data-value="대단한낚싯대"],
+  &[data-value="대단한낚싯대: 수면의 그림자"] {
+    background-color: #3d85c6;
+    color: white;
+  }
+  &[data-value="하수구"] {
+    background-color: #b7b7b7;
+  }
+  &[data-value^="동굴"],
+  &[data-value="모래먼지"] {
+    background-color: #e6d3be;
+  }
+  &[data-value^="모래"] {
+    background-color: #f6b26b;
+  }
+  &[data-value="날고 있는 포켓몬의 그림자"] {
+    background-color: #a2c4c9;
+  }
+}
+
+.wild-encounter-table .wild-item {
+  background-color: #efefef;
+
+  &[data-value="풀숲"],
+  &[data-value="흔들리는 풀숲"],
+  &[data-value="얕은 물웅덩이"] {
+    background-color: #b6d7a8;
+  }
+  &[data-value="색이 진한 풀숲"] {
+    background-color: #93c47d;
+  }
+  &[data-value="파도타기"],
+  &[data-value="파도타기: 수면의 그림자"],
+  &[data-value="대단한낚싯대"],
+  &[data-value="대단한낚싯대: 수면의 그림자"] {
+    background-color: #c9daf8;
+  }
+  &[data-value="하수구"] {
+    background-color: #efefef;
+  }
+  &[data-value^="동굴"],
+  &[data-value="모래먼지"] {
+    background-color: #f1e3d5;
+  }
+  &[data-value^="모래"] {
+    background-color: #fce5cd;
+  }
+  &[data-value="날고 있는 포켓몬의 그림자"] {
+    background-color: #d0e0e3;
+  }
 }

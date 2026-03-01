@@ -2003,10 +2003,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
             ],
           },
-          {
-            'area': '4번도로 : 봄, 여름,가을',
-            'encounters': [],
-          },
         ],
       },
       {
@@ -4706,15 +4702,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             ],
           },
         ],
-      },
-    ],
-  },
-  {
-    'locationName': '고대샛길 (중앙)',
-    'regionDatas': [
-      {
-        'locationStatus': '기본',
-        'areaDatas': [],
       },
     ],
   },
