@@ -217,7 +217,19 @@ export class PokedexComponent implements OnInit {
     // 이름 또는 한국어 이름으로 필터링합니다.
     const filtered = this.allPokemon.filter((pokemon) => {
       if (this.selectedType) {
-        if (!pokemon.types || !pokemon.types.includes(this.selectedType)) {
+        let current_types = pokemon.types;
+        if (!current_types) {
+          current_types = pokemon.form?.reduce(
+            (acc, f) => acc.concat(f.types || []),
+            [] as string[],
+          );
+        }
+
+        if (!current_types) {
+          return false;
+        }
+
+        if (!current_types.includes(this.selectedType)) {
           return false;
         }
       }
