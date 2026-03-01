@@ -1,5 +1,3 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { AppRoutingModule } from './app/app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +15,7 @@ bootstrapApplication(AppComponent, {
     importProvidersFrom(BrowserModule, AppRoutingModule, FormsModule),
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000',
+      registrationStrategy: 'registerWhenStable:300000',
     }),
   ],
 }).catch((err) => console.error(err));
