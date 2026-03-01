@@ -54,42 +54,66 @@
   opacity: 0;
 }
 
-/* 성별 버튼 스타일 */
-.gender-button {
+.floating-button {
   position: absolute;
-  top: 5px;
-  right: 5px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid #e0e0e0;
-  background-color: #ffffff; /* 흰색 원 배경 */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-}
+  font-size: 14px;
 
-.gender-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+  &.gender-button {
+    top: 5px;
+    right: 5px;
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s;
 
-/* 안쪽의 작은 원을 위한 공통 스타일 */
-.gender-button::after {
-  content: "";
-  display: block;
-  width: 15px; /* 내부 원 크기 */
-  height: 15px;
-  border-radius: 50%;
-  transition: background-color 0.2s ease;
-}
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      transition: background-color 0.2s ease;
+    }
+  }
 
+  &.favorite-button {
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    transition:
+      transform 0.2s,
+      color 0.2s,
+      text-shadow 0.2s;
+    padding: 0;
+    line-height: 1;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &.is-favorite {
+      color: #ffca28; /* 노란색 별 */
+      text-shadow: 0 0 2px rgba(255, 202, 40, 0.5);
+    }
+  }
+}
 .gender-button.male-active::after {
   background-color: #ffb6c1; /* 남성은 분홍색 원 */
 }
@@ -97,6 +121,8 @@
 .gender-button.female-active::after {
   background-color: #ff4d4d; /* 여성은 빨간색 원 */
 }
+
+/* 즐겨찾기 버튼 스타일 */
 
 .pokemon-info {
   display: flex;

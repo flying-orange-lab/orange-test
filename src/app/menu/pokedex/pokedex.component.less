@@ -10,6 +10,7 @@ main.pokedex-page {
 .search-section {
   &:extend(.base-section);
   padding: 25px;
+  position: relative;
 
   h2 {
     &:extend(.base-section-h2);
@@ -34,7 +35,9 @@ main.pokedex-page {
       border-radius: 8px;
       font-size: 1.1em;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
     }
 
     #searchButton:hover {
@@ -49,6 +52,47 @@ main.pokedex-page {
     #resetButton:hover {
       background-color: #5a6268;
     }
+  }
+
+  /* 즐겨찾기 필터 버튼 (Floating) */
+  #favoriteFilterButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #fff;
+    color: #ffd700; /* 기본 상태도 노란색 톤 띠게 유도하거나 회색(#6c757d)유지 */
+    color: #6c757d;
+    border: 1px solid #ced4da;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition:
+      background-color 0.3s ease,
+      transform 0.2s ease,
+      color 0.3s ease;
+    z-index: 10;
+  }
+
+  #favoriteFilterButton:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+  }
+
+  #favoriteFilterButton.active {
+    background-color: #ffca28;
+    color: #fff;
+    border-color: #ffca28;
+    box-shadow: 0 4px 10px rgba(255, 202, 40, 0.4);
+  }
+
+  .favorite-icon-active {
+    color: #fff;
   }
 
   .type-filter-grid {
