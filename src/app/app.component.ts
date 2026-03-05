@@ -12,8 +12,6 @@ import { HeaderComponent } from './header/header.component';
 import { FloatingButtonComponent } from './floating-button/floating-button.component';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
-declare let gtag: (command: string, ...args: unknown[]) => void;
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -38,14 +36,6 @@ export class AppComponent implements OnInit {
   private previousScroll = signal(0);
 
   constructor() {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        gtag('config', 'G-XXXXXXXXXX', {
-          page_path: event.urlAfterRedirects,
-        });
-      }
-    });
-
     this.unregisterServiceWorkers();
   }
 
