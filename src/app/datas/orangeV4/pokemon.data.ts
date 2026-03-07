@@ -4569,7 +4569,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
       },
       {
         'formName': '화덕의가면',
-        'imageUrl': '10273.png',
+        'imageUrl': '10274.png',
         'types': ['grass', 'fire'],
         'abilities': ['틀깨기', '-', '-'],
         'stats': [80, 120, 84, 60, 96, 110, 550],
@@ -4580,7 +4580,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
       },
       {
         'formName': '우물의가면',
-        'imageUrl': '10274.png',
+        'imageUrl': '10273.png',
         'types': ['grass', 'water'],
         'abilities': ['저수', '-', '-'],
         'stats': [80, 120, 84, 60, 96, 110, 550],
@@ -8832,7 +8832,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
       },
       {
         'formName': '화이트',
-        'imageUrl': '10022.png',
+        'imageUrl': '10023.png',
         'types': ['dragon', 'ice'],
         'abilities': ['터보블레이즈', '-', '-'],
         'stats': [125, 120, 90, 170, 100, 95, 700],
@@ -8843,7 +8843,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
       },
       {
         'formName': '블랙',
-        'imageUrl': '10023.png',
+        'imageUrl': '10022.png',
         'types': ['dragon', 'ice'],
         'abilities': ['테라볼티지', '-', '-'],
         'stats': [125, 170, 100, 120, 90, 95, 700],
