@@ -13,6 +13,9 @@ import { TYPE_DISPLAY_DATA, TYPE_LABEL } from 'src/app/datas/type.data';
 })
 export class PokedexSearchComponent implements OnInit {
   pokemonSearchInput = '';
+  abilitySearchInput = '';
+  moveSearchInput = '';
+  isAdvancedSearchOpen = false;
   selectedType: string | null = null;
   pokemonSearchOffset = 1;
 
@@ -25,37 +28,77 @@ export class PokedexSearchComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
       this.pokemonSearchInput = params['search'] || '';
+      this.abilitySearchInput = params['ability'] || '';
+      this.moveSearchInput = params['move'] || '';
       this.pokemonSearchOffset = parseInt(params['gte']) || 1;
       this.selectedType = params['type'] || null;
+
+      if (this.abilitySearchInput || this.moveSearchInput) {
+        this.isAdvancedSearchOpen = true;
+      }
     });
   }
 
+  toggleAdvancedSearch(): void {
+    this.isAdvancedSearchOpen = !this.isAdvancedSearchOpen;
+    if (!this.isAdvancedSearchOpen) {
+      // 닫을 때 값 초기화 할지 물어볼 수도 있지만 보통 유지하거나 지움.
+      // 일단 명시적으로 초기화하지 않으면 숨겨진 채로 검색어 적용될 수 있으므로 초기화.
+      this.abilitySearchInput = '';
+      this.moveSearchInput = '';
+    }
+  }
+
   onSearchButtonClick(): void {
-    if (this.pokemonSearchInput.length === 0) {
-      return;
+    if (
+      this.pokemonSearchInput.length === 0 &&
+      this.abilitySearchInput.length === 0 &&
+      this.moveSearchInput.length === 0
+    ) {
+      // 모두 비어있으면 전체 검색 (또는 그대로 유지)
     }
 
     const isNumericString = /^\d+$/.test(this.pokemonSearchInput);
+
+    // 고급 검색이 닫혀있으면 입력값을 없앰
+    if (!this.isAdvancedSearchOpen) {
+      this.abilitySearchInput = '';
+      this.moveSearchInput = '';
+    }
+
+    const queryParams: any = {
+      search:
+        this.pokemonSearchInput.length > 0 && !isNumericString
+          ? this.pokemonSearchInput
+          : undefined,
+      ability:
+        this.abilitySearchInput.length > 0
+          ? this.abilitySearchInput
+          : undefined,
+      move: this.moveSearchInput.length > 0 ? this.moveSearchInput : undefined,
+    };
+
     if (isNumericString) {
       this.pokemonSearchOffset = parseInt(this.pokemonSearchInput);
       this.pokemonSearchInput = '';
-      this.router.navigate([], {
-        relativeTo: this.route,
-        queryParams: { search: undefined, gte: this.pokemonSearchOffset },
-        queryParamsHandling: 'merge',
-      });
+      queryParams.gte = this.pokemonSearchOffset;
+      queryParams.search = undefined;
     } else {
       this.pokemonSearchOffset = 1;
-      this.router.navigate([], {
-        relativeTo: this.route,
-        queryParams: { search: this.pokemonSearchInput, gte: 1 },
-        queryParamsHandling: 'merge',
-      });
+      queryParams.gte = 1;
     }
+
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams,
+      queryParamsHandling: 'merge',
+    });
   }
 
   resetSearch(): void {
     this.pokemonSearchInput = '';
+    this.abilitySearchInput = '';
+    this.moveSearchInput = '';
     this.selectedType = null;
     this.router.navigate([], {
       relativeTo: this.route,

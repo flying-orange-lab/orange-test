@@ -34,12 +34,6 @@ export class PokemonMoveService {
       current_move_tutor = moveDatas.tutor?.[base_pokemonKeyname] ?? [];
     }
 
-    console.log(pokemonKeyname);
-    console.log(base_pokemonKeyname);
-    console.log(current_move_learn);
-    console.log(current_move_tm);
-    console.log(current_move_tutor);
-
     return {
       learn: current_move_learn,
       tm: current_move_tm,

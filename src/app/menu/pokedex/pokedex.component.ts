@@ -13,6 +13,8 @@ import { HelperService } from 'src/app/services/helper.service';
 import { FavoriteService } from 'src/app/services/favorite.service';
 import { Subscription } from 'rxjs';
 import { PokedexSearchComponent } from './pokedex-search/pokedex-search.component';
+import { PokemonMoveService } from 'src/app/services/move.service';
+import { MoveLearnData, MoveTutorData } from 'src/app/models/move.model';
 
 @Component({
   selector: 'app-pokedex',
@@ -31,6 +33,7 @@ export class PokedexComponent implements OnInit {
   private helperService = inject(HelperService);
   private dataHandleService = inject(DataHandleService);
   private pokemonService = inject(PokemonService);
+  private pokemonMoveService = inject(PokemonMoveService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private favoriteService = inject(FavoriteService);
@@ -38,6 +41,8 @@ export class PokedexComponent implements OnInit {
   private favoriteSub?: Subscription;
 
   pokemonSearchInput = '';
+  abilitySearchInput = '';
+  moveSearchInput = '';
   pokemonSearchOffset = 1;
   pokemonSearchAttr = '';
   selectedType: string | null = null;
@@ -75,6 +80,8 @@ export class PokedexComponent implements OnInit {
       // URL 파라미터가 있다면 검색을 실행합니다.
       this.route.queryParams.subscribe((params) => {
         this.pokemonSearchInput = params['search'] || '';
+        this.abilitySearchInput = params['ability'] || '';
+        this.moveSearchInput = params['move'] || '';
         this.pokemonSearchOffset = parseInt(params['gte']) || 1;
         this.pokemonSearchAttr = params['attr'] || '';
         this.selectedType = params['type'] || null;
@@ -148,6 +155,8 @@ export class PokedexComponent implements OnInit {
 
   performSearch(): void {
     const lowerCaseSearchTerm = this.pokemonSearchInput.toLowerCase().trim();
+    const lowerCaseAbilityTerm = this.abilitySearchInput.toLowerCase().trim();
+    const lowerCaseMoveTerm = this.moveSearchInput.toLowerCase().trim();
 
     // 즐겨찾기 전용 모드 일때
     if (this.showFavoritesOnly) {
@@ -210,20 +219,112 @@ export class PokedexComponent implements OnInit {
         }
       }
 
+      // 검색 단어 관련 필터링
       if (lowerCaseSearchTerm.length > 0) {
+        let nameMatch = false;
         if (pokemon.name.toLowerCase().includes(lowerCaseSearchTerm)) {
-          return true;
+          nameMatch = true;
         }
-
         if (
           pokemon.koreanName &&
           pokemon.koreanName.toLowerCase().includes(lowerCaseSearchTerm)
         ) {
-          return true;
+          nameMatch = true;
         }
 
-        return false;
+        if (!nameMatch) {
+          return false;
+        }
       }
+
+      // 특성 필터링
+      if (lowerCaseAbilityTerm.length > 0) {
+        let abilityMatch = false;
+        if (
+          pokemon.abilities &&
+          pokemon.abilities.some((ability) =>
+            ability.toLowerCase().includes(lowerCaseAbilityTerm),
+          )
+        ) {
+          abilityMatch = true;
+        }
+
+        if (
+          pokemon.form &&
+          pokemon.form.some(
+            (f) =>
+              f.abilities &&
+              f.abilities.some((ability) =>
+                ability.toLowerCase().includes(lowerCaseAbilityTerm),
+              ),
+          )
+        ) {
+          abilityMatch = true;
+        }
+
+        if (!abilityMatch) {
+          return false;
+        }
+      }
+
+      // 기술 필터링
+      if (lowerCaseMoveTerm.length > 0) {
+        let moveMatch = false;
+
+        const checkMoves = (movesData: {
+          learn: MoveLearnData[];
+          tm: string[];
+          tutor: MoveTutorData[];
+        }) => {
+          if (
+            movesData.learn.some((m) =>
+              m.moveName.toLowerCase().includes(lowerCaseMoveTerm),
+            )
+          )
+            return true;
+          if (
+            movesData.tm.some((m) =>
+              m.toLowerCase().includes(lowerCaseMoveTerm),
+            )
+          )
+            return true;
+          if (
+            movesData.tutor.some((t) =>
+              t.moves.some((m: string) =>
+                m.toLowerCase().includes(lowerCaseMoveTerm),
+              ),
+            )
+          )
+            return true;
+          return false;
+        };
+
+        const defaultMoveKey = `${pokemon.id}-0`;
+        const defaultMoves =
+          this.pokemonMoveService.getMoveFromPokemonKeyname(defaultMoveKey);
+
+        if (checkMoves(defaultMoves)) {
+          moveMatch = true;
+        }
+
+        // 폼이 있는 경우 폼 기술도 확인 (기본 폼 0도 다시 체크될 수 있지만 안전함)
+        if (!moveMatch && pokemon.form) {
+          for (let i = 0; i < pokemon.form.length; i++) {
+            const formMoveKey = `${pokemon.id}-${i}`;
+            const formMoves =
+              this.pokemonMoveService.getMoveFromPokemonKeyname(formMoveKey);
+            if (checkMoves(formMoves)) {
+              moveMatch = true;
+              break;
+            }
+          }
+        }
+
+        if (!moveMatch) {
+          return false;
+        }
+      }
+
       return true;
     });
 
