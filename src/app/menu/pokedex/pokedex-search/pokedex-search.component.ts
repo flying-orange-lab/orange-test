@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TYPE_DISPLAY_DATA, TYPE_LABEL } from 'src/app/datas/type.data';
+import { MoveDetailService } from 'src/app/services/move-detail.service';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-pokedex-search',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MatAutocompleteModule, MatInputModule],
   templateUrl: './pokedex-search.component.html',
   styleUrl: './pokedex-search.component.less',
 })
@@ -21,11 +24,15 @@ export class PokedexSearchComponent implements OnInit {
 
   typeLabels = TYPE_LABEL;
   typeDisplay = TYPE_DISPLAY_DATA;
+  moveNames: string[] = [];
+  filteredMoveNames: string[] = [];
 
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private moveDetailService = inject(MoveDetailService);
 
   ngOnInit(): void {
+    this.moveNames = this.moveDetailService.moveNames;
     this.route.queryParams.subscribe((params) => {
       this.pokemonSearchInput = params['search'] || '';
       this.abilitySearchInput = params['ability'] || '';
@@ -37,6 +44,17 @@ export class PokedexSearchComponent implements OnInit {
         this.isAdvancedSearchOpen = true;
       }
     });
+  }
+
+  onMoveSearchChange(): void {
+    const searchVal = this.moveSearchInput.trim();
+    if (searchVal.length > 0) {
+      this.filteredMoveNames = this.moveNames.filter((name) =>
+        name.includes(searchVal),
+      );
+    } else {
+      this.filteredMoveNames = [];
+    }
   }
 
   toggleAdvancedSearch(): void {
@@ -99,6 +117,7 @@ export class PokedexSearchComponent implements OnInit {
     this.pokemonSearchInput = '';
     this.abilitySearchInput = '';
     this.moveSearchInput = '';
+    this.filteredMoveNames = [];
     this.selectedType = null;
     this.router.navigate([], {
       relativeTo: this.route,

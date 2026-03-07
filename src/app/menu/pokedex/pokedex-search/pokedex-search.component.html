@@ -50,12 +50,20 @@
       <label for="move-search">기술</label>
       <input
         type="text"
+        matInput
         id="move-search"
         placeholder="기술 이름..."
         [(ngModel)]="moveSearchInput"
+        (ngModelChange)="onMoveSearchChange()"
         (keyup.enter)="onSearchButtonClick()"
         autocomplete="off"
+        [matAutocomplete]="auto"
       />
+      <mat-autocomplete #auto="matAutocomplete">
+        @for (moveName of filteredMoveNames; track $index) {
+          <mat-option [value]="moveName">{{ moveName }}</mat-option>
+        }
+      </mat-autocomplete>
     </div>
     <div class="advanced-input-group">
       <span>타입</span>
