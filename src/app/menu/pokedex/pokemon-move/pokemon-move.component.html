@@ -24,10 +24,12 @@
                 </tr>
               </thead>
               <tbody>
-                @for (move of moves.learn; track $index; let i = $index) {
-                  <tr>
+                @for (move of moves.learn; track $index) {
+                  <tr (click)="openMoveCard(move.moveName)">
                     <td>{{ move.moveLv }}</td>
-                    <td>{{ move.moveName }}</td>
+                    <td class="move-name-cell">
+                      <span class="move-chip">{{ move.moveName }}</span>
+                    </td>
                   </tr>
                 }
               </tbody>
@@ -56,9 +58,11 @@
                 </tr>
               </thead>
               <tbody>
-                @for (move of moves.tm; track $index; let i = $index) {
-                  <tr>
-                    <td>{{ move }}</td>
+                @for (move of moves.tm; track $index) {
+                  <tr (click)="openMoveCard(move)">
+                    <td class="move-name-cell">
+                      <span class="move-chip">{{ move }}</span>
+                    </td>
                   </tr>
                 }
               </tbody>
@@ -83,16 +87,18 @@
             <table>
               <thead>
                 <tr>
-                  <th></th>
+                  <th>조각</th>
                   <th>기술 이름</th>
                 </tr>
               </thead>
               <tbody class="drawer-tutor">
                 @for (tutor of moves.tutor; track tutor) {
                   @for (move of tutor.moves; track move) {
-                    <tr>
+                    <tr (click)="openMoveCard(move)">
                       <td [class]="tutor.tutorName"></td>
-                      <td>{{ move }}</td>
+                      <td class="move-name-cell">
+                        <span class="move-chip">{{ move }}</span>
+                      </td>
                     </tr>
                   }
                 }

@@ -2,13 +2,13 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { combineLatest } from 'rxjs';
-import { TYPE_CODE_DATA } from 'src/app/datas/type.data';
 import { MoveDetail } from 'src/app/models/move-detail.model';
 import { MoveDetailService } from 'src/app/services/move-detail.service';
+import { MoveCardComponent } from './move-card/move-card.component';
 
 @Component({
   selector: 'app-move-detail',
-  imports: [FormsModule],
+  imports: [FormsModule, MoveCardComponent],
   templateUrl: './move-detail.component.html',
   styleUrl: './move-detail.component.less',
 })
@@ -104,10 +104,6 @@ export class MoveDetailComponent implements OnInit {
       this.noResultsMessage = '';
       this.searchResults = filtered;
     }
-  }
-
-  korToEngTypeMapper(type: string) {
-    return TYPE_CODE_DATA[type];
   }
 
   onSearchButtonClick(): void {
