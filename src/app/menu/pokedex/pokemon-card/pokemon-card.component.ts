@@ -9,6 +9,7 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { NgOptimizedImage } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -226,7 +227,7 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
         urlKey = genderKey;
       }
     }
-    this.currentImageUrl = `assets/sprites/${urlKey}.png`;
+    this.currentImageUrl = `${environment.spriteBaseUrl}/${urlKey}.png`;
   }
 
   goToDefensePage(): void {

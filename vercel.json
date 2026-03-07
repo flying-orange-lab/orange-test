@@ -73,5 +73,10 @@
       ]
     }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/((?!.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|js|css)).*)",
+      "destination": "/index.html"
+    }
+  ]
 }

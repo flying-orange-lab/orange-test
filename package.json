@@ -1,6 +1,6 @@
 {
   "name": "orange-datasheet",
-  "version": "0.0.0",
+  "version": "4.04",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
