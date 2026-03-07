@@ -100,8 +100,20 @@
     @if (activeTab === "habitat") {
       <div class="habitat-grid">
         @for (pokemon of uniquePokemons; track pokemon.id) {
-          <app-pokemon-card [pokemon]="pokemon" [disableLocation]="true">
-          </app-pokemon-card>
+          <app-pokemon-card
+            [pokemon]="pokemon"
+            [disableLocation]="true"
+            [disableFavorite]="true"
+            [disableStatus]="true"
+            [disableDetail]="true"
+            [disableAbility]="true"
+            [disableEvolution]="true"
+            [disableWildItem]="true"
+            [disableId]="true"
+            [disableExtraInfo]="true"
+            (click)="goToPokedex(pokemon)"
+            style="cursor: pointer"
+          ></app-pokemon-card>
         }
       </div>
     }

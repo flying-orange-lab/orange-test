@@ -217,23 +217,11 @@
 // 서식지 정보 그리드 뷰
 .habitat-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
   justify-content: center;
-  padding: 20px 10px;
+  padding: 15px 10px;
   background-color: #f8f9fa;
   border-radius: 8px;
   border: 1px solid #dee2e6;
-}
-
-@media (min-width: 680px) {
-  .habitat-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .habitat-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }

@@ -42,6 +42,14 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() pokemon!: Pokemon;
   @Input() disableLocation = false;
+  @Input() disableFavorite = false;
+  @Input() disableStatus = false;
+  @Input() disableDetail = false;
+  @Input() disableAbility = false;
+  @Input() disableEvolution = false;
+  @Input() disableWildItem = false;
+  @Input() disableId = false;
+  @Input() disableExtraInfo = false;
   @Output() defenseEvent = new EventEmitter<string[]>();
   currentPokemonStats: number[] = [0, 0, 0, 0, 0, 0, 0];
   currentAbility?: PokemonAbility;

@@ -12,6 +12,8 @@ import { FormControl } from '@angular/forms';
 import { HighlightPipe } from 'src/app/shared/highlight.pipe';
 import { PokemonCardComponent } from '../../pokedex/pokemon-card/pokemon-card.component';
 import { Pokemon } from 'src/app/models/pokemon.model';
+import { Router } from '@angular/router';
+import { DataHandleService } from 'src/app/services/data-handle.service';
 
 @Component({
   selector: 'app-wild-region',
@@ -21,6 +23,8 @@ import { Pokemon } from 'src/app/models/pokemon.model';
 })
 export class WildRegionComponent implements OnInit {
   private pokemonService = inject(PokemonService);
+  private router = inject(Router);
+  private dataHandleService = inject(DataHandleService);
 
   @Input() searchContext!: FormControl;
   @Input() regionDatas!: RegionData[];
@@ -92,5 +96,12 @@ export class WildRegionComponent implements OnInit {
       console.log(`바이바이, ${name}`);
     }
     this.pokemonCaught.emit({ id: pokemonId, status: status });
+  }
+
+  goToPokedex(pokemon: Pokemon): void {
+    const gameVersion = this.dataHandleService.getGameVersion();
+    this.router.navigate(['/' + gameVersion, 'pokedex'], {
+      queryParams: { gte: pokemon.id },
+    });
   }
 }
