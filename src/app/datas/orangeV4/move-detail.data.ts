@@ -4491,6 +4491,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '80',
     'pp': 5,
     'makeContact': false,
+    'category': ['킥'],
     'effects': {},
   },
   {
