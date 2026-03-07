@@ -1,7 +1,10 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MoveLearnData, MoveTutorData } from 'src/app/models/move.model';
 import { DataHandleService } from 'src/app/services/data-handle.service';
+import { MoveDetailService } from 'src/app/services/move-detail.service';
 import { PokemonMoveService } from 'src/app/services/move.service';
+import { MoveCardModalComponent } from './move-card-modal/move-card-modal.component';
 
 export interface PokemonMoves {
   learn: MoveLearnData[];
@@ -17,6 +20,8 @@ export interface PokemonMoves {
 export class PokemonMoveComponent implements OnInit {
   private dataHandleService = inject(DataHandleService);
   private pokemonMoveService = inject(PokemonMoveService);
+  private moveDetailService = inject(MoveDetailService);
+  private dialog = inject(MatDialog);
 
   @Input() pokemonKeyname!: string;
 
@@ -32,6 +37,15 @@ export class PokemonMoveComponent implements OnInit {
     this.moves = this.pokemonMoveService.getMoveFromPokemonKeyname(
       this.pokemonKeyname,
     );
+  }
+
+  openMoveCard(moveName: string) {
+    const moveDetail = this.moveDetailService.getMoveDetailByName(moveName);
+    if (!moveDetail) return;
+    this.dialog.open(MoveCardModalComponent, {
+      data: { moveDetail },
+      panelClass: 'move-card-modal-panel',
+    });
   }
 
   toggleRootDrawer(event: Event) {

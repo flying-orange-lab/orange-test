@@ -27,7 +27,12 @@
                 @for (move of moves.learn; track $index; let i = $index) {
                   <tr>
                     <td>{{ move.moveLv }}</td>
-                    <td>{{ move.moveName }}</td>
+                    <td
+                      class="move-name-cell"
+                      (click)="openMoveCard(move.moveName)"
+                    >
+                      {{ move.moveName }}
+                    </td>
                   </tr>
                 }
               </tbody>
@@ -58,7 +63,9 @@
               <tbody>
                 @for (move of moves.tm; track $index; let i = $index) {
                   <tr>
-                    <td>{{ move }}</td>
+                    <td class="move-name-cell" (click)="openMoveCard(move)">
+                      {{ move }}
+                    </td>
                   </tr>
                 }
               </tbody>
@@ -92,7 +99,9 @@
                   @for (move of tutor.moves; track move) {
                     <tr>
                       <td [class]="tutor.tutorName"></td>
-                      <td>{{ move }}</td>
+                      <td class="move-name-cell" (click)="openMoveCard(move)">
+                        {{ move }}
+                      </td>
                     </tr>
                   }
                 }

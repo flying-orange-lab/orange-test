@@ -20,4 +20,12 @@ export class MoveDetailService {
   getAllMoveDetail(): Observable<MoveDetail[]> {
     return of(this.dataHandleService.moveDetailDatas);
   }
+
+  getMoveDetailByName(name: string): MoveDetail | undefined {
+    if (name.startsWith('TM')) {
+      name = name.split(' ')[1];
+    }
+
+    return this.dataHandleService.moveDetailDatas?.find((m) => m.name === name);
+  }
 }
