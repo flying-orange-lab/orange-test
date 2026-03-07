@@ -35,7 +35,10 @@
                 "output": "/"
               }
             ],
-            "styles": ["src/styles.less"],
+            "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
+              "src/styles.less"
+            ],
             "scripts": [],
             "browser": "src/main.ts"
           },
@@ -102,7 +105,10 @@
                 "output": "/"
               }
             ],
-            "styles": ["src/styles.less"],
+            "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
+              "src/styles.less"
+            ],
             "scripts": []
           }
         },
