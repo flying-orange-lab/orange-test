@@ -131,12 +131,15 @@
       </div>
     </div>
   }
-  <div class="pokemon-card-extra">
-    <app-pokemon-location
-      [pokemonName]="pokemon.koreanName"
-      [pokemonExtra]="pokemonFormName"
-    ></app-pokemon-location>
-  </div>
+
+  @if (!disableLocation) {
+    <div class="pokemon-card-extra">
+      <app-pokemon-location
+        [pokemonName]="pokemon.koreanName"
+        [pokemonExtra]="pokemonFormName"
+      ></app-pokemon-location>
+    </div>
+  }
   <div class="pokemon-card-extra detail">
     <div class="extra-detail-icon" (click)="openModal()">☰</div>
   </div>

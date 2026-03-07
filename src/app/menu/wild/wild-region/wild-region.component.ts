@@ -10,12 +10,14 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 import { Encounter, RegionData } from 'src/app/models/wilds.model';
 import { FormControl } from '@angular/forms';
 import { HighlightPipe } from 'src/app/shared/highlight.pipe';
+import { PokemonCardComponent } from '../../pokedex/pokemon-card/pokemon-card.component';
+import { Pokemon } from 'src/app/models/pokemon.model';
 
 @Component({
   selector: 'app-wild-region',
   templateUrl: './wild-region.component.html',
   styleUrls: ['./wild-region.component.less'],
-  imports: [HighlightPipe],
+  imports: [HighlightPipe, PokemonCardComponent],
 })
 export class WildRegionComponent implements OnInit {
   private pokemonService = inject(PokemonService);
@@ -27,6 +29,7 @@ export class WildRegionComponent implements OnInit {
 
   isExpanded = false;
   selectedRegion?: RegionData;
+  activeTab: 'encounter' | 'habitat' = 'encounter';
 
   ngOnInit(): void {
     if (this.regionDatas && this.regionDatas.length > 0) {
@@ -42,11 +45,34 @@ export class WildRegionComponent implements OnInit {
     return result;
   }
 
+  get uniquePokemons(): Pokemon[] {
+    if (!this.selectedRegion) {
+      return [];
+    }
+
+    const uniqueNames = new Set<string>();
+    const pokemons: Pokemon[] = [];
+
+    for (const areaData of this.selectedRegion.areaDatas) {
+      for (const encounter of areaData.encounters) {
+        if (!uniqueNames.has(encounter.name)) {
+          uniqueNames.add(encounter.name);
+          const pokemon = this.pokemonService.findPokemon(encounter.name);
+          if (pokemon) {
+            pokemons.push(pokemon);
+          }
+        }
+      }
+    }
+
+    return pokemons;
+  }
+
   public toggleExpanded(): void {
     this.isExpanded = !this.isExpanded;
   }
 
-  selectRegion(region: any): void {
+  selectRegion(region: RegionData): void {
     this.selectedRegion = region;
   }
 

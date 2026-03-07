@@ -41,6 +41,7 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   private favoriteSub?: Subscription;
 
   @Input() pokemon!: Pokemon;
+  @Input() disableLocation = false;
   @Output() defenseEvent = new EventEmitter<string[]>();
   currentPokemonStats: number[] = [0, 0, 0, 0, 0, 0, 0];
   currentAbility?: PokemonAbility;
