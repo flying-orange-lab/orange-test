@@ -10,6 +10,14 @@
 
 .search-controls {
   &:extend(.base-section-search-control);
+  align-items: center;
+  flex-direction: column;
+
+  .main-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 
   input#pokemon-search {
     &:extend(.base-section-search-input);
@@ -44,6 +52,11 @@
 
   #resetButton:hover {
     background-color: #5a6268;
+  }
+
+  .toggle-container {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -133,15 +146,9 @@
   }
 }
 
-.toggle-container {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 5px;
-}
-
 .advanced-search-toggle {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   gap: 6px;
   padding: 6px 14px;
