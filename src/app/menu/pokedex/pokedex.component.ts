@@ -242,8 +242,8 @@ export class PokedexComponent implements OnInit {
         let abilityMatch = false;
         if (
           pokemon.abilities &&
-          pokemon.abilities.some((ability) =>
-            ability.toLowerCase().includes(lowerCaseAbilityTerm),
+          pokemon.abilities.some(
+            (ability) => ability.toLowerCase() === lowerCaseAbilityTerm,
           )
         ) {
           abilityMatch = true;
@@ -254,8 +254,8 @@ export class PokedexComponent implements OnInit {
           pokemon.form.some(
             (f) =>
               f.abilities &&
-              f.abilities.some((ability) =>
-                ability.toLowerCase().includes(lowerCaseAbilityTerm),
+              f.abilities.some(
+                (ability) => ability.toLowerCase() === lowerCaseAbilityTerm,
               ),
           )
         ) {
@@ -277,21 +277,17 @@ export class PokedexComponent implements OnInit {
           tutor: MoveTutorData[];
         }) => {
           if (
-            movesData.learn.some((m) =>
-              m.moveName.toLowerCase().includes(lowerCaseMoveTerm),
+            movesData.learn.some(
+              (m) => m.moveName.toLowerCase() === lowerCaseMoveTerm,
             )
           )
             return true;
-          if (
-            movesData.tm.some((m) =>
-              m.toLowerCase().includes(lowerCaseMoveTerm),
-            )
-          )
+          if (movesData.tm.some((m) => m.toLowerCase() === lowerCaseMoveTerm))
             return true;
           if (
             movesData.tutor.some((t) =>
-              t.moves.some((m: string) =>
-                m.toLowerCase().includes(lowerCaseMoveTerm),
+              t.moves.some(
+                (m: string) => m.toLowerCase() === lowerCaseMoveTerm,
               ),
             )
           )
