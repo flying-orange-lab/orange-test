@@ -15,44 +15,6 @@ main.pokedex-page {
   h2 {
     &:extend(.base-section-h2);
   }
-  .search-controls {
-    &:extend(.base-section-search-control);
-
-    input#pokemon-search {
-      &:extend(.base-section-search-input);
-      max-width: 400px;
-    }
-    input#pokemon-search:focus {
-      &:extend(.base-section-search-input:focus);
-    }
-
-    #searchButton,
-    #resetButton {
-      padding: 12px 25px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1em;
-      cursor: pointer;
-      transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
-    }
-
-    #searchButton:hover {
-      background-color: #0056b3;
-    }
-
-    #resetButton {
-      background-color: #6c757d;
-      padding: 12px 18px;
-    }
-
-    #resetButton:hover {
-      background-color: #5a6268;
-    }
-  }
 
   /* 즐겨찾기 필터 버튼 (Floating) */
   #favoriteFilterButton {
@@ -60,7 +22,6 @@ main.pokedex-page {
     top: 20px;
     left: 20px;
     background-color: #fff;
-    color: #ffd700; /* 기본 상태도 노란색 톤 띠게 유도하거나 회색(#6c757d)유지 */
     color: #6c757d;
     border: 1px solid #ced4da;
     border-radius: 50%;
@@ -93,95 +54,6 @@ main.pokedex-page {
 
   .favorite-icon-active {
     color: #fff;
-  }
-
-  .type-filter-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 15px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-
-    .type-button {
-      padding: 5px 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background-color: #fff;
-      color: #333;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-size: 0.85em;
-
-      &:hover {
-        filter: brightness(0.95);
-      }
-
-      &.selected {
-        border-color: #fff;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        color: white;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-      }
-    }
-
-    .selected.type-normal {
-      background-color: #a8a878;
-    }
-    .selected.type-fire {
-      background-color: #f08030;
-    }
-    .selected.type-water {
-      background-color: #6890f0;
-    }
-    .selected.type-grass {
-      background-color: #78c850;
-    }
-    .selected.type-electric {
-      background-color: #f8d030;
-    }
-    .selected.type-ice {
-      background-color: #98d8d8;
-    }
-    .selected.type-fighting {
-      background-color: #c03028;
-    }
-    .selected.type-poison {
-      background-color: #a040a0;
-    }
-    .selected.type-ground {
-      background-color: #e0c068;
-    }
-    .selected.type-flying {
-      background-color: #a890f0;
-    }
-    .selected.type-psychic {
-      background-color: #f85888;
-    }
-    .selected.type-bug {
-      background-color: #a8b820;
-    }
-    .selected.type-rock {
-      background-color: #b8a038;
-    }
-    .selected.type-ghost {
-      background-color: #705898;
-    }
-    .selected.type-dragon {
-      background-color: #7038f8;
-    }
-    .selected.type-steel {
-      background-color: #b8b8d0;
-    }
-    .selected.type-dark {
-      background-color: #705848;
-    }
-    .selected.type-fairy {
-      background-color: #ee99ac;
-    }
   }
 }
 
