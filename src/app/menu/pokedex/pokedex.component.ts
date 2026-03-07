@@ -282,7 +282,11 @@ export class PokedexComponent implements OnInit {
             )
           )
             return true;
-          if (movesData.tm.some((m) => m.toLowerCase() === lowerCaseMoveTerm))
+          if (
+            movesData.tm.some((m) =>
+              m.toLowerCase().includes(lowerCaseMoveTerm),
+            )
+          )
             return true;
           if (
             movesData.tutor.some((t) =>
