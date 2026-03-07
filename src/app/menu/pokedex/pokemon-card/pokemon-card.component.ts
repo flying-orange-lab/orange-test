@@ -50,6 +50,7 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   @Input() disableWildItem = false;
   @Input() disableId = false;
   @Input() disableExtraInfo = false;
+  @Input() isSmallImage = false;
   @Output() defenseEvent = new EventEmitter<string[]>();
   currentPokemonStats: number[] = [0, 0, 0, 0, 0, 0, 0];
   currentAbility?: PokemonAbility;
@@ -170,13 +171,15 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   // 앞/뒷면 토글
-  toggleSprite(): void {
+  toggleSprite(event: Event): void {
+    event.stopPropagation();
     this.isFront = !this.isFront;
     this.updatePokemonInfo(); // 앞/뒷면이 바뀌면 이미지 업데이트
   }
 
   // 성별 토글
-  toggleGender(): void {
+  toggleGender(event: Event): void {
+    event.stopPropagation();
     this.isGenderFemale = !this.isGenderFemale;
     this.updatePokemonInfo(); // 성별이 바뀌면 이미지 업데이트
   }

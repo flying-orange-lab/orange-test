@@ -1,4 +1,4 @@
-<div class="pokemon-card-container">
+<div class="pokemon-card-container" [class.small-image]="isSmallImage">
   <div class="pokemon-card-content">
     @if (useSprite && hasGender) {
       <!-- 성별 표기-->
@@ -6,7 +6,7 @@
         class="floating-button gender-button"
         [class.male-active]="!isGenderFemale"
         [class.female-active]="isGenderFemale"
-        (click)="toggleGender()"
+        (click)="toggleGender($event)"
         [attr.aria-label]="isGenderFemale ? '암컷' : '수컷'"
         title="성별 변경"
       ></button>
@@ -25,10 +25,11 @@
     }
     <img
       class="pokemon-image"
+      [class.small-image]="isSmallImage"
       [ngSrc]="currentImageUrl"
       width="96"
       height="96"
-      (click)="toggleSprite()"
+      (click)="toggleSprite($event)"
     />
     <div class="pokemon-info">
       <div class="pokemon-name">{{ pokemon.koreanName || pokemon.name }}</div>
