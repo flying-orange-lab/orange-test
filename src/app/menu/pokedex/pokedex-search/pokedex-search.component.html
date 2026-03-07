@@ -19,18 +19,56 @@
   </button>
 </div>
 
-<div class="filter-row">
-  <span class="filter-label">타입</span>
-  <div class="type-filter-grid">
-    @for (typeKey of typeLabels; track typeKey) {
-      <button
-        class="type-button"
-        [class.selected]="selectedType === typeKey"
-        [ngClass]="'type-' + typeKey"
-        (click)="onTypeFilterClick(typeKey)"
-      >
-        {{ typeDisplay[typeKey] }}
-      </button>
-    }
-  </div>
+<div class="toggle-container">
+  <button
+    class="advanced-search-toggle"
+    (click)="toggleAdvancedSearch()"
+    title="고급 검색"
+    [class.active]="isAdvancedSearchOpen"
+  >
+    <i class="fas fa-sliders-h"></i>
+    <span class="toggle-text">고급 검색</span>
+  </button>
 </div>
+
+@if (isAdvancedSearchOpen) {
+  <div class="advanced-search-controls">
+    <div class="advanced-input-group">
+      <label for="ability-search">특성</label>
+      <input
+        type="text"
+        id="ability-search"
+        placeholder="특성 이름..."
+        [(ngModel)]="abilitySearchInput"
+        (keyup.enter)="onSearchButtonClick()"
+        autocomplete="off"
+      />
+    </div>
+    <div class="advanced-input-group">
+      <label for="move-search">기술</label>
+      <input
+        type="text"
+        id="move-search"
+        placeholder="기술 이름..."
+        [(ngModel)]="moveSearchInput"
+        (keyup.enter)="onSearchButtonClick()"
+        autocomplete="off"
+      />
+    </div>
+    <div class="advanced-input-group">
+      <span>타입</span>
+      <div class="type-filter-grid">
+        @for (typeKey of typeLabels; track typeKey) {
+          <button
+            class="type-button"
+            [class.selected]="selectedType === typeKey"
+            [ngClass]="'type-' + typeKey"
+            (click)="onTypeFilterClick(typeKey)"
+          >
+            {{ typeDisplay[typeKey] }}
+          </button>
+        }
+      </div>
+    </div>
+  </div>
+}

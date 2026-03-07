@@ -47,27 +47,6 @@
   }
 }
 
-.filter-row {
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #f8f9fa;
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
-
-  .filter-label {
-    font-weight: bold;
-    margin-right: 15px;
-    font-size: 0.95em;
-    color: #495057;
-    white-space: nowrap;
-  }
-}
-
 .type-filter-grid {
   display: flex;
   flex-wrap: wrap;
@@ -151,5 +130,97 @@
   }
   .selected.type-fairy {
     background-color: #ee99ac;
+  }
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+
+.advanced-search-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background-color: #fff;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #f1f3f5;
+  }
+
+  &.active {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
+}
+
+.advanced-search-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  animation: slideDown 0.3s ease-out;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .advanced-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    label,
+    span {
+      width: 40px;
+      font-weight: bold;
+      color: #495057;
+      white-space: nowrap;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px 15px;
+      font-size: 1em;
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      transition:
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+      outline: none;
+
+      &:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
