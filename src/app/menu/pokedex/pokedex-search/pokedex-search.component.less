@@ -1,5 +1,7 @@
 @import "_base-section.less";
 
+@search-max-width: 600px;
+
 .search-header {
   position: relative;
 
@@ -14,6 +16,8 @@
   flex-direction: column;
 
   .main-container {
+    width: 100%;
+    max-width: @search-max-width;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -21,7 +25,6 @@
 
   input#pokemon-search {
     &:extend(.base-section-search-input);
-    max-width: 400px;
   }
   input#pokemon-search:focus {
     &:extend(.base-section-search-input:focus);
@@ -41,8 +44,14 @@
       color 0.3s ease;
   }
 
-  #searchButton:hover {
-    background-color: #0056b3;
+  #searchButton {
+    &:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   #resetButton {
@@ -56,7 +65,10 @@
 
   .toggle-container {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
+    max-width: @search-max-width;
   }
 }
 
