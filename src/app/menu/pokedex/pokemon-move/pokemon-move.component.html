@@ -24,14 +24,11 @@
                 </tr>
               </thead>
               <tbody>
-                @for (move of moves.learn; track $index; let i = $index) {
-                  <tr>
+                @for (move of moves.learn; track $index) {
+                  <tr (click)="openMoveCard(move.moveName)">
                     <td>{{ move.moveLv }}</td>
-                    <td
-                      class="move-name-cell"
-                      (click)="openMoveCard(move.moveName)"
-                    >
-                      {{ move.moveName }}
+                    <td class="move-name-cell">
+                      <span class="move-chip">{{ move.moveName }}</span>
                     </td>
                   </tr>
                 }
@@ -61,10 +58,10 @@
                 </tr>
               </thead>
               <tbody>
-                @for (move of moves.tm; track $index; let i = $index) {
-                  <tr>
-                    <td class="move-name-cell" (click)="openMoveCard(move)">
-                      {{ move }}
+                @for (move of moves.tm; track $index) {
+                  <tr (click)="openMoveCard(move)">
+                    <td class="move-name-cell">
+                      <span class="move-chip">{{ move }}</span>
                     </td>
                   </tr>
                 }
@@ -90,17 +87,17 @@
             <table>
               <thead>
                 <tr>
-                  <th></th>
+                  <th>조각</th>
                   <th>기술 이름</th>
                 </tr>
               </thead>
               <tbody class="drawer-tutor">
                 @for (tutor of moves.tutor; track tutor) {
                   @for (move of tutor.moves; track move) {
-                    <tr>
+                    <tr (click)="openMoveCard(move)">
                       <td [class]="tutor.tutorName"></td>
-                      <td class="move-name-cell" (click)="openMoveCard(move)">
-                        {{ move }}
+                      <td class="move-name-cell">
+                        <span class="move-chip">{{ move }}</span>
                       </td>
                     </tr>
                   }

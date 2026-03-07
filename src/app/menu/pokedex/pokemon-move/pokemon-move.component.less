@@ -79,19 +79,53 @@
 table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 0.88rem;
 }
 
-table th,
-table td {
-  padding: 4px;
-  border: 1px solid #eee;
-  text-align: left;
+table thead tr {
+  background-color: #e9ecef;
+
+  th {
+    padding: 8px 12px;
+    font-weight: 600;
+    color: #495057;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    border-bottom: 2px solid #dee2e6;
+
+    &:first-child {
+      width: 50px;
+    }
+  }
 }
 
-table thead th {
-  background-color: #f0f0f0;
-  font-weight: bold;
-  color: #555;
+table tbody tr {
+  border-bottom: 1px solid #f1f3f5;
+  transition: background-color 0.12s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+
+  td {
+    padding: 7px 12px;
+    color: #343a40;
+    vertical-align: middle;
+  }
+
+  // 클릭 가능한 행: 기술명 열이 있으면 전체 행 pointer
+  &:has(.move-name-cell) {
+    cursor: pointer;
+
+    &:hover {
+      background-color: #edf2ff;
+    }
+  }
 }
 
 .drawer-tutor {
@@ -123,13 +157,26 @@ table thead th {
 }
 
 .move-name-cell {
-  cursor: pointer;
-  color: #1a56a0;
-  text-decoration: underline;
-  user-select: none;
+  color: #3b5bdb;
+  font-weight: 500;
 
-  &:hover {
-    background-color: #e8f0fe;
-    color: #0d3880;
+  span.move-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+
+    &::after {
+      content: "›";
+      font-size: 1.1rem;
+      line-height: 1;
+      color: #748ffc;
+      margin-left: 2px;
+      margin-top: -1px;
+      transition: transform 0.12s ease;
+    }
+  }
+
+  tr:hover & span.move-chip::after {
+    transform: translateX(3px);
   }
 }
