@@ -14,6 +14,7 @@ import { PokemonCardComponent } from '../../pokedex/pokemon-card/pokemon-card.co
 import { Pokemon } from 'src/app/models/pokemon.model';
 import { Router } from '@angular/router';
 import { DataHandleService } from 'src/app/services/data-handle.service';
+import { WildStateService } from 'src/app/services/wild-state.service';
 
 @Component({
   selector: 'app-wild-region',
@@ -25,7 +26,9 @@ export class WildRegionComponent implements OnInit {
   private pokemonService = inject(PokemonService);
   private router = inject(Router);
   private dataHandleService = inject(DataHandleService);
+  private wildStateService = inject(WildStateService);
 
+  @Input() itemIndex!: number;
   @Input() searchContext!: FormControl;
   @Input() regionDatas!: RegionData[];
   @Input() pokemonCatchStatus!: Record<number, boolean>;
@@ -36,8 +39,22 @@ export class WildRegionComponent implements OnInit {
   activeTab: 'encounter' | 'habitat' = 'encounter';
 
   ngOnInit(): void {
+    // 상태 초기화
+    this.isExpanded = this.wildStateService.isExpanded(this.itemIndex);
+    this.activeTab = this.wildStateService.getActiveTab(this.itemIndex);
+
     if (this.regionDatas && this.regionDatas.length > 0) {
-      this.selectedRegion = this.regionDatas[0];
+      const savedRegionStatus = this.wildStateService.getSelectedRegion(
+        this.itemIndex,
+      );
+      if (savedRegionStatus) {
+        this.selectedRegion =
+          this.regionDatas.find(
+            (r) => r.locationStatus === savedRegionStatus,
+          ) || this.regionDatas[0];
+      } else {
+        this.selectedRegion = this.regionDatas[0];
+      }
     }
   }
 
@@ -78,6 +95,15 @@ export class WildRegionComponent implements OnInit {
 
   selectRegion(region: RegionData): void {
     this.selectedRegion = region;
+    this.wildStateService.setSelectedRegion(
+      this.itemIndex,
+      region.locationStatus,
+    );
+  }
+
+  selectTab(tab: 'encounter' | 'habitat'): void {
+    this.activeTab = tab;
+    this.wildStateService.setActiveTab(this.itemIndex, tab);
   }
 
   getPokemonId(pokemonName: string): number {

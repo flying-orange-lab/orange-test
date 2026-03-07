@@ -18,14 +18,14 @@
       <div
         class="tab-button"
         [class.active]="activeTab === 'encounter'"
-        (click)="activeTab = 'encounter'"
+        (click)="selectTab('encounter')"
       >
         출현율
       </div>
       <div
         class="tab-button"
         [class.active]="activeTab === 'habitat'"
-        (click)="activeTab = 'habitat'"
+        (click)="selectTab('habitat')"
       >
         서식지 정보
       </div>
