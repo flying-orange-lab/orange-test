@@ -202,6 +202,12 @@ export class PokedexComponent implements OnInit {
         ) {
           return false;
         }
+        if (
+          this.pokemonSearchAttr === 'new' &&
+          !this.pokemonService.newPokemonIds.has(pokemon.id)
+        ) {
+          return false;
+        }
       }
 
       if (lowerCaseSearchTerm.length > 0) {
