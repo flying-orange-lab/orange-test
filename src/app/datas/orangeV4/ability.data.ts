@@ -481,7 +481,7 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   {
     'id': 77,
     'name': '눈치우기',
-    'effect_text': '날씨가 싸라기눈일 떄 스피드가 2배 증가한다.',
+    'effect_text': '날씨가 싸라기눈일 때 스피드가 2배 증가한다.',
     'effect_wild_text': '',
   },
   {
@@ -719,7 +719,7 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   {
     'id': 115,
     'name': '아이스바디',
-    'effect_text': '날씨가 싸라기눈일 떄 매 턴 최대 체력의 1/16을 회복한다.',
+    'effect_text': '날씨가 싸라기눈일 때 매 턴 최대 체력의 1/16을 회복한다.',
     'effect_wild_text': '',
   },
   {
