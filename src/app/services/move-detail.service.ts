@@ -8,6 +8,14 @@ import { Observable, of } from 'rxjs';
 })
 export class MoveDetailService {
   private dataHandleService = inject(DataHandleService);
+  moveNames: string[] = [];
+
+  constructor() {
+    this.dataHandleService.gameVersion$.subscribe(() => {
+      const details = this.dataHandleService.moveDetailDatas || [];
+      this.moveNames = details.map((m) => m.name);
+    });
+  }
 
   getAllMoveDetail(): Observable<MoveDetail[]> {
     return of(this.dataHandleService.moveDetailDatas);
