@@ -12,6 +12,7 @@ import { DataHandleService } from 'src/app/services/data-handle.service';
 import { ActivatedRoute } from '@angular/router';
 import { WildArea } from 'src/app/models/wilds.model';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { WildStateService } from 'src/app/services/wild-state.service';
 import { map, Observable, startWith } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { HighlightPipe } from 'src/app/shared/highlight.pipe';
@@ -26,6 +27,7 @@ export class WildComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private dataHandleService = inject(DataHandleService);
   private pokemonCatchService = inject(PokemonCatchService);
+  private wildStateService = inject(WildStateService);
 
   searchContext = new FormControl('');
   wildData: WildArea[] = [];
@@ -101,6 +103,7 @@ export class WildComponent implements OnInit {
     const component = this.wildRegionComponents.get(index);
     if (component) {
       component.toggleExpanded();
+      this.wildStateService.toggleExpanded(index, component.isExpanded);
       this.scrollToSection(index);
     }
   }

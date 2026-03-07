@@ -10,16 +10,25 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 import { Encounter, RegionData } from 'src/app/models/wilds.model';
 import { FormControl } from '@angular/forms';
 import { HighlightPipe } from 'src/app/shared/highlight.pipe';
+import { PokemonCardComponent } from '../../pokedex/pokemon-card/pokemon-card.component';
+import { Pokemon } from 'src/app/models/pokemon.model';
+import { Router } from '@angular/router';
+import { DataHandleService } from 'src/app/services/data-handle.service';
+import { WildStateService } from 'src/app/services/wild-state.service';
 
 @Component({
   selector: 'app-wild-region',
   templateUrl: './wild-region.component.html',
   styleUrls: ['./wild-region.component.less'],
-  imports: [HighlightPipe],
+  imports: [HighlightPipe, PokemonCardComponent],
 })
 export class WildRegionComponent implements OnInit {
   private pokemonService = inject(PokemonService);
+  private router = inject(Router);
+  private dataHandleService = inject(DataHandleService);
+  private wildStateService = inject(WildStateService);
 
+  @Input() itemIndex!: number;
   @Input() searchContext!: FormControl;
   @Input() regionDatas!: RegionData[];
   @Input() pokemonCatchStatus!: Record<number, boolean>;
@@ -27,10 +36,25 @@ export class WildRegionComponent implements OnInit {
 
   isExpanded = false;
   selectedRegion?: RegionData;
+  activeTab: 'encounter' | 'habitat' = 'encounter';
 
   ngOnInit(): void {
+    // 상태 초기화
+    this.isExpanded = this.wildStateService.isExpanded(this.itemIndex);
+    this.activeTab = this.wildStateService.getActiveTab(this.itemIndex);
+
     if (this.regionDatas && this.regionDatas.length > 0) {
-      this.selectedRegion = this.regionDatas[0];
+      const savedRegionStatus = this.wildStateService.getSelectedRegion(
+        this.itemIndex,
+      );
+      if (savedRegionStatus) {
+        this.selectedRegion =
+          this.regionDatas.find(
+            (r) => r.locationStatus === savedRegionStatus,
+          ) || this.regionDatas[0];
+      } else {
+        this.selectedRegion = this.regionDatas[0];
+      }
     }
   }
 
@@ -42,12 +66,44 @@ export class WildRegionComponent implements OnInit {
     return result;
   }
 
+  get uniquePokemons(): Pokemon[] {
+    if (!this.selectedRegion) {
+      return [];
+    }
+
+    const uniqueNames = new Set<string>();
+    const pokemons: Pokemon[] = [];
+
+    for (const areaData of this.selectedRegion.areaDatas) {
+      for (const encounter of areaData.encounters) {
+        if (!uniqueNames.has(encounter.name)) {
+          uniqueNames.add(encounter.name);
+          const pokemon = this.pokemonService.findPokemon(encounter.name);
+          if (pokemon) {
+            pokemons.push(pokemon);
+          }
+        }
+      }
+    }
+
+    return pokemons;
+  }
+
   public toggleExpanded(): void {
     this.isExpanded = !this.isExpanded;
   }
 
-  selectRegion(region: any): void {
+  selectRegion(region: RegionData): void {
     this.selectedRegion = region;
+    this.wildStateService.setSelectedRegion(
+      this.itemIndex,
+      region.locationStatus,
+    );
+  }
+
+  selectTab(tab: 'encounter' | 'habitat'): void {
+    this.activeTab = tab;
+    this.wildStateService.setActiveTab(this.itemIndex, tab);
   }
 
   getPokemonId(pokemonName: string): number {
@@ -66,5 +122,12 @@ export class WildRegionComponent implements OnInit {
       console.log(`바이바이, ${name}`);
     }
     this.pokemonCaught.emit({ id: pokemonId, status: status });
+  }
+
+  goToPokedex(pokemon: Pokemon): void {
+    const gameVersion = this.dataHandleService.getGameVersion();
+    this.router.navigate(['/' + gameVersion, 'pokedex'], {
+      queryParams: { gte: pokemon.id },
+    });
   }
 }

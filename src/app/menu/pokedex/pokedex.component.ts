@@ -9,10 +9,10 @@ import { DefenseComponent } from '../defense/defense.component';
 import { WindowSizeService } from 'src/app/services/window-size.service';
 import { PokedexGuideComponent } from './pokedex-guide/pokedex-guide.component';
 import { HelperService } from 'src/app/services/helper.service';
-import { TYPE_DISPLAY_DATA, TYPE_LABEL } from 'src/app/datas/type.data';
-import { NgClass } from '@angular/common';
+
 import { FavoriteService } from 'src/app/services/favorite.service';
 import { Subscription } from 'rxjs';
+import { PokedexSearchComponent } from './pokedex-search/pokedex-search.component';
 
 @Component({
   selector: 'app-pokedex',
@@ -23,7 +23,7 @@ import { Subscription } from 'rxjs';
     PokemonCardComponent,
     DefenseComponent,
     PokedexGuideComponent,
-    NgClass,
+    PokedexSearchComponent,
   ],
 })
 export class PokedexComponent implements OnInit {
@@ -36,9 +36,6 @@ export class PokedexComponent implements OnInit {
   private favoriteService = inject(FavoriteService);
   private allPokemon: Pokemon[] = [];
   private favoriteSub?: Subscription;
-
-  typeLabels = TYPE_LABEL;
-  typeDisplay = TYPE_DISPLAY_DATA;
 
   pokemonSearchInput = '';
   pokemonSearchOffset = 1;
@@ -88,39 +85,6 @@ export class PokedexComponent implements OnInit {
     });
   }
 
-  // 검색 버튼 클릭 시 호출될 메서드
-  onSearchButtonClick(): void {
-    if (this.pokemonSearchInput.length == 0) {
-      return;
-    }
-
-    const isNumericString = /^\d+$/.test(this.pokemonSearchInput);
-    if (isNumericString) {
-      this.pokemonSearchOffset = parseInt(this.pokemonSearchInput);
-      this.pokemonSearchInput = '';
-      this.router.navigate([], {
-        relativeTo: this.route,
-        queryParams: { search: undefined, gte: this.pokemonSearchOffset }, // 페이지 번호 쿼리 파라미터 추가
-        queryParamsHandling: 'merge',
-      });
-    } else {
-      this.pokemonSearchOffset = 1;
-      this.router.navigate([], {
-        relativeTo: this.route, // 현재 라우트를 기준으로
-        queryParams: { search: this.pokemonSearchInput },
-        queryParamsHandling: 'merge',
-      });
-    }
-  }
-
-  resetSearch(): void {
-    this.showFavoritesOnly = false;
-    this.router.navigate([], {
-      relativeTo: this.route,
-      queryParams: {}, // Clear all query params
-    });
-  }
-
   toggleFavoriteFilter(): void {
     this.showFavoritesOnly = !this.showFavoritesOnly;
     this.pokemonSearchOffset = 1;
@@ -129,24 +93,6 @@ export class PokedexComponent implements OnInit {
       queryParams: {
         favorites: this.showFavoritesOnly ? 'true' : null,
         gte: 1, // 돌아갈때 1페이지로
-      },
-      queryParamsHandling: 'merge',
-    });
-  }
-
-  onTypeFilterClick(typeKey: string): void {
-    if (this.selectedType === typeKey) {
-      this.selectedType = null;
-    } else {
-      this.selectedType = typeKey;
-    }
-
-    this.pokemonSearchOffset = 1;
-    this.router.navigate([], {
-      relativeTo: this.route,
-      queryParams: {
-        type: this.selectedType,
-        gte: 1, // 필터가 바뀌면 1페이지로
       },
       queryParamsHandling: 'merge',
     });

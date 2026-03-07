@@ -185,3 +185,43 @@
     background-color: #d0e0e3;
   }
 }
+
+// 탭 네비게이션
+.tab-container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  margin-bottom: -2px; /* 겹치게 하여 보더 처리 */
+
+  &:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.05);
+  }
+
+  &.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+  }
+}
+
+// 서식지 도감 그리드 뷰
+.habitat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  padding: 15px 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}

@@ -18,6 +18,10 @@
   position: relative; /* 내부 요소 위치 지정을 위해 */
   justify-content: start;
   padding: 16px;
+
+  &.small-image {
+    padding: 8px;
+  }
 }
 
 /* 호버 효과는 wrapper에 적용 */
@@ -47,6 +51,13 @@
   image-rendering: -webkit-optimize-contrast;
   cursor: pointer;
   image-rendering: pixelated;
+}
+
+.pokemon-card-content img.pokemon-image.small-image {
+  min-width: 64px;
+  max-width: 64px;
+  min-height: 64px;
+  max-height: 64px;
 }
 
 .pokemon-card-content img.pokemon-image.disabled {

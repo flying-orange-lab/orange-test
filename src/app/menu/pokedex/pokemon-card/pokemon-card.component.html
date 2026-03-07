@@ -1,4 +1,4 @@
-<div class="pokemon-card-container">
+<div class="pokemon-card-container" [class.small-image]="isSmallImage">
   <div class="pokemon-card-content">
     @if (useSprite && hasGender) {
       <!-- 성별 표기-->
@@ -6,31 +6,36 @@
         class="floating-button gender-button"
         [class.male-active]="!isGenderFemale"
         [class.female-active]="isGenderFemale"
-        (click)="toggleGender()"
+        (click)="toggleGender($event)"
         [attr.aria-label]="isGenderFemale ? '암컷' : '수컷'"
         title="성별 변경"
       ></button>
     }
     <!-- 즐겨찾기 버튼 -->
-    <button
-      class="floating-button favorite-button"
-      [class.is-favorite]="isFavorite"
-      (click)="toggleFavorite($event)"
-      [attr.aria-label]="isFavorite ? '즐겨찾기 해제' : '즐겨찾기 추가'"
-      [title]="isFavorite ? '즐겨찾기 해제' : '즐겨찾기 추가'"
-    >
-      {{ isFavorite ? "★" : "☆" }}
-    </button>
+    @if (!disableFavorite) {
+      <button
+        class="floating-button favorite-button"
+        [class.is-favorite]="isFavorite"
+        (click)="toggleFavorite($event)"
+        [attr.aria-label]="isFavorite ? '즐겨찾기 해제' : '즐겨찾기 추가'"
+        [title]="isFavorite ? '즐겨찾기 해제' : '즐겨찾기 추가'"
+      >
+        {{ isFavorite ? "★" : "☆" }}
+      </button>
+    }
     <img
       class="pokemon-image"
+      [class.small-image]="isSmallImage"
       [ngSrc]="currentImageUrl"
       width="96"
       height="96"
-      (click)="toggleSprite()"
+      (click)="toggleSprite($event)"
     />
     <div class="pokemon-info">
       <div class="pokemon-name">{{ pokemon.koreanName || pokemon.name }}</div>
-      <div class="pokemon-id">{{ displayId }}</div>
+      @if (!disableId) {
+        <div class="pokemon-id">{{ displayId }}</div>
+      }
     </div>
     <div class="pokemon-types-container" (click)="goToDefensePage()">
       @for (type of currentPokemon.types; track $index) {
@@ -40,7 +45,7 @@
       }
     </div>
 
-    @if (currentPokemonStats) {
+    @if (currentPokemonStats && !disableStatus) {
       <app-pokemon-stat
         style="width: 100%; margin-top: 15px"
         [pokemonStats]="currentPokemonStats"
@@ -62,25 +67,27 @@
     }
   </div>
 
-  <div class="pokemon-ability">
-    <div class="ability-name-box">
-      @if (currentPokemon.abilities) {
-        @for (
-          ability of currentPokemon.abilities;
-          track $index;
-          let i = $index
-        ) {
-          <div
-            class="ability-name"
-            [class.select]="currentAbilityIndex === i"
-            (click)="clickAbility(ability, i)"
-          >
-            {{ ability }}
-          </div>
+  @if (!disableAbility) {
+    <div class="pokemon-ability">
+      <div class="ability-name-box">
+        @if (currentPokemon.abilities) {
+          @for (
+            ability of currentPokemon.abilities;
+            track $index;
+            let i = $index
+          ) {
+            <div
+              class="ability-name"
+              [class.select]="currentAbilityIndex === i"
+              (click)="clickAbility(ability, i)"
+            >
+              {{ ability }}
+            </div>
+          }
         }
-      }
+      </div>
     </div>
-  </div>
+  }
 
   @if (pokemon.form && pokemon.form.length > 1) {
     <div class="pokemon-form-buttons">
@@ -96,7 +103,7 @@
     </div>
   }
 
-  @if (currentPokemon.evolutionCondition) {
+  @if (currentPokemon.evolutionCondition && !disableEvolution) {
     <div class="pokemon-card-extra">
       <div class="extra-title">
         <strong>진화 정보</strong>
@@ -108,7 +115,7 @@
       </div>
     </div>
   }
-  @if (currentPokemon.wildItems) {
+  @if (currentPokemon.wildItems && !disableWildItem) {
     <div class="pokemon-card-extra">
       <div class="extra-title">
         <strong>야생 정보</strong>
@@ -119,7 +126,7 @@
     </div>
   }
 
-  @if (currentPokemon.extra) {
+  @if (currentPokemon.extra && !disableExtraInfo) {
     <div class="pokemon-card-extra">
       <div class="extra-title">
         <strong>추가 서식 정보</strong>
@@ -131,13 +138,18 @@
       </div>
     </div>
   }
-  <div class="pokemon-card-extra">
-    <app-pokemon-location
-      [pokemonName]="pokemon.koreanName"
-      [pokemonExtra]="pokemonFormName"
-    ></app-pokemon-location>
-  </div>
-  <div class="pokemon-card-extra detail">
-    <div class="extra-detail-icon" (click)="openModal()">☰</div>
-  </div>
+
+  @if (!disableLocation) {
+    <div class="pokemon-card-extra">
+      <app-pokemon-location
+        [pokemonName]="pokemon.koreanName"
+        [pokemonExtra]="pokemonFormName"
+      ></app-pokemon-location>
+    </div>
+  }
+  @if (!disableDetail) {
+    <div class="pokemon-card-extra detail">
+      <div class="extra-detail-icon" (click)="openModal()">☰</div>
+    </div>
+  }
 </div>
