@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TYPE_DISPLAY_DATA, TYPE_LABEL } from 'src/app/datas/type.data';
 import { MoveDetailService } from 'src/app/services/move-detail.service';
+import { DataHandleService } from 'src/app/services/data-handle.service';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 
@@ -26,13 +27,21 @@ export class PokedexSearchComponent implements OnInit {
   typeDisplay = TYPE_DISPLAY_DATA;
   moveNames: string[] = [];
   filteredMoveNames: string[] = [];
+  abilityNames: string[] = [];
+  filteredAbilityNames: string[] = [];
 
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private moveDetailService = inject(MoveDetailService);
+  private dataHandleService = inject(DataHandleService);
 
   ngOnInit(): void {
     this.moveNames = this.moveDetailService.moveNames;
+    this.dataHandleService.gameVersion$.subscribe(() => {
+      const abilities = this.dataHandleService.abilityDatas || [];
+      this.abilityNames = abilities.map((a) => a.name);
+    });
+
     this.route.queryParams.subscribe((params) => {
       this.pokemonSearchInput = params['search'] || '';
       this.abilitySearchInput = params['ability'] || '';
@@ -44,6 +53,17 @@ export class PokedexSearchComponent implements OnInit {
         this.isAdvancedSearchOpen = true;
       }
     });
+  }
+
+  onAbilitySearchChange(): void {
+    const searchVal = this.abilitySearchInput.trim();
+    if (searchVal.length > 0) {
+      this.filteredAbilityNames = this.abilityNames.filter((name) =>
+        name.includes(searchVal),
+      );
+    } else {
+      this.filteredAbilityNames = [];
+    }
   }
 
   onMoveSearchChange(): void {
@@ -118,6 +138,7 @@ export class PokedexSearchComponent implements OnInit {
     this.abilitySearchInput = '';
     this.moveSearchInput = '';
     this.filteredMoveNames = [];
+    this.filteredAbilityNames = [];
     this.selectedType = null;
     this.router.navigate([], {
       relativeTo: this.route,
