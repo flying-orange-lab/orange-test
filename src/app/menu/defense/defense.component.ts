@@ -42,6 +42,7 @@ export class DefenseComponent implements OnInit {
   }
 
   initSelectType(types: string[]) {
+    this.defenseService.clearType();
     for (const typeKey of types) {
       this.defenseService.selectType(typeKey);
     }
