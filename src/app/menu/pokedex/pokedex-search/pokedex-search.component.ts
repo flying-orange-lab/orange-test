@@ -23,6 +23,14 @@ export class PokedexSearchComponent implements OnInit {
   selectedType: string | null = null;
   pokemonSearchOffset = 1;
 
+  get hasAdvancedSearchContent(): boolean {
+    return (
+      this.abilitySearchInput.trim().length > 0 ||
+      this.moveSearchInput.trim().length > 0 ||
+      this.selectedType !== null
+    );
+  }
+
   typeLabels = TYPE_LABEL;
   typeDisplay = TYPE_DISPLAY_DATA;
   moveNames: string[] = [];
@@ -53,28 +61,6 @@ export class PokedexSearchComponent implements OnInit {
         this.isAdvancedSearchOpen = true;
       }
     });
-  }
-
-  onAbilitySearchChange(): void {
-    const searchVal = this.abilitySearchInput.trim();
-    if (searchVal.length > 0) {
-      this.filteredAbilityNames = this.abilityNames.filter((name) =>
-        name.includes(searchVal),
-      );
-    } else {
-      this.filteredAbilityNames = [];
-    }
-  }
-
-  onMoveSearchChange(): void {
-    const searchVal = this.moveSearchInput.trim();
-    if (searchVal.length > 0) {
-      this.filteredMoveNames = this.moveNames.filter((name) =>
-        name.includes(searchVal),
-      );
-    } else {
-      this.filteredMoveNames = [];
-    }
   }
 
   toggleAdvancedSearch(): void {
@@ -144,6 +130,28 @@ export class PokedexSearchComponent implements OnInit {
       relativeTo: this.route,
       queryParams: {},
     });
+  }
+
+  onAbilitySearchChange(): void {
+    const searchVal = this.abilitySearchInput.trim();
+    if (searchVal.length > 0) {
+      this.filteredAbilityNames = this.abilityNames.filter((name) =>
+        name.includes(searchVal),
+      );
+    } else {
+      this.filteredAbilityNames = [];
+    }
+  }
+
+  onMoveSearchChange(): void {
+    const searchVal = this.moveSearchInput.trim();
+    if (searchVal.length > 0) {
+      this.filteredMoveNames = this.moveNames.filter((name) =>
+        name.includes(searchVal),
+      );
+    } else {
+      this.filteredMoveNames = [];
+    }
   }
 
   onTypeFilterClick(typeKey: string): void {

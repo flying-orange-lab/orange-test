@@ -178,6 +178,17 @@
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  position: relative;
+
+  .notification-dot {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 10px;
+    height: 10px;
+    background-color: #dc3545;
+    border-radius: 50%;
+  }
 
   &:hover {
     background-color: #f1f3f5;
