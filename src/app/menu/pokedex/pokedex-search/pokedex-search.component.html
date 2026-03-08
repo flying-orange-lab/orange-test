@@ -24,11 +24,11 @@
     <button
       class="advanced-search-toggle"
       (click)="toggleAdvancedSearch()"
-      title="고급 검색"
+      title="고급검색"
       [class.active]="isAdvancedSearchOpen"
     >
       <i class="fas fa-sliders-h"></i>
-      <span class="toggle-text">고급 검색</span>
+      <span class="toggle-text">고급검색</span>
       @if (hasAdvancedSearchContent) {
         <span class="notification-dot"></span>
       }
@@ -51,7 +51,10 @@
         autocomplete="off"
         [matAutocomplete]="abilityAuto"
       />
-      <mat-autocomplete #abilityAuto="matAutocomplete">
+      <mat-autocomplete
+        #abilityAuto="matAutocomplete"
+        (optionSelected)="onSearchButtonClick()"
+      >
         @for (abilityName of filteredAbilityNames; track $index) {
           <mat-option [value]="abilityName">{{ abilityName }}</mat-option>
         }
@@ -70,7 +73,10 @@
         autocomplete="off"
         [matAutocomplete]="auto"
       />
-      <mat-autocomplete #auto="matAutocomplete">
+      <mat-autocomplete
+        #auto="matAutocomplete"
+        (optionSelected)="onSearchButtonClick()"
+      >
         @for (moveName of filteredMoveNames; track $index) {
           <mat-option [value]="moveName">{{ moveName }}</mat-option>
         }

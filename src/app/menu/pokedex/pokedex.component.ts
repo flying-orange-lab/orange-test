@@ -338,7 +338,7 @@ export class PokedexComponent implements OnInit {
     if (filtered.length === 0) {
       this.noResultsMessage = isFavoritesResult
         ? '즐겨찾기한 포켓몬이 없습니다.'
-        : `'${this.pokemonSearchInput}'에 대한 검색 결과가 없습니다.`;
+        : '검색 결과가 없습니다.';
       this.searchResults = [];
     } else if (filtered.length > 30) {
       this.noResultsMessage = `총 ${filtered.length}개의 결과 중 30개만 표시되었습니다.`;
