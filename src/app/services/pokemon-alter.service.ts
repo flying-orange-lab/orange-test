@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class PokemonAlterService {
   private gender_set = new Set([
+    '001',
     '002',
     '003',
     '006',
@@ -242,6 +243,12 @@ export class PokemonAlterService {
     '475',
     '477',
     '478',
+    '479-1',
+    '479-2',
+    '479-3',
+    '479-4',
+    '479-5',
+    '479',
     '486',
     '500',
     '512',
