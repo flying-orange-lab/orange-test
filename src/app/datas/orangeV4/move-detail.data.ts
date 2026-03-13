@@ -5921,7 +5921,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'power': '80',
     'accuracy': '100',
     'pp': 15,
-    'makeContact': false,
+    'makeContact': true,
     'effects': {
       'inflict': '30% 풀죽음',
     },
@@ -6934,7 +6934,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
   },
   {
     'id': 518,
-    'name': '물의맹세',
+    'name': '풀의맹세',
     'type': '풀',
     'class': '특수',
     'power': '80',
@@ -6960,7 +6960,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
   },
   {
     'id': 520,
-    'name': '풀의맹세',
+    'name': '물의맹세',
     'type': '물',
     'class': '특수',
     'power': '80',

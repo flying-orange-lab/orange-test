@@ -27912,7 +27912,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 24,
-      'moveName': '블꽃엄니',
+      'moveName': '불꽃엄니',
     },
     {
       'moveLv': 27,
@@ -27998,7 +27998,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 24,
-      'moveName': '블꽃엄니',
+      'moveName': '불꽃엄니',
     },
     {
       'moveLv': 27,
@@ -42838,7 +42838,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 50,
-      'moveName': '최면술',
+      'moveName': '추억의선물',
     },
     {
       'moveLv': 54,
@@ -42846,7 +42846,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 58,
-      'moveName': '추억의선물',
+      'moveName': '최면술',
     },
     {
       'moveLv': 61,
@@ -42920,7 +42920,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 50,
-      'moveName': 'HP회복',
+      'moveName': '치유소원',
     },
     {
       'moveLv': 54,
@@ -42928,7 +42928,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 58,
-      'moveName': '치유소원',
+      'moveName': 'HP회복',
     },
     {
       'moveLv': 61,
@@ -43002,7 +43002,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 50,
-      'moveName': '신속',
+      'moveName': '대폭발',
     },
     {
       'moveLv': 54,
@@ -43010,7 +43010,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 58,
-      'moveName': '치유소원',
+      'moveName': '신속',
     },
     {
       'moveLv': 61,
@@ -43084,15 +43084,15 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 54,
-      'moveName': '러스터캐논',
+      'moveName': '신비의칼',
     },
     {
       'moveLv': 58,
-      'moveName': '용성군',
+      'moveName': '러스터캐논',
     },
     {
       'moveLv': 61,
-      'moveName': '신비의칼',
+      'moveName': '용성군',
     },
     {
       'moveLv': 64,
@@ -43166,15 +43166,15 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 54,
-      'moveName': '탁류',
+      'moveName': '성스러운칼',
     },
     {
       'moveLv': 58,
-      'moveName': '용성군',
+      'moveName': '탁류',
     },
     {
       'moveLv': 61,
-      'moveName': '성스러운칼',
+      'moveName': '용성군',
     },
     {
       'moveLv': 64,
@@ -43412,15 +43412,15 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 54,
-      'moveName': '그림자꿰매기',
+      'moveName': '목숨걸기',
     },
     {
       'moveLv': 58,
-      'moveName': '용성군',
+      'moveName': '그림자꿰매기',
     },
     {
       'moveLv': 61,
-      'moveName': '목숨걸기',
+      'moveName': '용성군',
     },
     {
       'moveLv': 64,
@@ -50796,7 +50796,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 68,
-      'moveName': '소울크래시',
+      'moveName': '문포스',
     },
   ],
   '570-0': [

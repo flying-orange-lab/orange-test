@@ -3088,7 +3088,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'koreanName': '뽀뽀라',
     'imageUrl': '238.png',
     'types': ['ice', 'psychic'],
-    'abilities': ['건조피부', '트레이스', '둔감'],
+    'abilities': ['트레이스', '건조피부', '둔감'],
     'stats': [50, 37, 37, 90, 65, 80, 359],
     'statsOrigin': [50, 37, 37, 90, 65, 80, 359],
     'evolutionCondition': '',

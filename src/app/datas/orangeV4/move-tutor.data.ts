@@ -11574,37 +11574,19 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
   '469-0': [
     {
       'tutorName': 'red',
-      'moves': [
-        '분노의앞니',
-        '더블촙',
-        '시그널빔',
-        '안다리걸기',
-        '더스트슈트',
-        '냉동펀치',
-      ],
+      'moves': ['탐내기'],
     },
     {
       'tutorName': 'blue',
-      'moves': [
-        '매직코트',
-        '대지의힘',
-        '속임수',
-        '중력',
-        '전자부유',
-        '아쿠아테일',
-        '악의파동',
-        '사념의박치기',
-        '용의파동',
-        '아이언테일',
-      ],
+      'moves': ['매직코트', '하이퍼보이스', '아이언테일'],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['그림자꿰매기', '아픔나누기', '드레인펀치'],
+      'moves': [],
     },
     {
       'tutorName': 'green',
-      'moves': ['리사이클'],
+      'moves': ['도우미', '잠꼬대', '스킬스왑'],
     },
     {
       'tutorName': 'black',
