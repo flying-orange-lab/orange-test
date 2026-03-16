@@ -59,7 +59,9 @@ export class SpriteCanvasComponent implements OnChanges {
 
       // 2. 대칭키 설정 (Python 스크립트와 동일해야 함)
       // 32바이트 AES-256를 위해 패딩 처리
-      const key = CryptoJS.enc.Utf8.parse('world-of-best-bb2-alternative'.padEnd(32, '\0'));
+      const key = CryptoJS.enc.Utf8.parse(
+        'world-of-best-bb2-alternative'.padEnd(32, '\0'),
+      );
       const iv = CryptoJS.enc.Base64.parse(encryptedJson.iv);
 
       // 3. 복호화 실행
@@ -75,12 +77,11 @@ export class SpriteCanvasComponent implements OnChanges {
       // 5. 이미지 객체 생성 및 캔버스 그리기
       const img = new Image();
       img.onload = () => {
-        // 96x96 사이즈에 맞춰 선명하게 설정
-        canvas.width = 96;
-        canvas.height = 96;
+        canvas.width = 128;
+        canvas.height = 128;
         ctx.imageSmoothingEnabled = false; // 픽셀 아트 선명도 유지
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0, 96, 96);
+        ctx.drawImage(img, 0, 0, 128, 128);
       };
       img.src = base64Data;
       this.lastDrawnUrl = url;
