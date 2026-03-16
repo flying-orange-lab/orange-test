@@ -23,14 +23,24 @@
         {{ isFavorite ? "★" : "☆" }}
       </button>
     }
-    <img
-      class="pokemon-image"
-      [class.small-image]="isSmallImage"
-      [ngSrc]="currentImageUrl"
-      width="96"
-      height="96"
-      (click)="toggleSprite($event)"
-    />
+    @if (useSprite) {
+      <app-sprite-canvas
+        class="pokemon-image"
+        [class.small-image]="isSmallImage"
+        [imageUrl]="currentImageUrl"
+        [isSmallImage]="isSmallImage"
+        (canvasClick)="toggleSprite($event)"
+      ></app-sprite-canvas>
+    } @else {
+      <img
+        class="pokemon-image"
+        [class.small-image]="isSmallImage"
+        [ngSrc]="currentImageUrl"
+        width="96"
+        height="96"
+        (click)="toggleSprite($event)"
+      />
+    }
     <div class="pokemon-info">
       <div class="pokemon-name">{{ pokemon.koreanName || pokemon.name }}</div>
       @if (!disableId) {

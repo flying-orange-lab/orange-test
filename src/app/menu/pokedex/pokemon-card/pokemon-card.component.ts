@@ -23,12 +23,13 @@ import { PokemonModalComponent } from '../pokemon-modal/pokemon-modal.component'
 import { PokemonAlterService } from 'src/app/services/pokemon-alter.service';
 import { FavoriteService } from 'src/app/services/favorite.service';
 import { Subscription } from 'rxjs';
+import { SpriteCanvasComponent } from './sprite-canvas/sprite-canvas.component';
 
 @Component({
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
   styleUrls: ['./pokemon-card.component.less'],
-  imports: [PokemonStatComponent, PokemonLocationComponent, NgOptimizedImage],
+  imports: [PokemonStatComponent, PokemonLocationComponent, NgOptimizedImage, SpriteCanvasComponent],
 })
 export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   private router = inject(Router);

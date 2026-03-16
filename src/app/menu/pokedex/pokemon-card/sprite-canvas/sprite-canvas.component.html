@@ -1,0 +1,9 @@
+<canvas
+  #spriteCanvas
+  class="sprite-canvas"
+  [class.small-image]="isSmallImage"
+  width="96"
+  height="96"
+  (click)="onCanvasClick($event)"
+  (contextmenu)="$event.preventDefault()"
+></canvas>
