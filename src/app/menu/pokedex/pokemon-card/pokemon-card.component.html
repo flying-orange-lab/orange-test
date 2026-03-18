@@ -1,5 +1,5 @@
 <div class="pokemon-card-container" [class.small-image]="isSmallImage">
-  <div class="pokemon-card-content">
+  <div class="pokemon-card-content" [class.small]="isSmallImage">
     @if (useSprite && hasGender) {
       <!-- 성별 표기-->
       <button
@@ -41,13 +41,17 @@
         (click)="toggleSprite($event)"
       />
     }
-    <div class="pokemon-info">
+    <div class="pokemon-info" [class.small]="isSmallImage">
       <div class="pokemon-name">{{ pokemon.koreanName || pokemon.name }}</div>
       @if (!disableId) {
         <div class="pokemon-id">{{ displayId }}</div>
       }
     </div>
-    <div class="pokemon-types-container" (click)="goToDefensePage()">
+    <div
+      class="pokemon-types-container"
+      [class.small]="isSmallImage"
+      (click)="goToDefensePage()"
+    >
       @for (type of currentPokemon.types; track $index) {
         <span class="type-badge type-{{ type }}">
           {{ displayType(type) }}
