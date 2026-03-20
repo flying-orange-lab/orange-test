@@ -1723,7 +1723,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'koreanName': '이브이',
     'imageUrl': '133.png',
     'types': ['normal'],
-    'abilities': ['도주', '적응력', '픽업'],
+    'abilities': ['적응력', '도주', '픽업'],
     'stats': [65, 75, 70, 65, 85, 75, 435],
     'statsOrigin': [65, 75, 70, 65, 85, 75, 435],
     'evolutionCondition': '',

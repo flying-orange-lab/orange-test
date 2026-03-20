@@ -59654,10 +59654,6 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
   '646-1': [
     {
       'moveLv': 1,
-      'moveName': '크로스플레임',
-    },
-    {
-      'moveLv': 1,
       'moveName': '얼음엄니',
     },
     {
@@ -59739,6 +59735,14 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     {
       'moveLv': 68,
       'moveName': '역린',
+    },
+    {
+      'moveLv': 72,
+      'moveName': '대지의힘',
+    },
+    {
+      'moveLv': 76,
+      'moveName': '크로스플레임',
     },
     {
       'moveLv': 80,
@@ -59748,10 +59752,6 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
   '646-2': [
     {
       'moveLv': 1,
-      'moveName': '크로스썬더',
-    },
-    {
-      'moveLv': 1,
       'moveName': '얼음엄니',
     },
     {
@@ -59833,6 +59833,14 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     {
       'moveLv': 68,
       'moveName': '역린',
+    },
+    {
+      'moveLv': 72,
+      'moveName': '지진',
+    },
+    {
+      'moveLv': 76,
+      'moveName': '크로스썬더',
     },
     {
       'moveLv': 80,
