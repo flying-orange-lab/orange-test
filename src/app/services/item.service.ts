@@ -31,8 +31,8 @@ export class ItemService extends Dexie {
         ];
 
         for (const storeName of storeNames) {
-          const oldGotchaData = await tx.table(storeName).toArray();
-          for (const row of oldGotchaData) {
+          const oldData = await tx.table(storeName).toArray();
+          for (const row of oldData) {
             await tx.table(storeName).put(row);
           }
         }

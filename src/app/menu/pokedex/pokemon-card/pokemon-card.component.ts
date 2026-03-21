@@ -14,6 +14,8 @@ import { NgOptimizedImage } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 // import { PokemonImageService } from 'src/app/services/pokemon-image.service';
+import { DataHandleService } from 'src/app/services/data-handle.service';
+import { WildAdditionalService } from 'src/app/services/wild-additional.service';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { PokemonStatComponent } from '../pokemon-stat/pokemon-stat.component';
 import { PokemonAbility } from 'src/app/models/ability.model';
@@ -29,7 +31,12 @@ import { SpriteCanvasComponent } from './sprite-canvas/sprite-canvas.component';
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
   styleUrls: ['./pokemon-card.component.less'],
-  imports: [PokemonStatComponent, PokemonLocationComponent, NgOptimizedImage, SpriteCanvasComponent],
+  imports: [
+    PokemonStatComponent,
+    PokemonLocationComponent,
+    NgOptimizedImage,
+    SpriteCanvasComponent,
+  ],
 })
 export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   private router = inject(Router);
@@ -38,6 +45,8 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   // private pokemonImageService = inject(PokemonImageService);
   private dialog = inject(MatDialog);
   private favoriteService = inject(FavoriteService);
+  private dataHandleService = inject(DataHandleService);
+  private wildAdditionalService = inject(WildAdditionalService);
 
   private sub: Subscription;
   private favoriteSub?: Subscription;
@@ -121,6 +130,21 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
     return this.currentPokemon.extra
       .split('.')
       .map((item: string) => item.trim());
+  }
+
+  get pokemonExtraWild() {
+    const name = this.pokemon.koreanName || this.pokemon.name;
+    console.log(name);
+    const locations = this.wildAdditionalService.getLocationsByName(name);
+
+    if (locations) {
+      const result = ['포켓몬 획득 정보 확인'];
+      if (locations.length > 0) {
+        result.push(...locations);
+      }
+      return result;
+    }
+    return undefined;
   }
 
   get pokemonFormName() {
