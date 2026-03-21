@@ -1,6 +1,6 @@
-import { GotchaPokemonCategory } from 'src/app/models/gotcha.model';
+import { WildAdditionalPokemonCategory } from 'src/app/models/wild-additional.model';
 
-export const POKEMON_GOTCHA_V4: GotchaPokemonCategory[] = [
+export const POKEMON_WILD_ADDITIONAL_V4: WildAdditionalPokemonCategory[] = [
   {
     'title': '심볼 포켓몬 - 엔딩 이전',
     'data': [
@@ -50,8 +50,8 @@ export const POKEMON_GOTCHA_V4: GotchaPokemonCategory[] = [
       {
         'name': '꿰뚫는화염',
         'level': 45,
-        'location': '',
-        'requirement': '',
+        'location': '리버스마운틴',
+        'requirement': '난천에게 폭포오르기 비전머신 받기',
         'note': '',
       },
       {

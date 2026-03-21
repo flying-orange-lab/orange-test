@@ -140,17 +140,31 @@
     </div>
   }
 
-  @if (currentPokemon.extra && !disableExtraInfo) {
-    <div class="pokemon-card-extra">
-      <div class="extra-title">
-        <strong>추가 서식 정보</strong>
+  @if (!disableExtraInfo) {
+    @if (currentPokemon.extra) {
+      <div class="pokemon-card-extra">
+        <div class="extra-title">
+          <strong>추가 정보</strong>
+        </div>
+        <div class="extra-section">
+          @for (extraText of pokemonExtraText; track $index) {
+            <div>{{ extraText }}</div>
+          }
+        </div>
       </div>
-      <div class="extra-section">
-        @for (extraText of pokemonExtraText; track $index) {
-          <div>{{ extraText }}</div>
-        }
+    }
+    @if (pokemonExtraWild) {
+      <div class="pokemon-card-extra">
+        <div class="extra-title">
+          <strong>추가 획득 정보</strong>
+        </div>
+        <div class="extra-section">
+          @for (extraText of pokemonExtraWild; track $index) {
+            <div>{{ extraText }}</div>
+          }
+        </div>
       </div>
-    </div>
+    }
   }
 
   @if (!disableLocation) {

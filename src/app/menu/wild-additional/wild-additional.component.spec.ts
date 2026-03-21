@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GotchaComponent } from './gotcha.component';
+import { WildAdditionalComponent } from './wild-additional.component';
 
-describe('GotchaComponent', () => {
-  let component: GotchaComponent;
-  let fixture: ComponentFixture<GotchaComponent>;
+describe('WildAdditionalComponent', () => {
+  let component: WildAdditionalComponent;
+  let fixture: ComponentFixture<WildAdditionalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GotchaComponent]
+      imports: [WildAdditionalComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GotchaComponent);
+    fixture = TestBed.createComponent(WildAdditionalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

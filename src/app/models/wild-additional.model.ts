@@ -1,4 +1,4 @@
-export interface GotchaPokemonInfo {
+export interface WildAdditionalPokemonInfo {
   name: string; // 포켓몬
   level: number; // 레벨
   location: string; // 위치
@@ -6,7 +6,7 @@ export interface GotchaPokemonInfo {
   note: string; // 비고
 }
 
-export interface GotchaPokemonCategory {
+export interface WildAdditionalPokemonCategory {
   title: string;
-  data: GotchaPokemonInfo[];
+  data: WildAdditionalPokemonInfo[];
 }

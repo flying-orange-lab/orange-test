@@ -9,7 +9,7 @@ import { POKEMON_MOVE_DETAIL_V4 } from '../datas/orangeV4/move-detail.data';
 import { POKEMON_HOLLOW_V4 } from '../datas/orangeV4/hollow.data';
 import { ITEM_DATA_V4 } from '../datas/orangeV4/item.data';
 import { MART_DATA_V4 } from '../datas/orangeV4/mart.data';
-import { POKEMON_GOTCHA_V4 } from '../datas/orangeV4/gotcha.data';
+import { POKEMON_WILD_ADDITIONAL_V4 } from '../datas/orangeV4/wild-additional.data';
 import { POKEMON_MOVE_TM_V4 } from '../datas/orangeV4/move-tm.data';
 import { POKEMON_MOVE_TUTOR_V4 } from '../datas/orangeV4/move-tutor.data';
 
@@ -64,10 +64,10 @@ export class DataHandleService {
     throw new Error('No service support');
   }
 
-  get gotchaDatas() {
+  get wildAdditionalDatas() {
     switch (this.gameVersionSubject.value) {
       case 'alternative':
-        return POKEMON_GOTCHA_V4;
+        return POKEMON_WILD_ADDITIONAL_V4;
     }
 
     return [];
