@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Credits and Licensing
+
+### Font Awesome Free
+This project uses SVG paths extracted from [Font Awesome Free](https://fontawesome.com).
+- **Icons**: CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+- **Code**: MIT License (https://opensource.org/licenses/MIT)
+- **Fonts**: SIL OFL 1.1 License (https://scripts.sil.org/OFL)
+
+### PokéAPI
+This project uses data and images provided by [PokéAPI](https://pokeapi.co/).
+- Copyright (c) © 2013–2023 Paul Hallett and PokéAPI contributors.
+- Pokémon and Pokémon character names are trademarks of Nintendo.
