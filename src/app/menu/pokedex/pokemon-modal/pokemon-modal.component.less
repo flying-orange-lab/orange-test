@@ -12,10 +12,28 @@
   flex-direction: column;
   background: black;
   cursor: pointer;
+  order: 1;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   .text-btn {
     margin: auto;
     padding: 20px;
     color: white;
+  }
+}
+
+.tab {
+  order: 2;
+  flex: 1;
+}
+
+/* 모바일 환경일 때 닫기 버튼을 하단으로 이동 및 고정 */
+@media (max-width: 768px) {
+  .header {
+    order: 3;
+    top: auto;
+    bottom: 0;
   }
 }

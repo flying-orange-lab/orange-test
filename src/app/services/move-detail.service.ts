@@ -22,7 +22,7 @@ export class MoveDetailService {
   }
 
   getMoveDetailByName(name: string): MoveDetail | undefined {
-    if (name.startsWith('TM')) {
+    if (name.startsWith('TM') || name.startsWith('HM')) {
       name = name.split(' ')[1];
     }
 
