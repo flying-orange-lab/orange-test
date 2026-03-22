@@ -1,5 +1,5 @@
-<div class="guide-close-button" (click)="onCloseClick()">
-  <i class="fas fa-times"></i>
+<div class="guide-close-button" (click)="onCloseClick()" style="display: flex; align-items: center; justify-content: center;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" width="1em" height="1em"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
 </div>
 
 <div class="pokemon-card-container">
@@ -113,9 +113,12 @@
         <ng-container [ngTemplateOutlet]="helperIconAfter"></ng-container>
       </strong>
       <div
-        class="extra-floating-button fas fa-search"
+        class="extra-floating-button"
         (click)="showPopover($event, 'wilddetailbtn')"
-      ></div>
+        style="display: flex; align-items: center; justify-content: center;"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" width="1em" height="1em"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      </div>
     </div>
     <div class="extra-section">
       <div class="location-entry">
@@ -130,8 +133,12 @@
 
 <ng-container #popoverContainer></ng-container>
 <ng-template #helperIcon>
-  <div class="helper-button far fa-question-circle"></div>
+  <div class="helper-button" style="display: flex; align-items: center; justify-content: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" width="1em" height="1em"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.1 212.5c4-54.4 46.2-95.2 97.4-95.2c56 0 102 46.5 102 102.3c0 30.7-18.4 57.5-39.7 75.8c-12.4 10.7-25.1 20.3-25.1 33.7c0 10.2-7 19.3-16.7 22.8c-1.3 .5-2.6 .8-4 .8c-8.8 0-16-7.2-16-16V328c0-21.8 11.2-40 27.6-53.7c9.5-8 23.9-20.1 23.9-39.5c0-30.8-21.6-54.3-54-54.3c-28.5 0-51 22.1-51.5 50.4c-.1 8.8-7.3 15.9-16.1 15.8c-8.8-.1-15.9-7.3-15.8-16.1zM288 416a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+  </div>
 </ng-template>
 <ng-template #helperIconAfter>
-  <div class="helper-button-after far fa-question-circle"></div>
+  <div class="helper-button-after" style="display: flex; align-items: center; justify-content: center;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" width="1em" height="1em"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.1 212.5c4-54.4 46.2-95.2 97.4-95.2c56 0 102 46.5 102 102.3c0 30.7-18.4 57.5-39.7 75.8c-12.4 10.7-25.1 20.3-25.1 33.7c0 10.2-7 19.3-16.7 22.8c-1.3 .5-2.6 .8-4 .8c-8.8 0-16-7.2-16-16V328c0-21.8 11.2-40 27.6-53.7c9.5-8 23.9-20.1 23.9-39.5c0-30.8-21.6-54.3-54-54.3c-28.5 0-51 22.1-51.5 50.4c-.1 8.8-7.3 15.9-16.1 15.8c-8.8-.1-15.9-7.3-15.8-16.1zM288 416a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+  </div>
 </ng-template>
