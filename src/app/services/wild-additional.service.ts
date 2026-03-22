@@ -12,7 +12,6 @@ export class WildAdditionalService {
   constructor() {
     this.dataHandleService.gameVersion$.subscribe(() => {
       this.updateLocationMap();
-      console.log(this.pokemonLocationMap);
     });
   }
 

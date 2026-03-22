@@ -52,8 +52,6 @@ export class MoveDetailComponent implements OnInit {
       this.activeFilters['contact'] = params.getAll('contact');
       this.activeFilters['category'] = params.getAll('category');
 
-      console.log('필터 변경 감지 및 검색 실행:', this.activeFilters);
-
       // 3. 검색 실행
       this.performSearch();
     });
@@ -95,8 +93,6 @@ export class MoveDetailComponent implements OnInit {
       });
     });
 
-    console.log(filtered);
-
     if (filtered.length === 0) {
       this.noResultsMessage = `'${this.moveSearchInput}'에 대한 검색 결과가 없습니다.`;
       this.searchResults = [];
@@ -130,8 +126,6 @@ export class MoveDetailComponent implements OnInit {
     }
 
     this.activeFilters[key] = [...currentValues];
-
-    console.log(this.activeFilters);
 
     this.router.navigate([], {
       relativeTo: this.route,

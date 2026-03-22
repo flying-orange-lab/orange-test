@@ -134,7 +134,6 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
 
   get pokemonExtraWild() {
     const name = this.pokemon.koreanName || this.pokemon.name;
-    console.log(name);
     const locations = this.wildAdditionalService.getLocationsByName(name);
 
     if (locations) {
