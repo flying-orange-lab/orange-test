@@ -1,112 +1,78 @@
 @if (moves) {
-  <div class="drawer-container">
-    <!-- <button (click)="toggleRootDrawer($event)">배우는 기술</button> -->
-    @if (isRootDrawerOpen) {
-      <div class="drawer-box">
-        <button (click)="toggleDrawer($event, 'learn')">
-          자력기 목록
-          <span>
-            @if (!isDrawerOpen.learn) {
-              ▼
-            }
-            @if (isDrawerOpen.learn) {
-              ▲
-            }
-          </span>
-        </button>
-        @if (isDrawerOpen.learn) {
-          <div class="drawer-content">
-            <table>
-              <thead>
-                <tr>
-                  <th>레벨</th>
-                  <th>기술 이름</th>
+  <div class="move-tabs-container">
+    <mat-tab-group
+      class="modal-tabs"
+      headerPosition="above"
+      animationDuration="0ms"
+    >
+      <mat-tab label="자력기 목록">
+        <div class="tab-content drawer-content">
+          <table>
+            <thead>
+              <tr>
+                <th>레벨</th>
+                <th>기술 이름</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (move of moves.learn; track $index) {
+                <tr (click)="openMoveCard(move.moveName)">
+                  <td>{{ move.moveLv }}</td>
+                  <td class="move-name-cell">
+                    <span class="move-chip">{{ move.moveName }}</span>
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                @for (move of moves.learn; track $index) {
-                  <tr (click)="openMoveCard(move.moveName)">
-                    <td>{{ move.moveLv }}</td>
-                    <td class="move-name-cell">
-                      <span class="move-chip">{{ move.moveName }}</span>
-                    </td>
-                  </tr>
-                }
-              </tbody>
-            </table>
-          </div>
-        }
-      </div>
-      <div class="drawer-box">
-        <button (click)="toggleDrawer($event, 'tm')">
-          TM 목록
-          <span>
-            @if (!isDrawerOpen.tm) {
-              ▼
-            }
-            @if (isDrawerOpen.tm) {
-              ▲
-            }
-          </span>
-        </button>
-        @if (isDrawerOpen.tm) {
-          <div class="drawer-content">
-            <table>
-              <thead>
-                <tr>
-                  <th>기술 이름</th>
+              }
+            </tbody>
+          </table>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="TM 목록">
+        <div class="tab-content drawer-content">
+          <table>
+            <thead>
+              <tr>
+                <th>기술 이름</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (move of moves.tm; track $index) {
+                <tr (click)="openMoveCard(move)">
+                  <td class="move-name-cell">
+                    <span class="move-chip">{{ move }}</span>
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                @for (move of moves.tm; track $index) {
+              }
+            </tbody>
+          </table>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="기술 가르침 목록">
+        <div class="tab-content drawer-content">
+          <table>
+            <thead>
+              <tr>
+                <th>조각</th>
+                <th>기술 이름</th>
+              </tr>
+            </thead>
+            <tbody class="drawer-tutor">
+              @for (tutor of moves.tutor; track tutor) {
+                @for (move of tutor.moves; track move) {
                   <tr (click)="openMoveCard(move)">
+                    <td [class]="tutor.tutorName"></td>
                     <td class="move-name-cell">
                       <span class="move-chip">{{ move }}</span>
                     </td>
                   </tr>
                 }
-              </tbody>
-            </table>
-          </div>
-        }
-      </div>
-      <div class="drawer-box">
-        <button (click)="toggleDrawer($event, 'tutor')">
-          기술 가르침 목록
-          <span>
-            @if (!isDrawerOpen.tutor) {
-              ▼
-            }
-            @if (isDrawerOpen.tutor) {
-              ▲
-            }
-          </span>
-        </button>
-        @if (isDrawerOpen.tutor) {
-          <div class="drawer-content">
-            <table>
-              <thead>
-                <tr>
-                  <th>조각</th>
-                  <th>기술 이름</th>
-                </tr>
-              </thead>
-              <tbody class="drawer-tutor">
-                @for (tutor of moves.tutor; track tutor) {
-                  @for (move of tutor.moves; track move) {
-                    <tr (click)="openMoveCard(move)">
-                      <td [class]="tutor.tutorName"></td>
-                      <td class="move-name-cell">
-                        <span class="move-chip">{{ move }}</span>
-                      </td>
-                    </tr>
-                  }
-                }
-              </tbody>
-            </table>
-          </div>
-        }
-      </div>
-    }
+              }
+            </tbody>
+          </table>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 }
