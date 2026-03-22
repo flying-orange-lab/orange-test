@@ -141,7 +141,6 @@ export class PokedexComponent implements OnInit {
   ) {
     if (pokemon.form) {
       for (const formData of pokemon.form) {
-        console.log(formData);
         if (!formData[attrName]) {
           return false;
         }

@@ -90,8 +90,6 @@ export class PokemonService {
             continue;
           }
           if (extra && extra !== '일반') {
-            console.log(extra, encounter.extra);
-            console.log(encounter.extra !== extra);
             if (encounter.extra !== extra) {
               continue;
             }
