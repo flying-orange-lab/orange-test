@@ -5694,7 +5694,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'name': '야습',
     'type': '고스트',
     'class': '물리',
-    'power': '40`',
+    'power': '40',
     'accuracy': '100',
     'pp': 30,
     'makeContact': true,
