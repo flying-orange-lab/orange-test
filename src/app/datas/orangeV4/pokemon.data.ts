@@ -7511,7 +7511,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
         'formName': '달마모드',
         'imageUrl': '10178.png',
         'types': ['ice', 'fire'],
-        'abilities': ['달마모드', '달마모드', '달마모드'],
+        'abilities': ['발광', '달마모드', '달마모드'],
         'stats': [105, 160, 55, 30, 55, 135, 540],
         'statsOrigin': [105, 160, 55, 30, 55, 135, 540],
         'evolutionCondition': '',

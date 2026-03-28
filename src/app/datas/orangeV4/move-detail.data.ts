@@ -2569,7 +2569,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'id': 193,
     'name': '아스트랄비트',
     'type': '고스트',
-    'class': '변화',
+    'class': '특수',
     'power': '120',
     'accuracy': '100',
     'pp': 5,
