@@ -31,7 +31,7 @@ export class DataHandleService {
   get gameTitle() {
     switch (this.gameVersionSubject.value) {
       case 'alternative':
-        return '얼터너티브 블랙2';
+        return '얼터너티브 블랙2 4.1';
     }
 
     return undefined;

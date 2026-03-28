@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
       case 'orange_v3':
         return '모에몬 리덕스 오렌지 에디션 3.24';
       case 'alternative':
-        return '얼터너티브 블랙2';
+        return '얼터너티브 블랙2 4.1';
       case 'another_red':
         return '어나더 레드';
       default:
