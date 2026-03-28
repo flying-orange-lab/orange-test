@@ -186,7 +186,8 @@ export class PokemonCardComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   // 폼 선택
-  selectForm(index: number): void {
+  selectForm(event: Event, index: number): void {
+    event.stopPropagation();
     if (this.currentFormIndex !== index) {
       this.currentFormIndex = index;
       this.currentAbility = undefined;

@@ -109,7 +109,7 @@
         <button
           class="form-button"
           [class.active]="i === currentFormIndex"
-          (click)="selectForm(i)"
+          (click)="selectForm($event, i)"
         >
           {{ form.formName }}
         </button>
