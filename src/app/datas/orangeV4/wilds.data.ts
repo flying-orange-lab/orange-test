@@ -1522,10 +1522,10 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '모란만콤비나트 (외부)',
+    'locationName': '모란만콤비나트',
     'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '외부',
         'areaDatas': [
           {
             'area': '풀숲',
@@ -1704,13 +1704,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '모란만콤비나트 (내부)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '내부',
         'areaDatas': [
           {
             'area': '풀숲',
@@ -4697,37 +4692,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     'locationName': '고대의성 (고대샛길 방면)',
     'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '1번방',
         'areaDatas': [
-          {
-            'area': '6번방 (3번방의 입구 너머)',
-            'encounters': [
-              {
-                'name': '점토도리',
-                'minLv': 36,
-                'maxLv': 38,
-                'rate': 40,
-              },
-              {
-                'name': '데스니칸',
-                'minLv': 36,
-                'maxLv': 38,
-                'rate': 20,
-              },
-              {
-                'name': '데스판',
-                'minLv': 36,
-                'maxLv': 38,
-                'rate': 20,
-              },
-              {
-                'name': '활화르바',
-                'minLv': 31,
-                'maxLv': 32,
-                'rate': 20,
-              },
-            ],
-          },
           {
             'area': '1번방 (출입구가 있는 방)',
             'encounters': [
@@ -4757,6 +4723,11 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
             ],
           },
+        ],
+      },
+      {
+        'locationStatus': '2번방',
+        'areaDatas': [
           {
             'area': '2번방 (1에서 오른쪽)',
             'encounters': [
@@ -4786,6 +4757,11 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
             ],
           },
+        ],
+      },
+      {
+        'locationStatus': '3번방',
+        'areaDatas': [
           {
             'area': '3번방 (2에서 오른쪽; 위에 6으로 향하는 문 있음)',
             'encounters': [
@@ -4809,6 +4785,11 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
             ],
           },
+        ],
+      },
+      {
+        'locationStatus': '4번방',
+        'areaDatas': [
           {
             'area': '4번방 (3에서 오른쪽)',
             'encounters': [
@@ -4838,6 +4819,11 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
             ],
           },
+        ],
+      },
+      {
+        'locationStatus': '5번방',
+        'areaDatas': [
           {
             'area': '5번방 (4에서 오른쪽)',
             'encounters': [
@@ -4869,13 +4855,47 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
+      {
+        'locationStatus': '6번방',
+        'areaDatas': [
+          {
+            'area': '6번방 (3번방의 입구 너머)',
+            'encounters': [
+              {
+                'name': '점토도리',
+                'minLv': 36,
+                'maxLv': 38,
+                'rate': 40,
+              },
+              {
+                'name': '데스니칸',
+                'minLv': 36,
+                'maxLv': 38,
+                'rate': 20,
+              },
+              {
+                'name': '데스판',
+                'minLv': 36,
+                'maxLv': 38,
+                'rate': 20,
+              },
+              {
+                'name': '활화르바',
+                'minLv': 31,
+                'maxLv': 32,
+                'rate': 20,
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
-    'locationName': '궐수의동굴 (1F)',
+    'locationName': '궐수의동굴',
     'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '1F',
         'areaDatas': [
           {
             'area': '동굴',
@@ -4949,13 +4969,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '궐수의동굴 (2F)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '2F',
         'areaDatas': [
           {
             'area': '동굴',
@@ -5029,13 +5044,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '궐수의동굴 (3F)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '3F',
         'areaDatas': [
           {
             'area': '동굴',
@@ -5112,10 +5122,10 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '전기돌동굴 (1F)',
+    'locationName': '전기돌동굴',
     'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '1F',
         'areaDatas': [
           {
             'area': '동굴',
@@ -5201,13 +5211,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '전기돌동굴 (B1F)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': 'B1F',
         'areaDatas': [
           {
             'area': '동굴',
@@ -5293,13 +5298,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '전기돌동굴 (B2F)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': 'B2F',
         'areaDatas': [
           {
             'area': '동굴',
@@ -5649,7 +5649,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '타워오브해븐 (2F)',
+    'locationName': '타워오브해븐',
     'regionDatas': [
       {
         'locationStatus': '기본',
@@ -5719,16 +5719,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
             ],
           },
-        ],
-      },
-    ],
-  },
-  {
-    'locationName': '타워오브해븐 (3F)',
-    'regionDatas': [
-      {
-        'locationStatus': '기본',
-        'areaDatas': [
           {
             'area': '3F',
             'encounters': [
@@ -5794,16 +5784,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
             ],
           },
-        ],
-      },
-    ],
-  },
-  {
-    'locationName': '타워오브해븐 (4F)',
-    'regionDatas': [
-      {
-        'locationStatus': '기본',
-        'areaDatas': [
           {
             'area': '4F',
             'encounters': [
@@ -5869,16 +5849,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
             ],
           },
-        ],
-      },
-    ],
-  },
-  {
-    'locationName': '타워오브해븐 (옥상)',
-    'regionDatas': [
-      {
-        'locationStatus': '기본',
-        'areaDatas': [
           {
             'area': '옥상',
             'encounters': [
@@ -5949,10 +5919,10 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '리버스마운틴 (외부)',
+    'locationName': '리버스마운틴',
     'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '외부',
         'areaDatas': [
           {
             'area': '풀숲',
@@ -6079,13 +6049,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '리버스마운틴 (내부, 1F)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '내부, 1F',
         'areaDatas': [
           {
             'area': '동굴',
@@ -6171,13 +6136,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '리버스마운틴 (내부, B1F)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '내부, B1F',
         'areaDatas': [
           {
             'area': '동굴',
@@ -7224,10 +7184,10 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '해변동혈 (지상)',
+    'locationName': '해변동혈',
     'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '지상',
         'areaDatas': [
           {
             'area': '동굴',
@@ -7393,13 +7353,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '해변동혈 (지하)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '지하',
         'areaDatas': [
           {
             'area': '동굴',
@@ -8890,10 +8845,10 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '자이언트홀 (입구쪽 동굴 밖)',
+    'locationName': '자이언트홀',
     'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '입구쪽 동굴 밖',
         'areaDatas': [
           {
             'area': '풀숲',
@@ -9038,13 +8993,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '자이언트홀 (입구쪽 동굴)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '입구쪽 동굴',
         'areaDatas': [
           {
             'area': '동굴',
@@ -9210,13 +9160,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '자이언트홀 (플라스마 프리깃 근처)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '플라스마 프리깃 근처',
         'areaDatas': [
           {
             'area': '풀숲',
@@ -9385,13 +9330,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '자이언트홀 (큐레무 동굴)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '큐레무 동굴',
         'areaDatas': [
           {
             'area': '동굴',
@@ -9799,10 +9739,10 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '챔피언로드 (유적)',
+    'locationName': '챔피언로드',
     'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '유적',
         'areaDatas': [
           {
             'area': '동굴',
@@ -9949,13 +9889,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '챔피언로드 (산1)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '산1',
         'areaDatas': [
           {
             'area': '풀숲',
@@ -10184,13 +10119,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '챔피언로드 (숲)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '숲',
         'areaDatas': [
           {
             'area': '풀숲',
@@ -10377,13 +10307,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '챔피언로드 (동굴1)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '동굴1',
         'areaDatas': [
           {
             'area': '동굴',
@@ -10569,13 +10494,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '챔피언로드 (산2)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '산2',
         'areaDatas': [
           {
             'area': '풀숲',
@@ -10762,13 +10682,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '챔피언로드 (동굴2)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '동굴2',
         'areaDatas': [
           {
             'area': '동굴',
@@ -11002,13 +10917,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '챔피언로드 (N의성 입구)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': 'N의성 입구',
         'areaDatas': [
           {
             'area': '동굴',
@@ -11300,7 +11210,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '설화시티 (계절 무관)',
+    'locationName': '설화시티',
     'regionDatas': [
       {
         'locationStatus': '기본',
@@ -12828,10 +12738,10 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '바람개비숲 (내부)',
+    'locationName': '바람개비숲',
     'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '내부',
         'areaDatas': [
           {
             'area': '풀숲',
@@ -13138,13 +13048,8 @@ export const POKEMON_WILDS_V4: WildArea[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    'locationName': '바람개비숲 (외부)',
-    'regionDatas': [
       {
-        'locationStatus': '기본',
+        'locationStatus': '외부',
         'areaDatas': [
           {
             'area': '풀숲',
