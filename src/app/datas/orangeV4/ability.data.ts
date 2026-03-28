@@ -995,7 +995,7 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   },
   {
     'id': 160,
-    'name': '철가시',
+    'name': '까칠한피부',
     'effect_text': '접촉기에 맞을 경우 상대 최대 체력의 1/8만큼을 감소시킨다.',
     'effect_wild_text': '',
   },
