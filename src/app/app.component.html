@@ -6,3 +6,21 @@
   <router-outlet></router-outlet>
 </main>
 <app-floating-button class="floating floating-bottom"></app-floating-button>
+
+@if (showUpdatePopup()) {
+  <div class="update-popup-overlay">
+    <div class="update-popup">
+      <h2>4.1 버전 업데이트 안내</h2>
+      <p>
+        얼터너티브 블랙 2의 <strong>4.1 버전</strong>이 출시되었습니다!<br />
+        최신 웹 DB로 이동하시겠습니까?
+      </p>
+      <div class="popup-actions">
+        <button class="btn-close" (click)="closeUpdatePopup()">닫기</button>
+        <button class="btn-primary" (click)="goToUpdate()">
+          4.1 버전으로 이동
+        </button>
+      </div>
+    </div>
+  </div>
+}

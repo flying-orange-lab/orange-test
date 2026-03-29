@@ -35,6 +35,12 @@ export class AppComponent implements OnInit {
   isHeaderHidden = signal(false);
   private previousScroll = signal(0);
 
+  // 4.1 업데이트 팝업 상태
+  showUpdatePopup = signal(false);
+
+  // TODO: 4.1 버전 실제 URL로 변경 필요
+  updateUrl = 'https://alternative-wiki-4-1.vercel.app/alternative'; // 임시 URL
+
   constructor() {
     this.unregisterServiceWorkers();
   }
@@ -50,6 +56,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // 4.1 업데이트 팝업 표시 여부 확인
+    const isUpdateClosed = localStorage.getItem('hideUpdatePopup_4_1');
+    if (!isUpdateClosed) {
+      this.showUpdatePopup.set(true);
+    }
+
     // 라우터 이벤트 구독 → 페이지 이동할 때마다 gameVersion 갱신
     this.router.events
       .pipe(
@@ -91,6 +103,15 @@ export class AppComponent implements OnInit {
     if (dataTitle) {
       this.title = `${dataTitle} | ${this.title}`;
     }
+  }
+
+  closeUpdatePopup() {
+    this.showUpdatePopup.set(false);
+    localStorage.setItem('hideUpdatePopup_4_1', 'true');
+  }
+
+  goToUpdate() {
+    window.location.href = this.updateUrl;
   }
 
   @HostListener('window:scroll')
