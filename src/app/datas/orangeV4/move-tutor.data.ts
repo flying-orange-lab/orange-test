@@ -1260,7 +1260,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': ['탁쳐서떨구기'],
+      'moves': ['탁쳐서떨구기', '드레인펀치'],
     },
     {
       'tutorName': 'green',
@@ -4863,7 +4863,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
   '199-0': [
     {
       'tutorName': 'red',
-      'moves': ['시그널빔', '더스트슈트', '냉동펀치'],
+      'moves': ['시그널빔', '더스트슈트', '번개펀치', '불꽃펀치'],
     },
     {
       'tutorName': 'blue',
@@ -4886,6 +4886,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
       'moves': [
         '화학변화스모그',
         '당신먼저',
+        '도우미',
         '트릭',
         '리사이클',
         '잠꼬대',

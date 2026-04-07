@@ -1263,6 +1263,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'accuracy': '100',
     'pp': 15,
     'makeContact': true,
+    'category': ['베기'],
     'effects': {
       'changeStatusTarget': '특공 -1',
     },
@@ -1553,7 +1554,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'pp': 10,
     'makeContact': true,
     'effects': {
-      'etc': ' 받은 공격 위력의 2배 고정 데미지',
+      'etc': ' 받은 공격 위력의 1.5배 고정 데미지',
     },
   },
   {
@@ -2575,9 +2576,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'pp': 5,
     'makeContact': false,
     'targeting': '아군 제외 광역',
-    'effects': {
-      'etc': '대상의 노말, 격투타입 상성 무효를 해제',
-    },
+    'effects': {},
   },
   {
     'id': 194,
@@ -2972,7 +2971,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'makeContact': true,
     'effects': {
       'changeStatusTarget': '20% 방어 -1',
-      'etc': '기본 급소율 +1',
+      'etc': '기본 급소율 +1, 대상의 방어 해제',
     },
   },
   {
@@ -4934,7 +4933,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'pp': 10,
     'makeContact': false,
     'effects': {
-      'etc': ' 받은 공격 위력의 2배 고정 데미지',
+      'etc': ' 받은 공격 위력의 1.5배 고정 데미지',
     },
   },
   {
@@ -6502,7 +6501,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'makeContact': true,
     'category': ['펀치'],
     'effects': {
-      'etc': '확정 급소',
+      'etc': '확정 급소, 대상의 방어 해제',
     },
   },
   {
@@ -6794,7 +6793,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'makeContact': true,
     'category': ['펀치'],
     'effects': {
-      'etc': '3회 공격, 확정 급소',
+      'etc': '3회 공격, 확정 급소, 대상의 방어 해제',
     },
   },
   {

@@ -351,7 +351,7 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
     'effect_text':
       '접촉기에 맞을 경우 상대를 30% 확률로 헤롱헤롱 상태로 만든다.',
     'effect_wild_text':
-      '다른 색상 성별의 야생 포켓몬과 조우할 확률이 1.3배 증가한다.',
+      '다른 성별의 야생 포켓몬과 조우할 확률이 1.3배 증가한다.',
   },
   {
     'id': 57,
