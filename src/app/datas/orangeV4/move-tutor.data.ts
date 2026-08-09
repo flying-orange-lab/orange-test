@@ -1185,7 +1185,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': ['그림자꿰매기'],
+      'moves': [],
     },
     {
       'tutorName': 'green',
@@ -1207,7 +1207,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': ['그림자꿰매기', '탁쳐서떨구기', '열풍', '순풍'],
+      'moves': ['탁쳐서떨구기', '열풍', '순풍'],
     },
     {
       'tutorName': 'green',
@@ -3484,7 +3484,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': ['썬더다이브', '순풍', '불새', '날개쉬기'],
+      'moves': ['썬더다이브'],
     },
     {
       'tutorName': 'green',
@@ -4490,7 +4490,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': ['그림자꿰매기', '탁쳐서떨구기', '아쿠아브레이크'],
+      'moves': ['탁쳐서떨구기', '아쿠아브레이크'],
     },
     {
       'tutorName': 'green',
@@ -4518,7 +4518,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': ['그림자꿰매기', '탁쳐서떨구기', '아쿠아브레이크'],
+      'moves': ['탁쳐서떨구기', '아쿠아브레이크'],
     },
     {
       'tutorName': 'green',
@@ -5504,15 +5504,15 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
   '225-0': [
     {
       'tutorName': 'red',
-      'moves': ['시그널빔', '씨폭탄', '뛰어오르기', '더스트슈트', '냉동펀치'],
+      'moves': ['씨폭탄', '드릴라이너', '뛰어오르기', '더스트슈트', '냉동펀치'],
     },
     {
       'tutorName': 'blue',
-      'moves': ['전자부유', '철벽', '얼어붙은바람', '아쿠아테일', '아이언테일'],
+      'moves': ['속임수', '얼어붙은바람', '아쿠아테일', '아이언테일'],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['아쿠아브레이크', '불새', '아픔나누기'],
+      'moves': ['불새', '아픔나누기'],
     },
     {
       'tutorName': 'green',
@@ -6401,7 +6401,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'black',
-      'moves': ['물의맹세'],
+      'moves': ['물의맹세', '웨이브태클'],
     },
   ],
   '259-0': [
@@ -6429,7 +6429,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'black',
-      'moves': ['물의맹세'],
+      'moves': ['물의맹세', '웨이브태클'],
     },
   ],
   '260-0': [
@@ -6464,7 +6464,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'black',
-      'moves': ['물의맹세'],
+      'moves': ['물의맹세', '웨이브태클'],
     },
   ],
   '261-0': [
@@ -9479,8 +9479,17 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     {
       'tutorName': 'red',
       'moves': [
+        '벌레먹기',
+        '탐내기',
+        '분노의앞니',
+        '더블촙',
         '시그널빔',
         '아이언헤드',
+        '씨폭탄',
+        '드릴라이너',
+        '뛰어오르기',
+        '안다리걸기',
+        '더스트슈트',
         '소란피기',
         '번개펀치',
         '불꽃펀치',
@@ -9492,24 +9501,56 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
       'moves': [
         '매직코트',
         '메가톤킥',
+        '대지의힘',
+        '속임수',
         '중력',
+        '전자부유',
         '철벽',
         '메테오빔',
+        '엄청난힘',
+        '일렉트릭네트',
         '얼어붙은바람',
+        '아쿠아테일',
+        '악의파동',
         '사념의박치기',
+        '용의파동',
+        '하이퍼보이스',
+        '아이언테일',
       ],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['드레인펀치'],
+      'moves': [
+        '그림자꿰매기',
+        '썬더다이브',
+        '탁쳐서떨구기',
+        '광합성',
+        '열풍',
+        '역할',
+        '아쿠아브레이크',
+        '순풍',
+        '불새',
+        '아픔나누기',
+        '기가드레인',
+        '드레인펀치',
+        '날개쉬기',
+      ],
     },
     {
       'tutorName': 'green',
       'moves': [
+        '화학변화스모그',
+        '하드프레스',
+        '막말내뱉기',
+        '당신먼저',
         '도우미',
         '트릭',
+        '아이스해머',
         '철제광선',
+        '죽기살기',
+        '역린',
         '리사이클',
+        '트리플악셀',
         '스텔스록',
         '잠꼬대',
         '스킬스왑',
@@ -9517,7 +9558,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'black',
-      'moves': [],
+      'moves': ['풀의맹세', '우드해머', '용성군'],
     },
   ],
   '386-0': [
@@ -11842,7 +11883,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'green',
-      'moves': ['트릭', '잠꼬대'],
+      'moves': ['막말내뱉기', '트릭', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -11852,19 +11893,26 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
   '480-0': [
     {
       'tutorName': 'red',
-      'moves': ['시그널빔', '번개펀치', '불꽃펀치', '냉동펀치'],
+      'moves': ['시그널빔', '아이언헤드'],
     },
     {
       'tutorName': 'blue',
-      'moves': ['매직코트', '속임수', '사념의박치기', '아이언테일'],
+      'moves': [
+        '매직코트',
+        '중력',
+        '전자부유',
+        '철벽',
+        '일렉트릭네트',
+        '사념의박치기',
+      ],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['탁쳐서떨구기', '역할', '기가드레인'],
+      'moves': ['썬더다이브'],
     },
     {
       'tutorName': 'green',
-      'moves': ['도우미', '트릭', '리사이클', '스텔스록', '잠꼬대', '스킬스왑'],
+      'moves': ['도우미', '철제광선', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -11874,27 +11922,26 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
   '481-0': [
     {
       'tutorName': 'red',
-      'moves': ['시그널빔', '번개펀치', '불꽃펀치', '냉동펀치'],
+      'moves': ['아이언헤드'],
     },
     {
       'tutorName': 'blue',
-      'moves': ['매직코트', '사념의박치기', '아이언테일'],
+      'moves': [
+        '매직코트',
+        '전자부유',
+        '철벽',
+        '메테오빔',
+        '엄청난힘',
+        '사념의박치기',
+      ],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['탁쳐서떨구기', '역할'],
+      'moves': [],
     },
     {
       'tutorName': 'green',
-      'moves': [
-        '막말내뱉기',
-        '도우미',
-        '트릭',
-        '리사이클',
-        '스텔스록',
-        '잠꼬대',
-        '스킬스왑',
-      ],
+      'moves': ['하드프레스', '도우미', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -11904,19 +11951,19 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
   '482-0': [
     {
       'tutorName': 'red',
-      'moves': ['시그널빔', '번개펀치', '불꽃펀치', '냉동펀치'],
+      'moves': ['씨폭탄'],
     },
     {
       'tutorName': 'blue',
-      'moves': ['매직코트', '사념의박치기', '아이언테일'],
+      'moves': ['매직코트', '중력'],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['탁쳐서떨구기', '역할', '순풍'],
+      'moves': ['광합성', '기가드레인'],
     },
     {
       'tutorName': 'green',
-      'moves': ['도우미', '트릭', '리사이클', '스텔스록', '잠꼬대', '스킬스왑'],
+      'moves': ['도우미', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -12148,139 +12195,75 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
   '492-0': [
     {
       'tutorName': 'red',
-      'moves': ['탐내기', '씨폭탄'],
+      'moves': ['탐내기'],
     },
     {
       'tutorName': 'blue',
-      'moves': ['대지의힘', '사념의박치기'],
+      'moves': ['악의파동'],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['광합성', '기가드레인'],
+      'moves': ['그림자꿰매기', '아픔나누기', '기가드레인', '드레인펀치'],
     },
     {
       'tutorName': 'green',
-      'moves': ['죽기살기', '잠꼬대'],
+      'moves': ['당신먼저', '트릭', '죽기살기', '잠꼬대'],
     },
     {
       'tutorName': 'black',
-      'moves': [],
+      'moves': ['우드해머'],
     },
   ],
   '493-0': [
     {
       'tutorName': 'red',
-      'moves': [
-        '벌레먹기',
-        '탐내기',
-        '분노의앞니',
-        '더블촙',
-        '시그널빔',
-        '아이언헤드',
-        '씨폭탄',
-        '드릴라이너',
-        '뛰어오르기',
-        '안다리걸기',
-        '더스트슈트',
-        '소란피기',
-        '번개펀치',
-        '불꽃펀치',
-        '냉동펀치',
-      ],
+      'moves': ['시그널빔', '아이언헤드'],
     },
     {
       'tutorName': 'blue',
       'moves': [
-        '매직코트',
-        '메가톤킥',
         '대지의힘',
-        '속임수',
-        '중력',
-        '전자부유',
         '철벽',
-        '메테오빔',
-        '엄청난힘',
-        '일렉트릭네트',
         '얼어붙은바람',
-        '아쿠아테일',
         '악의파동',
         '사념의박치기',
         '용의파동',
         '하이퍼보이스',
-        '아이언테일',
       ],
     },
     {
       'tutorName': 'yellow',
-      'moves': [
-        '그림자꿰매기',
-        '썬더다이브',
-        '탁쳐서떨구기',
-        '광합성',
-        '열풍',
-        '역할',
-        '아쿠아브레이크',
-        '순풍',
-        '불새',
-        '아픔나누기',
-        '기가드레인',
-        '드레인펀치',
-        '날개쉬기',
-      ],
+      'moves': ['열풍', '순풍'],
     },
     {
       'tutorName': 'green',
-      'moves': [
-        '화학변화스모그',
-        '하드프레스',
-        '막말내뱉기',
-        '당신먼저',
-        '도우미',
-        '트릭',
-        '아이스해머',
-        '철제광선',
-        '죽기살기',
-        '역린',
-        '리사이클',
-        '트리플악셀',
-        '스텔스록',
-        '잠꼬대',
-        '스킬스왑',
-      ],
+      'moves': ['철제광선', '역린', '잠꼬대'],
     },
     {
       'tutorName': 'black',
-      'moves': [
-        '풀의맹세',
-        '불꽃의맹세',
-        '물의맹세',
-        '우드해머',
-        '플레어드라이브',
-        '웨이브태클',
-        '용성군',
-      ],
+      'moves': ['용성군'],
     },
   ],
   '494-0': [
     {
       'tutorName': 'red',
-      'moves': ['시그널빔', '뛰어오르기', '소란피기', '번개펀치', '불꽃펀치'],
+      'moves': ['시그널빔', '아이언헤드'],
     },
     {
       'tutorName': 'blue',
-      'moves': ['매직코트', '메가톤킥', '사념의박치기'],
+      'moves': ['철벽', '얼어붙은바람'],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['열풍', '역할'],
+      'moves': [],
     },
     {
       'tutorName': 'green',
-      'moves': ['도우미', '트릭', '잠꼬대'],
+      'moves': ['잠꼬대'],
     },
     {
       'tutorName': 'black',
-      'moves': ['플레어드라이브'],
+      'moves': [],
     },
   ],
   '495-0': [
@@ -13137,34 +13120,32 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     {
       'tutorName': 'red',
       'moves': [
-        '탐내기',
         '시그널빔',
-        '안다리걸기',
-        '소란피기',
-        '번개펀치',
-        '불꽃펀치',
+        '씨폭탄',
+        '드릴라이너',
+        '뛰어오르기',
+        '더스트슈트',
         '냉동펀치',
       ],
     },
     {
       'tutorName': 'blue',
       'moves': [
-        '매직코트',
-        '메가톤킥',
-        '중력',
+        '속임수',
+        '전자부유',
+        '철벽',
         '얼어붙은바람',
-        '사념의박치기',
-        '하이퍼보이스',
+        '아쿠아테일',
         '아이언테일',
       ],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['탁쳐서떨구기', '역할', '아픔나누기', '드레인펀치'],
+      'moves': ['아쿠아브레이크', '불새', '아픔나누기'],
     },
     {
       'tutorName': 'green',
-      'moves': ['당신먼저', '도우미', '잠꼬대', '스킬스왑'],
+      'moves': ['도우미', '리사이클', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -15745,7 +15726,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'yellow',
-      'moves': [],
+      'moves': ['썬더다이브'],
     },
     {
       'tutorName': 'green',
@@ -15771,7 +15752,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'green',
-      'moves': ['도우미', '스텔스록', '잠꼬대'],
+      'moves': ['하드프레스', '도우미', '스텔스록', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -16254,7 +16235,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'green',
-      'moves': ['트릭', '잠꼬대'],
+      'moves': ['막말내뱉기', '트릭', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -16276,7 +16257,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'green',
-      'moves': ['트릭', '잠꼬대'],
+      'moves': ['막말내뱉기', '트릭', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -16298,7 +16279,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'green',
-      'moves': ['트릭', '잠꼬대'],
+      'moves': ['막말내뱉기', '트릭', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -16320,7 +16301,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'green',
-      'moves': ['트릭', '잠꼬대'],
+      'moves': ['막말내뱉기', '트릭', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -16342,7 +16323,7 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
     },
     {
       'tutorName': 'green',
-      'moves': ['트릭', '잠꼬대'],
+      'moves': ['막말내뱉기', '트릭', '잠꼬대'],
     },
     {
       'tutorName': 'black',
@@ -16384,23 +16365,23 @@ export const POKEMON_MOVE_TUTOR_V4: Record<string, MoveTutorData[]> = {
   '492-1': [
     {
       'tutorName': 'red',
-      'moves': ['탐내기', '씨폭탄'],
+      'moves': ['탐내기'],
     },
     {
       'tutorName': 'blue',
-      'moves': ['대지의힘', '사념의박치기'],
+      'moves': ['악의파동'],
     },
     {
       'tutorName': 'yellow',
-      'moves': ['광합성', '기가드레인'],
+      'moves': ['그림자꿰매기', '아픔나누기', '기가드레인', '드레인펀치'],
     },
     {
       'tutorName': 'green',
-      'moves': ['죽기살기', '잠꼬대'],
+      'moves': ['당신먼저', '트릭', '죽기살기', '잠꼬대'],
     },
     {
       'tutorName': 'black',
-      'moves': [],
+      'moves': ['우드해머'],
     },
   ],
   '550-1': [

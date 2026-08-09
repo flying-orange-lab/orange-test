@@ -638,8 +638,9 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   },
   {
     'id': 102,
-    'name': '리프가드',
-    'effect_text': '날씨가 쾌청일 때 상태이상에 걸리지 않는다.',
+    'name': '탈',
+    'effect_text':
+      '공격받은 뒤, HP가 7/8 이하일 경우 모습을 바꾼다. 볼에 넣으면 되돌아온다.',
     'effect_wild_text': '',
   },
   {
@@ -1002,7 +1003,8 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   {
     'id': 161,
     'name': '달마모드',
-    'effect_text': 'HP가 1/2 이하로 떨어질 경우 모습을 바꾼다.',
+    'effect_text':
+      '턴이 끝날 때, HP가 7/8 이하일 경우 모습을 바꾼다. 볼에 넣으면 되돌아온다.',
     'effect_wild_text': '',
   },
   {

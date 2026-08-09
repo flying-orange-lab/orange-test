@@ -154,10 +154,46 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '에블리',
                 'minLv': 9,
                 'maxLv': 9,
-                'rate': 100,
+                'rate': 20,
+              },
+              {
+                'name': '콩알뚜기',
+                'minLv': 9,
+                'maxLv': 9,
+                'rate': 20,
+              },
+              {
+                'name': '화살꼬빈',
+                'minLv': 9,
+                'maxLv': 9,
+                'rate': 15,
+              },
+              {
+                'name': '파라꼬',
+                'minLv': 9,
+                'maxLv': 9,
+                'rate': 15,
+              },
+              {
+                'name': '구구',
+                'minLv': 9,
+                'maxLv': 9,
+                'rate': 10,
+              },
+              {
+                'name': '테일로',
+                'minLv': 9,
+                'maxLv': 9,
+                'rate': 10,
+              },
+              {
+                'name': '찌르꼬',
+                'minLv': 9,
+                'maxLv': 9,
+                'rate': 10,
               },
             ],
           },
@@ -1886,7 +1922,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '럭키',
+                'name': '따라큐',
                 'minLv': 24,
                 'maxLv': 25,
                 'rate': 5,
@@ -2043,7 +2079,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '럭키',
+                'name': '따라큐',
                 'minLv': 24,
                 'maxLv': 25,
                 'rate': 5,
@@ -2200,7 +2236,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '럭키',
+                'name': '따라큐',
                 'minLv': 24,
                 'maxLv': 25,
                 'rate': 5,
@@ -2357,7 +2393,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '럭키',
+                'name': '따라큐',
                 'minLv': 24,
                 'maxLv': 25,
                 'rate': 5,
@@ -2416,32 +2452,38 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               {
                 'name': '포푸니',
                 'minLv': 22,
-                'maxLv': 24,
+                'maxLv': 23,
                 'rate': 20,
               },
               {
                 'name': '터벅고래',
                 'minLv': 22,
-                'maxLv': 24,
+                'maxLv': 23,
                 'rate': 20,
               },
               {
                 'name': '눈꼬마',
                 'minLv': 22,
-                'maxLv': 24,
+                'maxLv': 23,
                 'rate': 20,
               },
               {
                 'name': '바닐프티',
                 'minLv': 22,
-                'maxLv': 24,
+                'maxLv': 23,
                 'rate': 20,
               },
               {
                 'name': '프리지오',
-                'minLv': 22,
-                'maxLv': 24,
-                'rate': 20,
+                'minLv': 24,
+                'maxLv': 25,
+                'rate': 10,
+              },
+              {
+                'name': '딜리버드',
+                'minLv': 24,
+                'maxLv': 25,
+                'rate': 10,
               },
             ],
           },
@@ -3188,7 +3230,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 40,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 30,
                 'maxLv': 31,
                 'rate': 20,
@@ -3309,7 +3351,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 30,
                 'maxLv': 31,
                 'rate': 40,
@@ -3670,7 +3712,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '플라엣테',
+                'name': '딜리버드',
                 'minLv': 32,
                 'maxLv': 36,
                 'rate': 10,
@@ -3723,7 +3765,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 38,
                 'maxLv': 39,
                 'rate': 60,
@@ -3758,7 +3800,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '색이 진한 풀숲',
             'encounters': [
               {
-                'name': '플라엣테',
+                'name': '딜리버드',
                 'minLv': 35,
                 'maxLv': 37,
                 'rate': 20,
@@ -3922,7 +3964,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '플라엣테',
+                'name': '딜리버드',
                 'minLv': 32,
                 'maxLv': 36,
                 'rate': 10,
@@ -3975,7 +4017,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 38,
                 'maxLv': 39,
                 'rate': 60,
@@ -4010,7 +4052,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '색이 진한 풀숲',
             'encounters': [
               {
-                'name': '플라엣테',
+                'name': '딜리버드',
                 'minLv': 35,
                 'maxLv': 37,
                 'rate': 20,
@@ -4692,74 +4734,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     'locationName': '고대의성 (고대샛길 방면)',
     'regionDatas': [
       {
-        'locationStatus': '1번방',
-        'areaDatas': [
-          {
-            'area': '1번방 (출입구가 있는 방)',
-            'encounters': [
-              {
-                'name': '아켄',
-                'minLv': 30,
-                'maxLv': 30,
-                'rate': 30,
-              },
-              {
-                'name': '프로토가',
-                'minLv': 30,
-                'maxLv': 30,
-                'rate': 30,
-              },
-              {
-                'name': '오뚝군',
-                'minLv': 31,
-                'maxLv': 32,
-                'rate': 20,
-              },
-              {
-                'name': '데스마스',
-                'minLv': 31,
-                'maxLv': 32,
-                'rate': 20,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        'locationStatus': '2번방',
-        'areaDatas': [
-          {
-            'area': '2번방 (1에서 오른쪽)',
-            'encounters': [
-              {
-                'name': '릴링',
-                'minLv': 30,
-                'maxLv': 30,
-                'rate': 30,
-              },
-              {
-                'name': '아노딥스',
-                'minLv': 30,
-                'maxLv': 30,
-                'rate': 30,
-              },
-              {
-                'name': '오뚝군',
-                'minLv': 31,
-                'maxLv': 32,
-                'rate': 20,
-              },
-              {
-                'name': '데스마스',
-                'minLv': 31,
-                'maxLv': 32,
-                'rate': 20,
-              },
-            ],
-          },
-        ],
-      },
-      {
         'locationStatus': '3번방',
         'areaDatas': [
           {
@@ -4781,74 +4755,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'name': '프테라',
                 'minLv': 35,
                 'maxLv': 35,
-                'rate': 20,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        'locationStatus': '4번방',
-        'areaDatas': [
-          {
-            'area': '4번방 (3에서 오른쪽)',
-            'encounters': [
-              {
-                'name': '암나이트',
-                'minLv': 30,
-                'maxLv': 30,
-                'rate': 30,
-              },
-              {
-                'name': '투구',
-                'minLv': 30,
-                'maxLv': 30,
-                'rate': 30,
-              },
-              {
-                'name': '오뚝군',
-                'minLv': 31,
-                'maxLv': 32,
-                'rate': 20,
-              },
-              {
-                'name': '데스마스',
-                'minLv': 31,
-                'maxLv': 32,
-                'rate': 20,
-              },
-            ],
-          },
-        ],
-      },
-      {
-        'locationStatus': '5번방',
-        'areaDatas': [
-          {
-            'area': '5번방 (4에서 오른쪽)',
-            'encounters': [
-              {
-                'name': '티고라스',
-                'minLv': 30,
-                'maxLv': 30,
-                'rate': 30,
-              },
-              {
-                'name': '아마루스',
-                'minLv': 30,
-                'maxLv': 30,
-                'rate': 30,
-              },
-              {
-                'name': '오뚝군',
-                'minLv': 31,
-                'maxLv': 32,
-                'rate': 20,
-              },
-              {
-                'name': '데스마스',
-                'minLv': 31,
-                'maxLv': 32,
                 'rate': 20,
               },
             ],
@@ -4881,6 +4787,51 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
               {
                 'name': '활화르바',
+                'minLv': 31,
+                'maxLv': 32,
+                'rate': 20,
+              },
+              {
+                'name': '포켓몬',
+                'minLv': 0,
+                'maxLv': 0,
+                'rate': 0,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    'locationName': '',
+    'regionDatas': [
+      {
+        'locationStatus': '기본',
+        'areaDatas': [
+          {
+            'area': '1번방 (출입구가 있는 방)',
+            'encounters': [
+              {
+                'name': '아켄',
+                'minLv': 30,
+                'maxLv': 30,
+                'rate': 30,
+              },
+              {
+                'name': '프로토가',
+                'minLv': 30,
+                'maxLv': 30,
+                'rate': 30,
+              },
+              {
+                'name': '오뚝군',
+                'minLv': 31,
+                'maxLv': 32,
+                'rate': 20,
+              },
+              {
+                'name': '데스마스',
                 'minLv': 31,
                 'maxLv': 32,
                 'rate': 20,
@@ -5456,7 +5407,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 43,
                 'maxLv': 47,
                 'rate': 100,
@@ -5485,7 +5436,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 20,
               },
               {
-                'name': '마그마',
+                'name': '포푸니크',
                 'minLv': 40,
                 'maxLv': 42,
                 'rate': 10,
@@ -5584,7 +5535,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 43,
                 'maxLv': 47,
                 'rate': 100,
@@ -5613,7 +5564,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 20,
               },
               {
-                'name': '루주라',
+                'name': '포푸니라',
                 'minLv': 40,
                 'maxLv': 42,
                 'rate': 10,
@@ -5919,6 +5870,169 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
+    'locationName': '태엽산',
+    'regionDatas': [
+      {
+        'locationStatus': '기본',
+        'areaDatas': [
+          {
+            'area': '동굴',
+            'encounters': [
+              {
+                'name': '암트르',
+                'minLv': 40,
+                'maxLv': 43,
+                'rate': 20,
+              },
+              {
+                'name': '맘박쥐',
+                'minLv': 40,
+                'maxLv': 43,
+                'rate': 20,
+              },
+              {
+                'name': '코리갑',
+                'minLv': 40,
+                'maxLv': 43,
+                'rate': 10,
+              },
+              {
+                'name': '링곰',
+                'minLv': 40,
+                'maxLv': 43,
+                'rate': 10,
+              },
+              {
+                'name': '갱도라',
+                'minLv': 40,
+                'maxLv': 43,
+                'rate': 10,
+              },
+              {
+                'name': '메꾸리',
+                'minLv': 40,
+                'maxLv': 43,
+                'rate': 10,
+              },
+              {
+                'name': '마릴리',
+                'minLv': 40,
+                'maxLv': 43,
+                'rate': 10,
+              },
+              {
+                'name': '스태솔트',
+                'minLv': 40,
+                'maxLv': 43,
+                'rate': 5,
+              },
+              {
+                'name': '골뱃',
+                'minLv': 40,
+                'maxLv': 43,
+                'rate': 5,
+              },
+            ],
+          },
+          {
+            'area': '모래먼지',
+            'encounters': [
+              {
+                'name': '몰드류',
+                'minLv': 42,
+                'maxLv': 44,
+                'rate': 100,
+              },
+              {
+                'name': '기가이어스',
+                'minLv': 68,
+                'maxLv': 68,
+                'rate': 60,
+              },
+              {
+                'name': '배바닐라',
+                'minLv': 69,
+                'maxLv': 69,
+                'rate': 30,
+              },
+              {
+                'name': '드닐레이브',
+                'minLv': 70,
+                'maxLv': 70,
+                'rate': 10,
+              },
+            ],
+          },
+          {
+            'area': '동굴 (얼음 바위 방)',
+            'encounters': [
+              {
+                'name': '프리지오',
+                'minLv': 68,
+                'maxLv': 68,
+                'rate': 20,
+              },
+              {
+                'name': '프리지오',
+                'minLv': 69,
+                'maxLv': 69,
+                'rate': 20,
+              },
+              {
+                'name': '툰베어',
+                'minLv': 69,
+                'maxLv': 69,
+                'rate': 10,
+              },
+              {
+                'name': '링곰',
+                'minLv': 69,
+                'maxLv': 69,
+                'rate': 10,
+              },
+              {
+                'name': '얼음귀신',
+                'minLv': 68,
+                'maxLv': 68,
+                'rate': 10,
+              },
+              {
+                'name': '얼음귀신',
+                'minLv': 69,
+                'maxLv': 69,
+                'rate': 10,
+              },
+              {
+                'name': '암트르',
+                'minLv': 66,
+                'maxLv': 66,
+                'rate': 5,
+              },
+              {
+                'name': '바닐리치',
+                'minLv': 66,
+                'maxLv': 66,
+                'rate': 5,
+              },
+              {
+                'name': '툰베어',
+                'minLv': 70,
+                'maxLv': 70,
+                'rate': 5,
+              },
+              {
+                'name': '바닐리치',
+                'minLv': 68,
+                'maxLv': 68,
+                'rate': 5,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     'locationName': '리버스마운틴',
     'regionDatas': [
       {
@@ -5981,7 +6095,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 40,
                 'maxLv': 43,
                 'rate': 60,
@@ -6259,7 +6373,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '듀란',
+                'name': '무우마',
                 'minLv': 40,
                 'maxLv': 43,
                 'rate': 10,
@@ -6283,16 +6397,16 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '무우마',
+                'name': '따라큐',
                 'minLv': 40,
                 'maxLv': 43,
-                'rate': 6,
+                'rate': 5,
               },
               {
                 'name': '화강돌',
                 'minLv': 40,
                 'maxLv': 43,
-                'rate': 4,
+                'rate': 5,
               },
             ],
           },
@@ -6318,7 +6432,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '듀란',
+                'name': '무우마',
                 'minLv': 40,
                 'maxLv': 43,
                 'rate': 10,
@@ -6342,10 +6456,10 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '무우마',
+                'name': '따라큐',
                 'minLv': 40,
                 'maxLv': 43,
-                'rate': 6,
+                'rate': 4,
               },
               {
                 'name': '화강돌',
@@ -6731,7 +6845,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 42,
                 'maxLv': 46,
                 'rate': 80,
@@ -7511,7 +7625,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 42,
                 'maxLv': 45,
                 'rate': 75,
@@ -7742,7 +7856,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 44,
                 'maxLv': 46,
                 'rate': 70,
@@ -7893,7 +8007,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 47,
                 'maxLv': 49,
                 'rate': 60,
@@ -8121,7 +8235,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 50,
                 'maxLv': 53,
                 'rate': 80,
@@ -8362,7 +8476,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 53,
                 'maxLv': 56,
                 'rate': 80,
@@ -8688,7 +8802,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 54,
                 'maxLv': 58,
                 'rate': 80,
@@ -8907,7 +9021,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 54,
                 'maxLv': 58,
                 'rate': 80,
@@ -9226,7 +9340,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 54,
                 'maxLv': 58,
                 'rate': 70,
@@ -9574,7 +9688,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 59,
                 'maxLv': 62,
                 'rate': 85,
@@ -9955,7 +10069,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 56,
                 'maxLv': 56,
                 'rate': 80,
@@ -10191,7 +10305,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 60,
                 'maxLv': 65,
                 'rate': 50,
@@ -10408,6 +10522,24 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'maxLv': 65,
                 'rate': 5,
               },
+              {
+                'name': '몰드류',
+                'minLv': 60,
+                'maxLv': 65,
+                'rate': 60,
+              },
+              {
+                'name': '기가이어스',
+                'minLv': 60,
+                'maxLv': 65,
+                'rate': 20,
+              },
+              {
+                'name': '콜로솔트',
+                'minLv': 60,
+                'maxLv': 65,
+                'rate': 20,
+              },
             ],
           },
           {
@@ -10427,24 +10559,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
               {
                 'name': '파르토',
-                'minLv': 59,
-                'maxLv': 62,
-                'rate': 10,
-              },
-              {
-                'name': '마자용',
-                'minLv': 59,
-                'maxLv': 62,
-                'rate': 10,
-              },
-              {
-                'name': '입치트',
-                'minLv': 59,
-                'maxLv': 62,
-                'rate': 10,
-              },
-              {
-                'name': '맘박쥐',
                 'minLv': 59,
                 'maxLv': 62,
                 'rate': 10,
@@ -10473,22 +10587,22 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '모래먼지 (플래시)',
             'encounters': [
               {
-                'name': '몰드류',
-                'minLv': 60,
-                'maxLv': 65,
-                'rate': 60,
+                'name': '마자용',
+                'minLv': 59,
+                'maxLv': 62,
+                'rate': 10,
               },
               {
-                'name': '기가이어스',
-                'minLv': 60,
-                'maxLv': 65,
-                'rate': 20,
+                'name': '입치트',
+                'minLv': 59,
+                'maxLv': 62,
+                'rate': 10,
               },
               {
-                'name': '콜로솔트',
-                'minLv': 60,
-                'maxLv': 65,
-                'rate': 20,
+                'name': '맘박쥐',
+                'minLv': 59,
+                'maxLv': 62,
+                'rate': 10,
               },
             ],
           },
@@ -10572,7 +10686,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 60,
                 'maxLv': 65,
                 'rate': 70,
@@ -10801,6 +10915,42 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'maxLv': 65,
                 'rate': 2,
               },
+              {
+                'name': '크로뱃',
+                'minLv': 60,
+                'maxLv': 65,
+                'rate': 20,
+              },
+              {
+                'name': '폭음룡',
+                'minLv': 60,
+                'maxLv': 65,
+                'rate': 10,
+              },
+              {
+                'name': '기가이어스',
+                'minLv': 60,
+                'maxLv': 65,
+                'rate': 10,
+              },
+              {
+                'name': '거대코뿌리',
+                'minLv': 60,
+                'maxLv': 65,
+                'rate': 10,
+              },
+              {
+                'name': '마기라스',
+                'minLv': 60,
+                'maxLv': 65,
+                'rate': 5,
+              },
+              {
+                'name': '대도각참',
+                'minLv': 60,
+                'maxLv': 65,
+                'rate': 5,
+              },
             ],
           },
           {
@@ -10830,6 +10980,11 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'maxLv': 62,
                 'rate': 10,
               },
+            ],
+          },
+          {
+            'area': '모래먼지 (플래시)',
+            'encounters': [
               {
                 'name': '데기라스',
                 'minLv': 59,
@@ -10866,52 +11021,11 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'maxLv': 62,
                 'rate': 5,
               },
-            ],
-          },
-          {
-            'area': '모래먼지 (플래시)',
-            'encounters': [
               {
                 'name': '음번',
                 'minLv': 60,
                 'maxLv': 65,
                 'rate': 40,
-              },
-              {
-                'name': '크로뱃',
-                'minLv': 60,
-                'maxLv': 65,
-                'rate': 20,
-              },
-              {
-                'name': '폭음룡',
-                'minLv': 60,
-                'maxLv': 65,
-                'rate': 10,
-              },
-              {
-                'name': '기가이어스',
-                'minLv': 60,
-                'maxLv': 65,
-                'rate': 10,
-              },
-              {
-                'name': '거대코뿌리',
-                'minLv': 60,
-                'maxLv': 65,
-                'rate': 10,
-              },
-              {
-                'name': '마기라스',
-                'minLv': 60,
-                'maxLv': 65,
-                'rate': 5,
-              },
-              {
-                'name': '대도각참',
-                'minLv': 60,
-                'maxLv': 65,
-                'rate': 5,
               },
             ],
           },
@@ -11469,13 +11583,13 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 50,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 66,
                 'maxLv': 66,
                 'rate': 30,
@@ -11742,13 +11856,13 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 50,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 66,
                 'maxLv': 66,
                 'rate': 26,
@@ -12068,204 +12182,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
     ],
   },
   {
-    'locationName': '태엽산',
-    'regionDatas': [
-      {
-        'locationStatus': '기본',
-        'areaDatas': [
-          {
-            'area': '동굴',
-            'encounters': [
-              {
-                'name': '암트르',
-                'minLv': 66,
-                'maxLv': 66,
-                'rate': 20,
-              },
-              {
-                'name': '또르박쥐',
-                'minLv': 62,
-                'maxLv': 62,
-                'rate': 20,
-              },
-              {
-                'name': '코리갑',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 10,
-              },
-              {
-                'name': '링곰',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 10,
-              },
-              {
-                'name': '갱도라',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 10,
-              },
-              {
-                'name': '메꾸리',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 10,
-              },
-              {
-                'name': '스태솔트',
-                'minLv': 66,
-                'maxLv': 66,
-                'rate': 5,
-              },
-              {
-                'name': '골뱃',
-                'minLv': 66,
-                'maxLv': 66,
-                'rate': 5,
-              },
-              {
-                'name': '마릴리',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 4,
-              },
-              {
-                'name': '다투곰',
-                'minLv': 66,
-                'maxLv': 66,
-                'rate': 4,
-              },
-              {
-                'name': '마릴리',
-                'minLv': 69,
-                'maxLv': 69,
-                'rate': 1,
-              },
-              {
-                'name': '다투곰',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 1,
-              },
-            ],
-          },
-          {
-            'area': '모래먼지',
-            'encounters': [
-              {
-                'name': '몰드류',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 60,
-              },
-              {
-                'name': '몰드류',
-                'minLv': 69,
-                'maxLv': 69,
-                'rate': 30,
-              },
-              {
-                'name': '몰드류',
-                'minLv': 70,
-                'maxLv': 70,
-                'rate': 10,
-              },
-            ],
-          },
-          {
-            'area': '동굴 (얼음 바위 방)',
-            'encounters': [
-              {
-                'name': '프리지오',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 20,
-              },
-              {
-                'name': '프리지오',
-                'minLv': 69,
-                'maxLv': 69,
-                'rate': 20,
-              },
-              {
-                'name': '툰베어',
-                'minLv': 69,
-                'maxLv': 69,
-                'rate': 10,
-              },
-              {
-                'name': '링곰',
-                'minLv': 69,
-                'maxLv': 69,
-                'rate': 10,
-              },
-              {
-                'name': '얼음귀신',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 10,
-              },
-              {
-                'name': '얼음귀신',
-                'minLv': 69,
-                'maxLv': 69,
-                'rate': 10,
-              },
-              {
-                'name': '암트르',
-                'minLv': 66,
-                'maxLv': 66,
-                'rate': 5,
-              },
-              {
-                'name': '바닐리치',
-                'minLv': 66,
-                'maxLv': 66,
-                'rate': 5,
-              },
-              {
-                'name': '툰베어',
-                'minLv': 70,
-                'maxLv': 70,
-                'rate': 5,
-              },
-              {
-                'name': '바닐리치',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 5,
-              },
-            ],
-          },
-          {
-            'area': '모래먼지 (얼음 바위 방)',
-            'encounters': [
-              {
-                'name': '기가이어스',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 60,
-              },
-              {
-                'name': '배바닐라',
-                'minLv': 69,
-                'maxLv': 69,
-                'rate': 30,
-              },
-              {
-                'name': '드닐레이브',
-                'minLv': 70,
-                'maxLv': 70,
-                'rate': 10,
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
     'locationName': '지하유적 (야콘로드 심부)',
     'regionDatas': [
       {
@@ -12311,24 +12227,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '루나톤',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 5,
-              },
-              {
-                'name': '솔록',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 5,
-              },
-              {
-                'name': '점토도리',
-                'minLv': 67,
-                'maxLv': 67,
-                'rate': 4,
-              },
-              {
                 'name': '미라몽',
                 'minLv': 67,
                 'maxLv': 67,
@@ -12349,6 +12247,29 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             ],
           },
           {
+            'area': '모래먼지 (얼음 바위 방)',
+            'encounters': [
+              {
+                'name': '루나톤',
+                'minLv': 68,
+                'maxLv': 68,
+                'rate': 5,
+              },
+              {
+                'name': '솔록',
+                'minLv': 68,
+                'maxLv': 68,
+                'rate': 5,
+              },
+              {
+                'name': '점토도리',
+                'minLv': 67,
+                'maxLv': 67,
+                'rate': 4,
+              },
+            ],
+          },
+          {
             'area': '모래먼지',
             'encounters': [
               {
@@ -12361,6 +12282,24 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'name': '데스니칸',
                 'minLv': 67,
                 'maxLv': 67,
+                'rate': 20,
+              },
+              {
+                'name': '데스판',
+                'minLv': 70,
+                'maxLv': 70,
+                'rate': 5,
+              },
+              {
+                'name': '몰드류',
+                'minLv': 70,
+                'maxLv': 70,
+                'rate': 75,
+              },
+              {
+                'name': '데스니칸',
+                'minLv': 68,
+                'maxLv': 68,
                 'rate': 20,
               },
               {
@@ -12442,29 +12381,6 @@ export const POKEMON_WILDS_V4: WildArea[] = [
               },
             ],
           },
-          {
-            'area': '모래먼지 (레지 시리즈 방)',
-            'encounters': [
-              {
-                'name': '몰드류',
-                'minLv': 70,
-                'maxLv': 70,
-                'rate': 75,
-              },
-              {
-                'name': '데스니칸',
-                'minLv': 68,
-                'maxLv': 68,
-                'rate': 20,
-              },
-              {
-                'name': '데스판',
-                'minLv': 70,
-                'maxLv': 70,
-                'rate': 5,
-              },
-            ],
-          },
         ],
       },
     ],
@@ -12514,6 +12430,11 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'maxLv': 67,
                 'rate': 9,
               },
+            ],
+          },
+          {
+            'area': '모래먼지 (레지 시리즈 방)',
+            'encounters': [
               {
                 'name': '파비코',
                 'minLv': 67,
@@ -12539,7 +12460,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
         'locationStatus': '기본',
         'areaDatas': [
           {
-            'area': '풀숲',
+            'area': '모래먼지 (레지 시리즈 방)',
             'encounters': [
               {
                 'name': '코리갑',
@@ -12547,6 +12468,11 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'maxLv': 65,
                 'rate': 20,
               },
+            ],
+          },
+          {
+            'area': '풀숲',
+            'encounters': [
               {
                 'name': '글라이거',
                 'minLv': 64,
@@ -12619,13 +12545,13 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 60,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 66,
                 'maxLv': 66,
                 'rate': 30,
@@ -12824,7 +12750,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 50,
@@ -13132,13 +13058,13 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 60,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 68,
                 'maxLv': 68,
                 'rate': 20,
@@ -13319,25 +13245,25 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 50,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 66,
                 'maxLv': 66,
                 'rate': 30,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 67,
                 'maxLv': 67,
                 'rate': 10,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 68,
                 'maxLv': 68,
                 'rate': 10,
@@ -13886,13 +13812,13 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 50,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 66,
                 'maxLv': 66,
                 'rate': 30,
@@ -14120,13 +14046,13 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 64,
                 'maxLv': 64,
                 'rate': 50,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 30,
@@ -14138,7 +14064,7 @@ export const POKEMON_WILDS_V4: WildArea[] = [
                 'rate': 10,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 66,
                 'maxLv': 66,
                 'rate': 5,
@@ -14224,13 +14150,13 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 50,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 66,
                 'maxLv': 66,
                 'rate': 20,
@@ -14582,19 +14508,19 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 50,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 66,
                 'maxLv': 66,
                 'rate': 30,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 67,
                 'maxLv': 67,
                 'rate': 10,
@@ -14837,13 +14763,13 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 65,
                 'maxLv': 65,
                 'rate': 50,
               },
               {
-                'name': '다부니',
+                'name': '럭키',
                 'minLv': 66,
                 'maxLv': 66,
                 'rate': 20,
@@ -14980,46 +14906,34 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '풀숲',
             'encounters': [
               {
-                'name': '위대한엄니',
+                'name': '디안시',
                 'minLv': 50,
                 'maxLv': 100,
                 'rate': 20,
               },
               {
-                'name': '땅을기는날개',
+                'name': '볼케니온',
                 'minLv': 50,
                 'maxLv': 100,
                 'rate': 20,
               },
               {
-                'name': '우렁찬꼬리',
+                'name': '꿰뚫는화염',
                 'minLv': 50,
                 'maxLv': 100,
                 'rate': 20,
               },
               {
-                'name': '모래털가죽',
+                'name': '날뛰는우레',
                 'minLv': 50,
                 'maxLv': 100,
-                'rate': 10,
+                'rate': 20,
               },
               {
-                'name': '사나운버섯',
+                'name': '굽이치는물결',
                 'minLv': 50,
                 'maxLv': 100,
-                'rate': 10,
-              },
-              {
-                'name': '날개치는머리',
-                'minLv': 50,
-                'maxLv': 100,
-                'rate': 10,
-              },
-              {
-                'name': '고동치는달',
-                'minLv': 50,
-                'maxLv': 100,
-                'rate': 10,
+                'rate': 20,
               },
             ],
           },
@@ -15027,58 +14941,28 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '흔들리는 풀숲',
             'encounters': [
               {
-                'name': '이브이',
+                'name': '오거폰(벽록)',
                 'minLv': 1,
                 'maxLv': 100,
-                'rate': 20,
+                'rate': 25,
               },
               {
-                'name': '님피아',
+                'name': '오거폰(우물)',
                 'minLv': 1,
                 'maxLv': 100,
-                'rate': 20,
+                'rate': 25,
               },
               {
-                'name': '샤미드',
+                'name': '오거폰(화덕)',
                 'minLv': 1,
                 'maxLv': 100,
-                'rate': 10,
+                'rate': 25,
               },
               {
-                'name': '부스터',
+                'name': '오거폰(주춧돌)',
                 'minLv': 1,
                 'maxLv': 100,
-                'rate': 10,
-              },
-              {
-                'name': '쥬피썬더',
-                'minLv': 1,
-                'maxLv': 100,
-                'rate': 10,
-              },
-              {
-                'name': '에브이',
-                'minLv': 1,
-                'maxLv': 100,
-                'rate': 10,
-              },
-              {
-                'name': '블래키',
-                'minLv': 1,
-                'maxLv': 100,
-                'rate': 10,
-              },
-              {
-                'name': '리피아',
-                'minLv': 1,
-                'maxLv': 100,
-                'rate': 5,
-              },
-              {
-                'name': '글레이시아',
-                'minLv': 1,
-                'maxLv': 100,
-                'rate': 5,
+                'rate': 25,
               },
             ],
           },
@@ -15086,46 +14970,34 @@ export const POKEMON_WILDS_V4: WildArea[] = [
             'area': '색이 진한 풀숲',
             'encounters': [
               {
-                'name': '무쇠바퀴',
+                'name': '타입:널',
                 'minLv': 50,
                 'maxLv': 100,
                 'rate': 20,
               },
               {
-                'name': '무쇠독나방',
+                'name': '마기아나',
                 'minLv': 50,
                 'maxLv': 100,
                 'rate': 20,
               },
               {
-                'name': '무쇠보따리',
+                'name': '무쇠감투',
                 'minLv': 50,
                 'maxLv': 100,
                 'rate': 20,
               },
               {
-                'name': '무쇠가시',
+                'name': '무쇠암석',
                 'minLv': 50,
                 'maxLv': 100,
-                'rate': 10,
+                'rate': 20,
               },
               {
-                'name': '무쇠손',
+                'name': '무쇠잎새',
                 'minLv': 50,
                 'maxLv': 100,
-                'rate': 10,
-              },
-              {
-                'name': '무쇠머리',
-                'minLv': 50,
-                'maxLv': 100,
-                'rate': 10,
-              },
-              {
-                'name': '무쇠무인',
-                'minLv': 50,
-                'maxLv': 100,
-                'rate': 10,
+                'rate': 20,
               },
             ],
           },
