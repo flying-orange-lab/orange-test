@@ -140,7 +140,7 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       {
         'rateType': '간혹',
         'pokemonName': '미끄메라',
-        'ability': '초식',
+        'ability': '마중물',
       },
       {
         'rateType': '간혹',
@@ -149,7 +149,7 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '간혹',
-        'pokemonName': '연꽃몬',
+        'pokemonName': '미끄메라',
         'ability': '마이페이스',
       },
       {
@@ -435,8 +435,8 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '자주',
-        'pokemonName': '덩쿠리',
-        'ability': '엽록소',
+        'pokemonName': '골뱃',
+        'ability': '틈새포착',
       },
       {
         'rateType': '자주',
@@ -822,7 +822,7 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
     'groups': [
       {
         'rateType': '자주',
-        'pokemonName': '수륙챙이',
+        'pokemonName': '슈륙챙이',
         'ability': '습기',
       },
       {
@@ -884,12 +884,12 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       {
         'rateType': '자주',
         'pokemonName': '에리본',
-        'ability': '근성',
+        'ability': '하늘의은총',
       },
       {
         'rateType': '간혹',
-        'pokemonName': '로토스',
-        'ability': '마이페이스',
+        'pokemonName': '가디',
+        'ability': '정신력',
       },
       {
         'rateType': '간혹',
@@ -924,8 +924,8 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '자주',
-        'pokemonName': '로토스',
-        'ability': '마이페이스',
+        'pokemonName': '다부니',
+        'ability': '재생력',
       },
       {
         'rateType': '자주',
