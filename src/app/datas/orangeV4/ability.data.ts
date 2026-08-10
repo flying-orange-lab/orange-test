@@ -756,7 +756,7 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
   },
   {
     'id': 121,
-    'name': '멀티타입',
+    'name': 'AR시스템2',
     'effect_text': '지닌 플레이트에 따라 타입이 변화한다.',
     'effect_wild_text': '',
   },

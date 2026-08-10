@@ -12,12 +12,11 @@ export const POKEMON_WILD_ADDITIONAL_V4: WildAdditionalPokemonCategory[] = [
         'note': '',
       },
       {
-        'name': '비크티니',
+        'name': '타입:널',
         'level': 15,
         'location': '리버티가든섬',
-        'requirement':
-          '버그배지 획득 이전, 리버티가든섬의 등대 앞 베테랑 트레이너와의 배틀에서 승리',
-        'note': '지나쳤을 경우 성신시티까지 진행해야 포획 가능',
+        'requirement': '',
+        'note': '',
       },
       {
         'name': '버랜지나',
@@ -242,27 +241,6 @@ export const POKEMON_WILD_ADDITIONAL_V4: WildAdditionalPokemonCategory[] = [
         'note': '',
       },
       {
-        'name': '유크시',
-        'level': 65,
-        'location': '칠보시티',
-        'requirement': '20번도로 마음의 공동에서 주박사와 이벤트 확인',
-        'note': '',
-      },
-      {
-        'name': '엠라이트',
-        'level': 65,
-        'location': '타워오브해븐',
-        'requirement': '20번도로 마음의 공동에서 주박사와 이벤트 확인',
-        'note': '',
-      },
-      {
-        'name': '아그놈',
-        'level': 65,
-        'location': '23번도로',
-        'requirement': '20번도로 마음의 공동에서 주박사와 이벤트 확인',
-        'note': '',
-      },
-      {
         'name': '디아루가',
         'level': 85,
         'location': '길잡이의 공간',
@@ -310,13 +288,6 @@ export const POKEMON_WILD_ADDITIONAL_V4: WildAdditionalPokemonCategory[] = [
         'location': '스트레인저 하우스',
         'requirement': '크레세리아를 선두 배치',
         'note': '',
-      },
-      {
-        'name': '쉐이미',
-        'level': 70,
-        'location': '사색의들판',
-        'requirement': '바람개비숲 체렌 이벤트',
-        'note': '성신시티 포켓몬센터의 유채로부터 그라데시아꽃 획득 가능',
       },
       {
         'name': '아르세우스',
@@ -450,7 +421,7 @@ export const POKEMON_WILD_ADDITIONAL_V4: WildAdditionalPokemonCategory[] = [
         'note': '',
       },
       {
-        'name': '무쇠보따리',
+        'name': '로토무',
         'level': 25,
         'location': '구름시티 (메달사무국 3층)',
         'requirement': '비틀배지',

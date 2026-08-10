@@ -87,10 +87,6 @@ export const MART_DATA_V4: MartItem[] = [
         'price': 1000,
       },
       {
-        'name': '타이마볼',
-        'price': 1000,
-      },
-      {
         'name': '럭셔리볼',
         'price': 1000,
       },
@@ -174,6 +170,120 @@ export const MART_DATA_V4: MartItem[] = [
     'locationName': '물풍경시티',
     'items': [
       {
+        'name': '불꽃의돌',
+        'price': 2100,
+      },
+      {
+        'name': '물의돌',
+        'price': 2100,
+      },
+      {
+        'name': '리프의돌',
+        'price': 2100,
+      },
+      {
+        'name': '천둥의돌',
+        'price': 2100,
+      },
+      {
+        'name': '달의돌',
+        'price': 2100,
+      },
+      {
+        'name': '태양의돌',
+        'price': 2100,
+      },
+      {
+        'name': '빛의돌',
+        'price': 2100,
+      },
+      {
+        'name': '어둠의돌',
+        'price': 2100,
+      },
+      {
+        'name': '각성의돌',
+        'price': 2100,
+      },
+      {
+        'name': '얼음의돌',
+        'price': 2100,
+      },
+    ],
+  },
+  {
+    'locationName': '물풍경 시장 - 구 플라스마단',
+    'items': [
+      {
+        'name': '주먹플레이트',
+        'price': 0,
+      },
+      {
+        'name': '푸른하늘플레이트',
+        'price': 0,
+      },
+      {
+        'name': '맹독플레이트',
+        'price': 0,
+      },
+      {
+        'name': '대지플레이트',
+        'price': 0,
+      },
+      {
+        'name': '암석플레이트',
+        'price': 0,
+      },
+      {
+        'name': '비단벌레플레이트',
+        'price': 0,
+      },
+      {
+        'name': '원령플레이트',
+        'price': 0,
+      },
+      {
+        'name': '강철플레이트',
+        'price': 0,
+      },
+      {
+        'name': '불구슬플레이트',
+        'price': 0,
+      },
+      {
+        'name': '물방울플레이트',
+        'price': 0,
+      },
+      {
+        'name': '초록플레이트',
+        'price': 0,
+      },
+      {
+        'name': '우뢰플레이트',
+        'price': 0,
+      },
+      {
+        'name': '이상한플레이트',
+        'price': 0,
+      },
+      {
+        'name': '고드름플레이트',
+        'price': 0,
+      },
+      {
+        'name': '용의플레이트',
+        'price': 0,
+      },
+      {
+        'name': '공포플레이트',
+        'price': 0,
+      },
+    ],
+  },
+  {
+    'locationName': '물풍경 시장 - 우측 하단 상인',
+    'items': [
+      {
         'name': '에레키부스터',
         'price': 2100,
       },
@@ -214,70 +324,8 @@ export const MART_DATA_V4: MartItem[] = [
         'price': 2100,
       },
       {
-        'name': '얼음의돌',
-        'price': 2100,
-      },
-    ],
-  },
-  {
-    'locationName': '물풍경 시장 - 구 플라스마단',
-    'items': [
-      {
-        'name': '불꽃의돌',
-        'price': 2100,
-      },
-      {
-        'name': '물의돌',
-        'price': 2100,
-      },
-      {
-        'name': '리프의돌',
-        'price': 2100,
-      },
-      {
-        'name': '번개의돌',
-        'price': 2100,
-      },
-      {
-        'name': '달의돌',
-        'price': 2100,
-      },
-      {
-        'name': '태양의돌',
-        'price': 2100,
-      },
-      {
-        'name': '빛의돌',
-        'price': 2100,
-      },
-      {
-        'name': '어둠의돌',
-        'price': 2100,
-      },
-      {
-        'name': '각성의돌',
-        'price': 2100,
-      },
-    ],
-  },
-  {
-    'locationName': '물풍경 시장 - 우측 하단 상인',
-    'items': [
-      {
         'name': '모으령의코인',
         'price': 300000,
-      },
-      {
-        'name': '행복의알',
-        'price': 10000,
-      },
-      {
-        'name': '진화의휘석',
-        'price': 10000,
-      },
-      {
-        'name': '검은철구',
-        'price': 200,
       },
     ],
   },
@@ -330,12 +378,12 @@ export const MART_DATA_V4: MartItem[] = [
         'price': 1000,
       },
       {
-        'name': '자보열매',
-        'price': 1000,
+        'name': '진화의휘석',
+        'price': 10000,
       },
       {
-        'name': '애터열매',
-        'price': 1000,
+        'name': '행복의알',
+        'price': 10000,
       },
       {
         'name': '부스트에너지S',
@@ -372,64 +420,20 @@ export const MART_DATA_V4: MartItem[] = [
     'locationName': '쇼핑몰R9 - 1층',
     'items': [
       {
-        'name': '불꽃의돌',
-        'price': 2100,
+        'name': '뜨거운바위',
+        'price': 0,
       },
       {
-        'name': '물의돌',
-        'price': 2100,
+        'name': '축축한바위',
+        'price': 0,
       },
       {
-        'name': '리프의돌',
-        'price': 2100,
+        'name': '보송보송바위',
+        'price': 0,
       },
       {
-        'name': '달의돌',
-        'price': 2100,
-      },
-      {
-        'name': '태양의돌',
-        'price': 2100,
-      },
-      {
-        'name': '빛의돌',
-        'price': 2100,
-      },
-      {
-        'name': '어둠의돌',
-        'price': 2100,
-      },
-      {
-        'name': '각성의돌',
-        'price': 2100,
-      },
-      {
-        'name': '얼음의돌',
-        'price': 2100,
-      },
-      {
-        'name': '연결의끈',
-        'price': 2100,
-      },
-      {
-        'name': '초점렌즈',
-        'price': 200,
-      },
-      {
-        'name': '광각렌즈',
-        'price': 200,
-      },
-      {
-        'name': '포커스렌즈',
-        'price': 200,
-      },
-      {
-        'name': '포인트업',
-        'price': 9800,
-      },
-      {
-        'name': '포인트맥스',
-        'price': 24500,
+        'name': '차가운바위',
+        'price': 0,
       },
     ],
   },
@@ -437,31 +441,11 @@ export const MART_DATA_V4: MartItem[] = [
     'locationName': '쇼핑몰R9 - 2층 왼쪽',
     'items': [
       {
-        'name': '에레키부스터',
-        'price': 2100,
-      },
-      {
-        'name': '마그마부스터',
-        'price': 2100,
-      },
-      {
-        'name': '용의비늘',
-        'price': 2100,
-      },
-      {
-        'name': '영계의천',
-        'price': 2100,
-      },
-      {
-        'name': '프로텍터',
-        'price': 2100,
-      },
-      {
         'name': '업그레이드',
         'price': 2100,
       },
       {
-        'name': '괴상한패치',
+        'name': '고운비늘',
         'price': 2100,
       },
       {
@@ -470,18 +454,6 @@ export const MART_DATA_V4: MartItem[] = [
       },
       {
         'name': '저주받은갑옷',
-        'price': 2100,
-      },
-      {
-        'name': '예리한손톱',
-        'price': 2100,
-      },
-      {
-        'name': '예리한이빨',
-        'price': 2100,
-      },
-      {
-        'name': '고운비늘',
         'price': 2100,
       },
       {
@@ -499,6 +471,34 @@ export const MART_DATA_V4: MartItem[] = [
       {
         'name': '물의족자',
         'price': 9800,
+      },
+      {
+        'name': '먹다남은음식',
+        'price': 5000,
+      },
+      {
+        'name': '검은철구',
+        'price': 200,
+      },
+      {
+        'name': '반짝가루',
+        'price': 0,
+      },
+      {
+        'name': '빛의점토',
+        'price': 0,
+      },
+      {
+        'name': '큰뿌리',
+        'price': 0,
+      },
+      {
+        'name': '느림보꼬리',
+        'price': 0,
+      },
+      {
+        'name': '포인트맥스',
+        'price': 24500,
       },
     ],
   },
@@ -531,16 +531,16 @@ export const MART_DATA_V4: MartItem[] = [
         'price': 2000,
       },
       {
-        'name': '굵은뼈',
-        'price': 2000,
+        'name': '포커스렌즈',
+        'price': 200,
       },
       {
-        'name': '대파',
-        'price': 2000,
+        'name': '광각렌즈',
+        'price': 200,
       },
       {
-        'name': '먹다남은음식',
-        'price': 5000,
+        'name': '초점렌즈',
+        'price': 200,
       },
     ],
   },
