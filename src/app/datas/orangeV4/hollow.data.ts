@@ -149,8 +149,8 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '간혹',
-        'pokemonName': '미끄메라',
-        'ability': '마이페이스',
+        'pokemonName': '수리둥보',
+        'ability': '날카로운눈',
       },
       {
         'rateType': '간혹',
@@ -359,7 +359,7 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       {
         'rateType': '자주',
         'pokemonName': '가디',
-        'ability': '정신력',
+        'ability': '위협',
       },
       {
         'rateType': '간혹',
@@ -924,8 +924,8 @@ export const POKEMON_HOLLOW_V4: HiddenHollow[] = [
       },
       {
         'rateType': '자주',
-        'pokemonName': '다부니',
-        'ability': '재생력',
+        'pokemonName': '럭키',
+        'ability': '하늘의은총',
       },
       {
         'rateType': '자주',
