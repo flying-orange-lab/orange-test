@@ -248,13 +248,6 @@ export const POKEMON_WILD_ADDITIONAL_V4: WildAdditionalPokemonCategory[] = [
         'note': '종을 조사해야 출현',
       },
       {
-        'name': '지라치',
-        'level': 65,
-        'location': '꿈터',
-        'requirement': '',
-        'note': '',
-      },
-      {
         'name': '테오키스',
         'level': 75,
         'location': '자이언트홀',
@@ -519,7 +512,7 @@ export const POKEMON_WILD_ADDITIONAL_V4: WildAdditionalPokemonCategory[] = [
         'note': '6세대 스타팅 중 한 마리를 선택',
       },
       {
-        'name': '조로아(히스이)',
+        'name': '조로아',
         'level': 30,
         'location': '물풍경시티',
         'requirement': 'N의 포켓몬 이벤트',
