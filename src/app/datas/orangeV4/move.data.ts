@@ -43942,7 +43942,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 48,
-      'moveName': '우드해머',
+      'moveName': '파워휩',
     },
     {
       'moveLv': 52,
@@ -59282,7 +59282,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 48,
-      'moveName': '우드해머',
+      'moveName': '파워휩',
     },
     {
       'moveLv': 52,

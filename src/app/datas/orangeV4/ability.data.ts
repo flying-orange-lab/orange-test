@@ -640,7 +640,7 @@ export const ABILITY_DATA_V4: PokemonAbility[] = [
     'id': 102,
     'name': '탈',
     'effect_text':
-      '공격받은 뒤, HP가 7/8 이하일 경우 모습을 바꾼다. 볼에 넣으면 되돌아온다.',
+      '공격하거나 공격받은 뒤, HP가 7/8 이하일 경우 모습을 바꾼다. 볼에 넣으면 되돌아온다.',
     'effect_wild_text': '',
   },
   {

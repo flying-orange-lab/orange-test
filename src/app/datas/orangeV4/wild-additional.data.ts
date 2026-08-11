@@ -68,6 +68,27 @@ export const POKEMON_WILD_ADDITIONAL_V4: WildAdditionalPokemonCategory[] = [
         'note': '',
       },
       {
+        'name': '무쇠감투',
+        'level': 50,
+        'location': '태엽산',
+        'requirement': '',
+        'note': '',
+      },
+      {
+        'name': '무쇠암석',
+        'level': 50,
+        'location': '태엽산',
+        'requirement': '',
+        'note': '',
+      },
+      {
+        'name': '무쇠잎새',
+        'level': 50,
+        'location': '태엽산',
+        'requirement': '',
+        'note': '',
+      },
+      {
         'name': '탱탱겔',
         'level': 45,
         'location': '물결만',
@@ -425,7 +446,7 @@ export const POKEMON_WILD_ADDITIONAL_V4: WildAdditionalPokemonCategory[] = [
         'level': 25,
         'location': '구름시티 (메달사무국 3층)',
         'requirement': '비틀배지',
-        'note': '',
+        'note': '색이 다른 모습 고정',
       },
       {
         'name': '나오하',

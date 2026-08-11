@@ -770,7 +770,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'type': '얼음',
     'class': '특수',
     'power': '110',
-    'accuracy': '70',
+    'accuracy': '75',
     'pp': 5,
     'makeContact': false,
     'targeting': '아군 제외 광역',
@@ -1141,7 +1141,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'type': '전기',
     'class': '특수',
     'power': '110',
-    'accuracy': '70',
+    'accuracy': '75',
     'pp': 10,
     'makeContact': false,
     'effects': {
@@ -5041,7 +5041,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'makeContact': true,
     'category': ['베기'],
     'effects': {
-      'inflict': '50% 마비/화상/얼음',
+      'inflict': '30% 마비/화상/얼음',
     },
   },
   {
@@ -5505,7 +5505,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'type': '격투',
     'class': '특수',
     'power': '120',
-    'accuracy': '70',
+    'accuracy': '75',
     'pp': 5,
     'makeContact': false,
     'effects': {
@@ -7256,7 +7256,7 @@ export const POKEMON_MOVE_DETAIL_V4: MoveDetail[] = [
     'type': '비행',
     'class': '특수',
     'power': '110',
-    'accuracy': '70',
+    'accuracy': '75',
     'pp': 5,
     'makeContact': false,
     'effects': {
