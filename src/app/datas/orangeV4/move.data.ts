@@ -29005,7 +29005,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
       'moveName': '화염탄',
     },
     {
-      'moveLv': 62,
+      'moveLv': 64,
       'moveName': '땅가르기',
     },
   ],
@@ -30709,7 +30709,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
       'moveName': '트윈빔',
     },
     {
-      'moveLv': 56,
+      'moveLv': 60,
       'moveName': '오라윙',
     },
   ],
@@ -30772,7 +30772,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 37,
-      'moveName': '광합성',
+      'moveName': 'HP회복',
     },
     {
       'moveLv': 40,
@@ -30788,7 +30788,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 49,
-      'moveName': 'HP회복',
+      'moveName': '탁류',
     },
     {
       'moveLv': 52,
@@ -30862,7 +30862,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 39,
-      'moveName': '광합성',
+      'moveName': 'HP회복',
     },
     {
       'moveLv': 42,
@@ -30878,7 +30878,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 54,
-      'moveName': 'HP회복',
+      'moveName': '탁류',
     },
     {
       'moveLv': 58,
@@ -38734,11 +38734,11 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 44,
-      'moveName': '배리어러시',
+      'moveName': '코스믹파워',
     },
     {
       'moveLv': 48,
-      'moveName': '하드프레스',
+      'moveName': '휠스핀',
     },
   ],
   '437-0': [
@@ -38803,32 +38803,32 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
       'moveName': '아이언헤드',
     },
     {
-      'moveLv': 37,
+      'moveLv': 36,
       'moveName': '트릭룸',
     },
     {
-      'moveLv': 41,
+      'moveLv': 40,
       'moveName': '뱀눈초리',
     },
     {
-      'moveLv': 45,
+      'moveLv': 44,
       'moveName': '비바라기',
     },
     {
-      'moveLv': 49,
+      'moveLv': 48,
       'moveName': '희망사항',
     },
     {
-      'moveLv': 53,
-      'moveName': '배리어러시',
+      'moveLv': 52,
+      'moveName': '코스믹파워',
     },
     {
-      'moveLv': 57,
+      'moveLv': 56,
       'moveName': '헤비봄버',
     },
     {
-      'moveLv': 61,
-      'moveName': '하드프레스',
+      'moveLv': 60,
+      'moveName': '휠스핀',
     },
   ],
   '438-0': [
@@ -47301,8 +47301,12 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
       'moveName': '메가혼',
     },
     {
-      'moveLv': 62,
+      'moveLv': 61,
       'moveName': '땅가르기',
+    },
+    {
+      'moveLv': 64,
+      'moveName': '들이받기',
     },
   ],
   '531-0': [
@@ -50456,7 +50460,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 52,
-      'moveName': '배리어러시',
+      'moveName': '사이코팽',
     },
     {
       'moveLv': 56,
@@ -57454,7 +57458,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 4,
-      'moveName': '울부짖기',
+      'moveName': '겁나는얼굴',
     },
     {
       'moveLv': 7,
@@ -57626,7 +57630,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 4,
-      'moveName': '울부짖기',
+      'moveName': '겁나는얼굴',
     },
     {
       'moveLv': 7,
@@ -59746,7 +59750,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 4,
-      'moveName': '울부짖기',
+      'moveName': '겁나는얼굴',
     },
     {
       'moveLv': 7,
@@ -59844,7 +59848,7 @@ export const POKEMON_MOVE_V4: Record<string, MoveLearnData[]> = {
     },
     {
       'moveLv': 4,
-      'moveName': '울부짖기',
+      'moveName': '겁나는얼굴',
     },
     {
       'moveLv': 7,

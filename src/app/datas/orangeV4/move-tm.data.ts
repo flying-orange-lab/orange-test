@@ -15265,6 +15265,7 @@ export const POKEMON_MOVE_TM_V4: Record<string, string[]> = {
     'TM05 울부짖기',
     'TM10 잠재파워',
     'TM11 쾌청',
+    'TM12 도발',
     'TM17 방어',
     'TM19 개척하기',
     'TM21 화풀이',
