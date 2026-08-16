@@ -6648,7 +6648,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
     'form': [
       {
         'formName': '일반',
-        'imageUrl': '492.png',
+        'imageUrl': '778.png',
         'types': ['ghost', 'fairy'],
         'abilities': ['탈', '-', '-'],
         'stats': [55, 90, 160, 50, 210, 96, 661],
@@ -6659,7 +6659,7 @@ export const POKEMON_DATA_V4: Pokemon[] = [
       },
       {
         'formName': '들킨 모습',
-        'imageUrl': '492.png',
+        'imageUrl': '10143.png',
         'types': ['ghost', 'fairy'],
         'abilities': ['탈', '-', '-'],
         'stats': [55, 90, 80, 50, 105, 96, 476],
